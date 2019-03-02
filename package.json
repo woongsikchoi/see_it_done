@@ -1,0 +1,48 @@
+{
+  "name": "new_project_name",
+  "version": "0.0.1",
+  "description": "??????",
+  "main": "src/index.js",
+  "url": "https://www.npmjs.com/package/new_project_name",
+  "scripts": {
+    "test": "nyc mocha **/*.test.js",
+    "test2": "nodemon --exec \"npm test\"",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "rules": "standard | snazzy",
+    "fix": "standard --fix"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": [
+      "mocha"
+    ],
+    "ignore": [
+      "**/out/",
+      "/lib/select2/",
+      "/lib/ckeditor/",
+      "tmp.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perezLamed/lamed_array.git"
+  },
+  "author": "Perez Lamed van Niekerk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perezLamed/lamed_array/issues"
+  },
+  "homepage": "https://github.com/perezLamed/lamed_array#readme",
+  "dependencies": {
+    "lamed_array": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "codecov": "^3.2.0",
+    "expect": "^24.1.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "snazzy": "^8.0.0",
+    "standard": "^12.0.1"
+  }
+}
