@@ -19,7 +19,7 @@ md test
 md docs
 md docs\pics
 md docs\designs
-
+md docs\plan
 
 REM -----------------------------
 REM ---- COPY FILES
