@@ -1,17 +1,14 @@
-console.log('Starting index.test.js...')
+console.log('Starting index.run.js...')
 /* jshint esversion: 6 */
 // ------------------------------------------------------
 
 const _larray = require('lamed_array')
 const {Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed, _Trace_Set, _Trace, _Trace_Table, _Trace_Heading } = _larray // eslint-disable-line
-const _run = require('./index.run')
+const _app = require('../src/index')
 
-describe('index.js', () => {
-  it('About()', (done) => {
-    _run.test_About()
-    done()
-  })
-})
+function test_About () { // eslint-disable-line
+  _log(_app.About(true))
+}
 
 // Exports --------------------------
-module.exports = {}
+module.exports = { test_About }

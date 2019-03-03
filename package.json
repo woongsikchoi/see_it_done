@@ -1,9 +1,9 @@
 {
-  "name": "new_project_name",
+  "name": "see_it_done",
   "version": "0.0.1",
-  "description": "??????",
+  "description": "see_it_done ??????",
   "main": "src/index.js",
-  "url": "https://www.npmjs.com/package/new_project_name",
+  "url": "https://www.npmjs.com/package/see_it_done",
   "scripts": {
     "test": "nyc mocha **/*.test.js",
     "test2": "nodemon --exec \"npm test\"",
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perezLamed/lamed_array.git"
+    "url": "git+https://github.com/perezLamed/see_it_done.git"
   },
   "author": "Perez Lamed van Niekerk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/perezLamed/lamed_array/issues"
+    "url": "https://github.com/perezLamed/see_it_done/issues"
   },
-  "homepage": "https://github.com/perezLamed/lamed_array#readme",
+  "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
     "lamed_array": "^1.0.0"
   },
