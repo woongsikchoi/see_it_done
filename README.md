@@ -13,9 +13,4 @@ ll readme usage
 [![Code size](https://img.shields.io/github/languages/code-size/perezLamed/see_it_done.svg?style=flat)](https://github.com/perezLamed/see_it_done)
 [![license](https://img.shields.io/github/license/perezLamed/see_it_done.svg?style=flat)](https://github.com/perezLamed/see_it_done)
 
-[![NPM](https://nodei.co/npm/see_it_done.png?downloads=true&downloadRank=true)](https://nodei.co/npm/see_it_done/)
-
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
-
-
 MIT license
