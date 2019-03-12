@@ -1,5 +1,5 @@
 # see_it_done (put your name here)
->From crises to touchdown - get to the goal
+>From lift-off to touchdown - get to the goal
 
 Execute following commands
 ```
@@ -18,5 +18,8 @@ No | Project | NPM | Build | Coverage | Quality | Downloads
  5 | [lamed_floweditor](https://github.com/perezLamed/lamed_floweditor) | [![npm](https://img.shields.io/npm/v/lamed_floweditor.svg)](https://www.npmjs.org/package/lamed_floweditor) | [![Build Status](https://travis-ci.org/perezLamed/lamed_floweditor.svg?branch=master)](https://travis-ci.org/perezLamed/lamed_floweditor) | [![codecov](https://codecov.io/gh/perezLamed/lamed_floweditor/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/lamed_floweditor) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/lamed_floweditor/badge)](https://www.codefactor.io/repository/github/perezlamed/lamed_floweditor) | [![downloads](http://img.shields.io/npm/dt/lamed_floweditor.svg?style=flat)](https://www.npmjs.org/package/lamed_floweditor)
  6 | [lamed_learn](https://github.com/perezLamed/lamed_learn) | [![npm](https://img.shields.io/npm/v/lamed_learn.svg)](https://www.npmjs.org/package/lamed_learn) | [![Build Status](https://travis-ci.org/perezLamed/lamed_learn.svg?branch=master)](https://travis-ci.org/perezLamed/lamed_learn) | [![codecov](https://codecov.io/gh/perezLamed/lamed_learn/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/lamed_learn) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/lamed_learn/badge)](https://www.codefactor.io/repository/github/perezlamed/lamed_learn) | [![downloads](http://img.shields.io/npm/dt/lamed_learn.svg?style=flat)](https://www.npmjs.org/package/lamed_learn)     
  7 | see_it_done | na | [![Build Status](https://travis-ci.org/perezLamed/see_it_done.svg?branch=master)](https://travis-ci.org/perezLamed/see_it_done) | [![codecov](https://codecov.io/gh/perezLamed/see_it_done/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/see_it_done) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/see_it_done/badge)](https://www.codefactor.io/repository/github/perezlamed/see_it_done) | na 
+
+<img src="https://github.com/perezLamed/see_it_done/raw/master/docs/pics/Burndown.png" alt="Burn down" width="400"/>
+<img src="https://github.com/perezLamed/see_it_done/raw/master/docs/pics/wellSaid.jpg" alt="Well said" width="300"/>
 
 [![license](https://img.shields.io/github/license/perezLamed/see_it_done.svg?style=flat)](https://github.com/perezLamed/see_it_done)
