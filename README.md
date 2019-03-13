@@ -19,6 +19,7 @@ No | Project | NPM | Build | Coverage | Quality | Downloads
  6 | [lamed_learn](https://github.com/perezLamed/lamed_learn) | [![npm](https://img.shields.io/npm/v/lamed_learn.svg)](https://www.npmjs.org/package/lamed_learn) | [![Build Status](https://travis-ci.org/perezLamed/lamed_learn.svg?branch=master)](https://travis-ci.org/perezLamed/lamed_learn) | [![codecov](https://codecov.io/gh/perezLamed/lamed_learn/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/lamed_learn) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/lamed_learn/badge)](https://www.codefactor.io/repository/github/perezlamed/lamed_learn) | [![downloads](http://img.shields.io/npm/dt/lamed_learn.svg?style=flat)](https://www.npmjs.org/package/lamed_learn)     
  7 | see_it_done | na | [![Build Status](https://travis-ci.org/perezLamed/see_it_done.svg?branch=master)](https://travis-ci.org/perezLamed/see_it_done) | [![codecov](https://codecov.io/gh/perezLamed/see_it_done/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/see_it_done) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/see_it_done/badge)](https://www.codefactor.io/repository/github/perezlamed/see_it_done) | na 
 
+## [User stories](./UserStories.md)
 <table>
     <tr>
         <td>
