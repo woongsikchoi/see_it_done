@@ -2,8 +2,12 @@ console.log('Starting index.js.js...')
 /* jshint esversion: 6 */
 // ------------------------------------------------------
 
-const _larray = require('lamed_array')
-const {Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed, _Trace_Set, _Trace, _Trace_Table, _Trace_Heading } = _larray // eslint-disable-line
+/* eslint-disable */
+const _test = require('lamed_test')
+const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed,
+  _ifTrace, _Trace_Set, _Trace_Get,
+  _Trace, _TraceLine, _TraceBold, _Trace_Table, _Trace_Heading } = _test
+/* eslint-enable */
 
 /* Get the application version */
 const _package = require('../package.json')

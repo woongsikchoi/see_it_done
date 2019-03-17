@@ -1,11 +1,15 @@
 # see_it_done (put your name here)
 >From lift-off to touchdown - get to the goal
 
-Execute following commands
+- Clone this repo
+- Create your Nodejs project folder
+- Execute 'sid_clone.bat' from your project folder.
+- Execute following commands to setup the README.md
 ```
 ll badges readme
 ll readme usage
 ```
+- Remove the next section
 
 ## Related Projects
 
@@ -17,7 +21,7 @@ No | Project | NPM | Build | Coverage | Quality | Downloads
  4 | [lamed_flowchart](https://github.com/perezLamed/lamed_flowchart) | [![npm](https://img.shields.io/npm/v/lamed_flowchart.svg)](https://www.npmjs.org/package/lamed_flowchart) | [![Build Status](https://travis-ci.org/perezLamed/lamed_flowchart.svg?branch=master)](https://travis-ci.org/perezLamed/lamed_flowchart) | [![codecov](https://codecov.io/gh/perezLamed/lamed_flowchart/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/lamed_flowchart) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/lamed_flowchart/badge)](https://www.codefactor.io/repository/github/perezlamed/lamed_flowchart) | [![downloads](http://img.shields.io/npm/dt/lamed_flowchart.svg?style=flat)](https://www.npmjs.org/package/lamed_flowchart)
  5 | [lamed_floweditor](https://github.com/perezLamed/lamed_floweditor) | [![npm](https://img.shields.io/npm/v/lamed_floweditor.svg)](https://www.npmjs.org/package/lamed_floweditor) | [![Build Status](https://travis-ci.org/perezLamed/lamed_floweditor.svg?branch=master)](https://travis-ci.org/perezLamed/lamed_floweditor) | [![codecov](https://codecov.io/gh/perezLamed/lamed_floweditor/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/lamed_floweditor) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/lamed_floweditor/badge)](https://www.codefactor.io/repository/github/perezlamed/lamed_floweditor) | [![downloads](http://img.shields.io/npm/dt/lamed_floweditor.svg?style=flat)](https://www.npmjs.org/package/lamed_floweditor)
  6 | [lamed_learn](https://github.com/perezLamed/lamed_learn) | [![npm](https://img.shields.io/npm/v/lamed_learn.svg)](https://www.npmjs.org/package/lamed_learn) | [![Build Status](https://travis-ci.org/perezLamed/lamed_learn.svg?branch=master)](https://travis-ci.org/perezLamed/lamed_learn) | [![codecov](https://codecov.io/gh/perezLamed/lamed_learn/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/lamed_learn) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/lamed_learn/badge)](https://www.codefactor.io/repository/github/perezlamed/lamed_learn) | [![downloads](http://img.shields.io/npm/dt/lamed_learn.svg?style=flat)](https://www.npmjs.org/package/lamed_learn)     
- 7 | see_it_done | na | [![Build Status](https://travis-ci.org/perezLamed/see_it_done.svg?branch=master)](https://travis-ci.org/perezLamed/see_it_done) | [![codecov](https://codecov.io/gh/perezLamed/see_it_done/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/see_it_done) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/see_it_done/badge)](https://www.codefactor.io/repository/github/perezlamed/see_it_done) | na 
+ 7 | see_it_done | [![npm](https://img.shields.io/npm/v/see_it_done.svg)](https://www.npmjs.org/package/see_it_done) | [![Build Status](https://travis-ci.org/perezLamed/see_it_done.svg?branch=master)](https://travis-ci.org/perezLamed/see_it_done) | [![codecov](https://codecov.io/gh/perezLamed/see_it_done/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/see_it_done) | [![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/see_it_done/badge)](https://www.codefactor.io/repository/github/perezlamed/see_it_done) | na 
 
 ## [User stories](./UserStories.md)
 <table>

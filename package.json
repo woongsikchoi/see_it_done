@@ -5,11 +5,24 @@
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
   "scripts": {
-    "test": "nyc mocha **/*.test.js",
+    "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\"",
     "test2": "nodemon --exec \"npm test\"",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage_test": "nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"",
+    "coverage_report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage": "npm run coverage_test && npm run coverage_report",
     "rules": "standard | snazzy",
-    "fix": "standard --fix"
+    "fix": "standard --fix",
+    "update": "ncu -u && yarn",
+    "commit": "git commit -a -m \"release\"",
+    "bump": "npm version patch -m \"Bumping to %s\"",
+    "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
+    "release": "npm run rules && npm test && npm version patch -m \"Patch version %s\" && start npm run push"
+  },
+  "nyc": {
+    "exclude": [
+      "**/Test.runner.js",
+      "**/readline.js**"
+    ]
   },
   "standard": {
     "parser": "babel-eslint",
@@ -34,7 +47,9 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_array": "^1.0.0"
+    "lamed_array": "^1.0.0",
+    "lamed_io": "^1.0.9",
+    "lamed_test": "^2.1.15"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
