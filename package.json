@@ -1,7 +1,7 @@
 {
   "name": "see_it_done",
   "version": "0.0.2",
-  "description": "see_it_done ??????",
+  "description": "see_it_done template project",
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
   "scripts": {
@@ -47,7 +47,6 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_array": "^1.0.0",
     "lamed_io": "^1.0.9",
     "lamed_test": "^2.1.15"
   },

@@ -1720,11 +1720,6 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lamed_array@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lamed_array/-/lamed_array-1.0.0.tgz#0b131ee5b5c762780a8cddd0febcde8a20db25c8"
-  integrity sha512-VH/4YjE3gw6n5ICccY7J18qI8yi+jedfDcUepp9wzBQw4GWBPxsWcOTn122aFRmnXDG/66VhDlhZbBegAmtDbA==
-
 lamed_io@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.9.tgz#5e923e9578dfa02f9e65f213f3f00753b7e0e13d"

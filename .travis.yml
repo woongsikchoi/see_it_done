@@ -25,4 +25,4 @@ deploy:
   api_key: "$NPM_TOKEN"
   on:
     commit_message: "release"
-    repo: perezLamed/packageName???
+    repo: perezLamed/see_it_done
