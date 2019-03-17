@@ -52,14 +52,16 @@ function TestAll (done) {
  * Execute the tests manually
  */
 function testRunner () {
-  _Trace_Set(0)
   const done2 = (err) => {
     if (err !== undefined) { throw err }
   }
   let isRoot = _lio.isRootFolder() // const _lio = require('lamed_io')
   _Trace({ isRoot })
 
-  if (isRoot === false) TestAll(done2) // Only run if not executed from the root folder
+  if (isRoot === false) {
+    _Trace_Set(0)
+    TestAll(done2)
+  } // Only run if not executed from the root folder
 }
 testRunner()
 
