@@ -12,11 +12,11 @@
     "coverage": "npm run coverage_test && npm run coverage_report",
     "rules": "standard | snazzy",
     "fix": "standard --fix",
-    "update": "ncu -u && yarn",
     "commit": "git commit -a -m \"release\"",
     "bump": "npm version patch -m \"Bumping to %s\"",
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
-    "release": "npm run rules && npm test && npm version patch -m \"Patch version %s\" && start npm run push"
+    "release": "npm run rules && npm test && npm version patch -m \"Patch version %s\" && start npm run push",
+    "update": "ncu -u -l verbose && yarn && npm run commit && npm run release"
   },
   "nyc": {
     "exclude": [
@@ -47,13 +47,13 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_io": "^1.0.9",
-    "lamed_test": "^2.1.15"
+    "lamed_io": "^1.0.12",
+    "lamed_test": "^2.1.20"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "codecov": "^3.2.0",
-    "expect": "^24.1.0",
+    "expect": "^24.5.0",
     "mocha": "^6.0.2",
     "nyc": "^13.3.0",
     "snazzy": "^8.0.0",
