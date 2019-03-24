@@ -16,7 +16,8 @@
     "bump": "npm version patch -m \"Bumping to %s\"",
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "release": "npm run rules && npm test && npm version patch -m \"Patch version %s\" && start npm run push",
-    "update": "ncu -u -l verbose && yarn && npm run commit && npm run release"
+    "ncu": "ncu -u -l info --timeout 50000",
+    "update": "npm run ncu && yarn && npm run commit && npm run release"
   },
   "nyc": {
     "exclude": [
