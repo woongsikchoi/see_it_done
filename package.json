@@ -49,7 +49,7 @@
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
     "lamed_io": "^1.0.12",
-    "lamed_test": "^2.1.20"
+    "lamed_test": "^2.1.22"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
