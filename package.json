@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_io": "^1.0.12",
+    "lamed_io": "^1.0.13",
     "lamed_test": "^2.1.22"
   },
   "devDependencies": {
