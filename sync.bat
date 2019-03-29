@@ -11,31 +11,31 @@ c:
 cd %path1%
 
 cd lamed_test
-start npm run update
+start npm run sync
 cd %path1%
 echo ----------------------------------[lamed_test
 
 cd lamed_io
-start npm run update
+start npm run sync
 cd %path1%
 echo ----------------------------------[lamed_io
 
 cd lamed_folder
-start npm run update
+start npm run sync
 cd %path1%
 echo ----------------------------------[lamed_folder
 
 cd lamed_flowchart
-start npm run update
+start npm run sync
 cd %path1%
 echo ----------------------------------[lamed_flowchart
 
 cd lamed_learn
-start npm run update
+start npm run sync
 cd %path1%
 echo ----------------------------------[lamed_learn
 
 cd see_it_done
-start npm run update
+start npm run sync
 cd %path1%
 echo ----------------------------------[see_it_done

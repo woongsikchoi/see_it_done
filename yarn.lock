@@ -1785,10 +1785,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lamed_io@^1.0.13:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.13.tgz#58b9d5ffa146d00f74d6b71fa23ffcc688088be1"
-  integrity sha512-KBJeQ+/cRAJrgHFrZ7QOAG5rG41eG99G7/UivTFczOlegdt/Yz2RuJgF8/u7XEOhPGsGYzqD81LogJUpxmTW2g==
+lamed_io@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.14.tgz#b1157ad14ad8867266cfcb97d79ae0563f661828"
+  integrity sha512-LLu4lWE7QMHN6Gh34uckt+sIFKtDVU3D31+EIfIdQQwrIDsUcr1DYQKk531HPZZqAgcIRo9zuVboAhi3MGRh3A==
   dependencies:
     clipboardy "^1.2.3"
     lamed_test "^2.1.22"
@@ -1798,6 +1798,11 @@ lamed_test@^2.1.22:
   version "2.1.22"
   resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.1.22.tgz#f37a4ac2d91147bc1aa204efdf419bdc1cf1937c"
   integrity sha512-fT7pZHD1x6NVQtMKA1ViRXi30j2YSvLUjsWq6tFKxOpKkmXNtdSrxG0eZ8A3/Z9OnpwHWjajHVHTx3+88Fig3g==
+
+lamed_test@^2.1.23:
+  version "2.1.23"
+  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.1.23.tgz#2b8693f5ed871a498e68d2886bd7d03a15fe7038"
+  integrity sha512-0KJd71sx2l4cfzoeEA4RmQgC0jTQhxj16wME8QE6NSzfUQI8qRefZG1W2OpmcidYJo6degtmWCBbsklfabnKUw==
 
 lcid@^2.0.0:
   version "2.0.0"
