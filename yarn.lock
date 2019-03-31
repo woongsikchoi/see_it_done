@@ -1799,10 +1799,10 @@ lamed_test@^2.1.22:
   resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.1.22.tgz#f37a4ac2d91147bc1aa204efdf419bdc1cf1937c"
   integrity sha512-fT7pZHD1x6NVQtMKA1ViRXi30j2YSvLUjsWq6tFKxOpKkmXNtdSrxG0eZ8A3/Z9OnpwHWjajHVHTx3+88Fig3g==
 
-lamed_test@^2.1.23:
-  version "2.1.23"
-  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.1.23.tgz#2b8693f5ed871a498e68d2886bd7d03a15fe7038"
-  integrity sha512-0KJd71sx2l4cfzoeEA4RmQgC0jTQhxj16wME8QE6NSzfUQI8qRefZG1W2OpmcidYJo6degtmWCBbsklfabnKUw==
+lamed_test@^2.1.24:
+  version "2.1.24"
+  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.1.24.tgz#5ab8a605acb614946fc2192915ce71d99e19c3fc"
+  integrity sha512-dkuGR43NY7DTkdv03CPJBwdtTTmRYd8JIyo8Uw1RAzVTQV/XJA7f5pPEQiqZYDt9jpxftPw+q1yxp1r3wosS5w==
 
 lcid@^2.0.0:
   version "2.0.0"
