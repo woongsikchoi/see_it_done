@@ -1,6 +1,6 @@
 {
   "name": "see_it_done",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "see_it_done template project",
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
