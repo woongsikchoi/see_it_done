@@ -49,13 +49,13 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_io": "^1.0.14",
-    "lamed_test": "^2.1.24"
+    "lamed_io": "^1.0.16",
+    "lamed_test": "^2.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "codecov": "^3.2.0",
-    "expect": "^24.5.0",
+    "expect": "^24.6.0",
     "mocha": "^6.0.2",
     "nyc": "^13.3.0",
     "snazzy": "^8.0.0",
