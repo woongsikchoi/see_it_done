@@ -1,7 +1,7 @@
 echo on
 REM ---- PATH -----------
-set path1=c:\projects\
-rem set path1=c:\_Git\
+rem set path1=c:\projects\
+set path1=c:\_Git\
 echo path=%path1%
 REM ---------------------
 pause
@@ -49,4 +49,4 @@ timeout /t 20
 cd see_it_done
 start npm run update
 cd %path1%
-echo ----------------------------------[see_it_don
+echo ----------------------------------[see_it_done
