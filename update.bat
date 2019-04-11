@@ -1,13 +1,12 @@
 echo on
 REM ---- PATH -----------
 rem set path1=c:\projects\
-set path1=c:\_Git\
+set path1=e:\_Git\
 echo path=%path1%
 REM ---------------------
 pause
 cls
 
-c:
 cd %path1%
 
 cd lamed_test
