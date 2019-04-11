@@ -1701,27 +1701,22 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lamed_folder@^1.1.2:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.3.tgz#128b0ffc8c6edbc251b15434e170b50e489a601e"
-  integrity sha512-f1/ZSnK05bh5GOW2jTZlq4cd3/b3lzk25GTB926fMiSVhs8hsvLPoerBPfTnluWR6lL0int5dHspluxrcrGpVA==
+lamed_folder@^1.1.3:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.4.tgz#a707cf66125dd618033655560f5621d1b14e1aea"
+  integrity sha512-juBIFFIyoW+OgJF38Gspl363Ilomy5eWjzZhMGcCkW9ZcjYfZ5EQHOIwXpSU53e4stawHVxYQ5a8zpqDzja3Bg==
   dependencies:
-    lamed_test "^2.2.1"
+    lamed_test "^2.2.2"
 
-lamed_io@^1.0.17:
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.17.tgz#955c5459c83b0bbf0232b017636231dfe802777f"
-  integrity sha512-S7XzuL/gxvSyMkkAno5ToJDGfkB4ShJZub3ZD8maQzi3wPqzyOcQTawbNsTAtHOi2AUc4PlbXf4iu/dGt1iz4A==
+lamed_io@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.18.tgz#46b9fee4f9eede598fc225b1e476fafac5001aad"
+  integrity sha512-mupG6XJ9mdRIsrKYT2UAUwSDUaoEsf/6tqa9qVIbQEvu3wRwfE3+Jn68CHRLJCb+oyD6RpV3mYRLxkJPoUZMNw==
   dependencies:
     clipboardy "^2.0.0"
-    lamed_folder "^1.1.2"
-    lamed_test "^2.2.1"
+    lamed_folder "^1.1.3"
+    lamed_test "^2.2.2"
     readline "^1.3.0"
-
-lamed_test@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.1.tgz#c508da5f0a31e04a0f50e5dbd3b16f323c9fe95f"
-  integrity sha512-gxTDMBaPMYgTGTaYFV2HxhdmwL8IMhmYnvV0nTH1vMrO6+5Za3QaLpiGuDDBQGjN0BUSaqR8yTaW/+CObslZqQ==
 
 lamed_test@^2.2.2:
   version "2.2.2"
