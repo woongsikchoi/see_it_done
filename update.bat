@@ -16,6 +16,12 @@ cd %path1%
 echo ----------------------------------[lamed_test
 
 timeout /t 20
+cd lamed_string
+start npm run update
+cd %path1%
+echo ----------------------------------[lamed_string
+
+timeout /t 20
 cd lamed_io
 start npm run update
 cd %path1%
