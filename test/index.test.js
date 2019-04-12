@@ -51,19 +51,19 @@ function TestAll (done) {
 /**
  * Execute the tests manually
  */
-function testRunner () {
+function testRunner (traceLevel = 0) {
+  let isRoot = require('lamed_io').isRootFolder() // const _lio = require('lamed_io')
+  _Trace({ isRoot })
+  if (isRoot) return
+
+  _Trace_Set(traceLevel)
   const done2 = (err) => {
     if (err !== undefined) { throw err }
   }
-  let isRoot = _lio.isRootFolder() // const _lio = require('lamed_io')
-  _Trace({ isRoot })
-
-  if (isRoot === false) {
-    _Trace_Set(0)
-    TestAll(done2)
-  } // Only run if not executed from the root folder
+  TestAll(done2) // Only run if not executed from the root folder
+  _logGreen('Success!!!')
 }
-testRunner()
+testRunner(0)
 
 // Exports --------------------------
 module.exports = { TestAll }
