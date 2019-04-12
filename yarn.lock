@@ -1701,20 +1701,20 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lamed_folder@^1.1.5:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.6.tgz#ddd6fecdd78cd2cc6e075edb747b0bff3268c4fa"
-  integrity sha512-xwNyqQ3Oj7k/9Nc5o2FD2155hlt8Hz3GC632PF1drwxDIRv29qlfebgQuWNSJ+F5qCg+C3KRL5Cbu7HGkAqvNw==
+lamed_folder@^1.1.6:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.7.tgz#a0ab133681afd1cbd0ea8ec74bbfd66abc85a324"
+  integrity sha512-sHPoXNlB3ZSoky65Xb6IPo0VvChwgg1XVaUbsUYAeYMfhFTMmb9BLAOgRNrifDUZYvYFZhiiKCBiAWc2dkhtlQ==
   dependencies:
     lamed_test "^2.2.2"
 
-lamed_io@^1.0.20:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.20.tgz#b76cb04a1b085749854ad81ae54987ae23a8ca0a"
-  integrity sha512-Z5pW8azduSg6+O1i/cfJRftrn8v6h9fmm216HH+3rzUtIS4Gnn/mGt7JDJc2CE0doc1NjrQq+V1iq11SFTUeFg==
+lamed_io@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.21.tgz#7ac95c706d663515a54fdadf05029145cc201858"
+  integrity sha512-lK82tDdkER2xH3qocdF63g4g63UN23/tYREmtUGOMr3P9WIPZjmUEsWnxBgMLGGA3h5hvRAYtBhh+ZrSeAmxlA==
   dependencies:
     clipboardy "^2.0.0"
-    lamed_folder "^1.1.5"
+    lamed_folder "^1.1.6"
     lamed_test "^2.2.2"
     readline "^1.3.0"
 
@@ -1722,6 +1722,11 @@ lamed_test@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.2.tgz#158e3a5a8bea17984ebffef74731f6705d6e8787"
   integrity sha512-PcK2AWYxWxzbHt4jxGVQ2yKU66TnxyxS6nc7Z1k2NZcvssAnMZ4BHAoNznbphFrPyIPSsFjXmcmcOCBnGLmgew==
+
+lamed_test@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.3.tgz#7bbea391cfa65ff45d4638f38b478bf6b01dba18"
+  integrity sha512-TLEV0QNK390pByGWzaDjZryC+Ddr3fTCaSanfrRQFQM+Owt78l3M5djJoswj+hbqaExUb/JVbJ0W6jGQ0cA1dA==
 
 lcid@^2.0.0:
   version "2.0.0"
