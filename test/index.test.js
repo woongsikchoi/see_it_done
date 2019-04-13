@@ -9,7 +9,6 @@ const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, 
   _Trace, _TraceLine, _TraceBold, _Trace_Table, _Trace_Heading } = _test
 /* eslint-enable */
 
-const _lio = require('lamed_io')
 const _app = require('../src/index')
 
 function test_1 (done) { // eslint-disable-line
@@ -22,16 +21,6 @@ function test_1 (done) { // eslint-disable-line
   // sync function
   // if (false) return done(new Error(error))
   // done()
-
-  // async function
-  // _lio.readFile(package1)
-  //   .then((text) => {
-  //     _Trace({ text })
-  //     done()
-  //   })
-  //   .catch((err) => {
-  //     done(new Error(error + '\n' + err.message))
-  //   })
 }
 
 /**

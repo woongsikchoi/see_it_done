@@ -8,6 +8,7 @@
     "lamed_test",
     "lamed_io",
     "lamed_folder",
+    "lamed_string",
     "lamed_flowchart",
     "lamed_floweditor",
     "lamed_learn"

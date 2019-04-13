@@ -20,15 +20,15 @@ const _lfolder = require('lamed_folder')
  */
 function header (command, root = 'c:\\projects\\') {
   let template =
-    "echo on\n" +
+    'echo on\n' +
     `REM ----[ ${command} ]---\n` +
     `set path1=${root}\n` +
-    "echo path=%path1%\n" +
-    "REM ---------------------\n" +
-    "pause\n" +
-    "cls\n" +
-    "\n" +
-    "cd %path1%\n\n"
+    'echo path=%path1%\n' +
+    'REM ---------------------\n' +
+    'pause\n' +
+    'cls\n' +
+    '\n' +
+    'cd %path1%\n\n'
   return template
 }
 
@@ -38,13 +38,13 @@ function header (command, root = 'c:\\projects\\') {
  * @param isFirst
  * @param timeout
  */
-function body(project, command, isFirst = false, timeout = 20) {
-  let template = ""
+function body (project, command, isFirst = false, timeout = 20) {
+  let template = ''
   if (isFirst === false) template += `timeout /t ${timeout}\n`
-   template +=
+  template +=
     `cd ${project}\n` +
     `${command}\n` +
-    "cd %path1%\n" +
+    'cd %path1%\n' +
     `echo ----------------------------------[${project}\n\n`
   return template
 }
@@ -55,16 +55,16 @@ function body(project, command, isFirst = false, timeout = 20) {
  * @param root
  * @param timeout
  */
-function buildFile(projects, command, root = 'c:\\projects\\', timeout = 20) {
+function buildFile (projects, command, root = 'c:\\projects\\', timeout = 20) {
   let result = header(command, root)
   for (let ii = 0; ii < projects.length; ii++) {
     let item = projects[ii]
-    result += body(item, command, (ii===0), timeout)
+    result += body(item, command, (ii === 0), timeout)
   }
   return result
 }
 
-const _root = _lfolder.fromRootFolder('',-1)
+const _root = _lfolder.fromRootFolder('', -1)
 const _projects = require('./package_zetup')
 const _timeout = _projects.timeout
 

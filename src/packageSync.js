@@ -12,10 +12,12 @@ const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, 
 // _Trace_Set(0)
 
 const _lio = require('lamed_io')
-const _folder = require('lamed_folder')
+const _lfolder = require('lamed_folder')
+require('lamed_string')
 const _packAdd = require('./package_add.json')
 const _packUpdate = require('./package_update.json')
 const _packSetup = require('./package_zetup.json')
+const _root = _lfolder.fromRootFolder('', -1)
 
 /*
 [Find all project json files]
@@ -24,27 +26,45 @@ const _packSetup = require('./package_zetup.json')
 //
 */
 
-function syncPackages() {
+async function syncPackages () {
   let projects = _packSetup.projects
+  let exclude = _packSetup.projects_add_exclude
+
   for (let ii = 0; ii < projects.length; ii++) {
-    let item = projects[ii]
+    let file = projects[ii]
+    let packageName = _root + file + '/package.json'
     // _log({item})
 
-    // Find the json files
-    let pack1 = jsonGet(item)
-
+    // Find the package.json file and sync
+    let package1 = {}
+    let packNew = {}
+    if (projects.includesAny(exclude) === false) {
+      package1 = jsonGet(packageName)
+      packNew = jsonSync(_packAdd, package1)
+      if (Ok(packNew)) {
+        let buffer = JSON.stringify(packNew, null, 2) + '\n'
+        await _lio.writeFile(packageName, buffer)
+      }
+    }
+    package1 = jsonGet(packageName)
+    packNew = jsonSync(_packUpdate, package1, true)
+    if (Ok(packNew)) {
+      let buffer = JSON.stringify(packNew, null, 2) + '\n'
+      await _lio.writeFile(packageName, buffer)
+    }
+    // return
   }
 }
+syncPackages()
 
 /**
  * If the file exist, then return it
  * @param name
  * @returns {*}
  */
-function jsonGet(name) {
-  let packageName = _folder.fromRootFolder(name, -1) + 'package.json'
+function jsonGet (packageName) {
   if (_lio.exist(packageName) === false) throw new Error(`'${packageName}' does not exist.`)
-  _log({packageName})
+  _log({ packageName })
   let package1 = require(packageName)
   return package1
 }
@@ -56,12 +76,12 @@ function jsonGet(name) {
  * @param sync - if true also update the item values
  * @returns {*}
  */
-function jsonSync(template, pack, sync = false) {
+function jsonSync (template, pack, sync = false) {
   let update = false
   for (const index in template) {
     if (index === '//') continue // <--------------------------
     let item = template[index]
-    let property = {index, item}
+    // let property = { index, item }
 
     // Check item
     let test = pack[index]
@@ -73,20 +93,18 @@ function jsonSync(template, pack, sync = false) {
     }
     if (typeof item !== 'object') {
       // Simple type ------------------------------
-      if (sync && pack[index] !== item)  {
+      if (sync && pack[index] !== item) {
         update = true
         _logGreen(`Update '${index}'`)
         pack[index] = item
       }
       // _log({property})
-    }
-    else {
+    } else {
       // This is an object  -------------
-
       for (const index2 in item) {
         if (index2 === '//') continue
         let item2 = item[index2]
-        let property2 = {index2, item2}
+        let property2 = { index2, item2 }
         // _log({property2})
         let test1 = pack[index]
         let test2 = test1[index2]
@@ -96,12 +114,11 @@ function jsonSync(template, pack, sync = false) {
           if (item2 === '') {
             _logGreen(`Remove '${index}.${index2}'`)
             delete test1[index2]
-          }
-          else {
+          } else {
             _logGreen(`Update '${index}.${index2}'`)
-            _log({property2})
+            _log({ property2 })
             test1[index2] = item2
-          }  // if value is '' remove it
+          } // if value is '' remove it
         } else if (sync && test1[index2] !== item2) {
           update = true
           _logGreen(`Update '${index}.${index2}'`)
@@ -112,23 +129,6 @@ function jsonSync(template, pack, sync = false) {
   }
   if (update) return pack
 }
-
-// let file = 'C:\\Projects\\see_it_done\\src\\test.json'
-// let package1 = require(file)
-// let packNew = jsonSync(_packAdd, package1)
-// if (Ok(packNew)) {
-//   _lio.writeFile(file, JSON.stringify(packNew, null, 2))
-// }
-// package1 = require(file)
-// packNew = jsonSync(_packUpdate, package1, true)
-// if (Ok(packNew)) {
-//   _lio.writeFile(file, JSON.stringify(packNew, null, 2))
-// }
-
-function batchFile() {
-
-}
-
 
 // Exports --------------------------
 module.exports = {}
