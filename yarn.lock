@@ -1701,12 +1701,12 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lamed_folder@^1.1.10:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.10.tgz#fdbaf2434eebda27bde9f5eea5af22b8d94d7c46"
-  integrity sha512-Ggum2+151SRVT5r+P0bKo4EuQpA77BPa9RK1u7P9nwye3EiEd0FSwRlIFF6iiojUJhA7oG08bOsoJBKdf8+lTQ==
+lamed_folder@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.11.tgz#c09a217ba6e3bbf9d92aa59df2e54f6afef0c424"
+  integrity sha512-aDrbsM5ZR9Q5MAp6uEkbnLhkXv712QsY1KugkWTSlvqzyI4eYF+tvzqJs1ep0KGgLZEY/hRu2dHMtlATApAXjQ==
   dependencies:
-    lamed_test "^2.2.4"
+    lamed_test "^2.2.5"
 
 lamed_folder@^1.1.6:
   version "1.1.7"
@@ -1735,10 +1735,10 @@ lamed_test@^2.2.2:
   resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.2.tgz#158e3a5a8bea17984ebffef74731f6705d6e8787"
   integrity sha512-PcK2AWYxWxzbHt4jxGVQ2yKU66TnxyxS6nc7Z1k2NZcvssAnMZ4BHAoNznbphFrPyIPSsFjXmcmcOCBnGLmgew==
 
-lamed_test@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.4.tgz#89d683927450648677b2ae415bc5650a7f99f900"
-  integrity sha512-CvJnqSFOaBuDGdp4in8iawWL4aAUtEp17jZDo+XCDl36oWVTO+/yDz8Q5azB0APzdBloO+phkBBmKQ34R/P+pg==
+lamed_test@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.5.tgz#e0b849eeee1dcc600deefbf77289dd5c94723145"
+  integrity sha512-T0y6l+9LeGZr7lv8miDymm9YqAzm21M0AxnHXQAsHD00EnLpufGDq2lS960Lkc5RhUXdHtR/Tbtt+z8bOAKsLw==
 
 lcid@^2.0.0:
   version "2.0.0"

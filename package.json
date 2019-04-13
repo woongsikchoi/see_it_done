@@ -16,13 +16,14 @@
     "bump": "npm version patch -m \"Bumping to %s\"",
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "release": "npm run rules && npm test && npm version patch -m \"Patch version %s\" && start npm run push",
-    "ncu": "ncu -u -l info --timeout 50000",
-    "update": "npm run ncu && yarn && npm run commit && npm run release",
-    "sync": "git pull && npm run ncu && yarn && npm run commit"
+    "ncu": "ncu -u -l info --timeout 70000",
+    "update": "",
+    "sync": "git pull && npm run ncu && yarn && npm run commit",
+    "updateAll": "npm run ncu && yarn && npm run commit && npm run release"
   },
   "nyc": {
     "exclude": [
-      "**/Test.runner.js",
+      "**/test.runner.js",
       "**/readline.js**"
     ]
   },
@@ -48,16 +49,15 @@
     "url": "https://github.com/perezLamed/see_it_done/issues"
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "lamed_folder": "^1.1.10",
+    "lamed_folder": "^1.1.11",
     "babel-eslint": "^10.0.1",
     "codecov": "^3.3.0",
     "expect": "^24.7.1",
     "lamed_io": "^1.0.21",
     "lamed_string": "^1.0.1",
-    "lamed_test": "^2.2.4",
+    "lamed_test": "^2.2.5",
     "mocha": "^6.1.3",
     "nyc": "^13.3.0",
     "snazzy": "^8.0.0",

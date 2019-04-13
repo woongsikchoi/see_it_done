@@ -11,7 +11,8 @@
     "lamed_string",
     "lamed_flowchart",
     "lamed_floweditor",
-    "lamed_learn"
+    "lamed_learn",
+    "see_it_done"
   ],
   "commands" : {
     "updateAll" : "start npm run updateAll",
