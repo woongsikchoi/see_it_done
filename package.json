@@ -17,7 +17,6 @@
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "release": "npm run rules && npm test && npm version patch -m \"Patch version %s\" && start npm run push",
     "ncu": "ncu -u -l info --timeout 70000",
-    "update": "",
     "sync": "git pull && npm run ncu && yarn && npm run commit",
     "updateAll": "npm run ncu && yarn && npm run commit && npm run release"
   },
@@ -36,7 +35,8 @@
       "**/out/",
       "/lib/select2/",
       "/lib/ckeditor/",
-      "tmp.js"
+      "tmp.js",
+      "**/templates/"
     ]
   },
   "repository": {
