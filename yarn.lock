@@ -1723,10 +1723,10 @@ lamed_test@^2.2.2:
   resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.2.tgz#158e3a5a8bea17984ebffef74731f6705d6e8787"
   integrity sha512-PcK2AWYxWxzbHt4jxGVQ2yKU66TnxyxS6nc7Z1k2NZcvssAnMZ4BHAoNznbphFrPyIPSsFjXmcmcOCBnGLmgew==
 
-lamed_test@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.3.tgz#7bbea391cfa65ff45d4638f38b478bf6b01dba18"
-  integrity sha512-TLEV0QNK390pByGWzaDjZryC+Ddr3fTCaSanfrRQFQM+Owt78l3M5djJoswj+hbqaExUb/JVbJ0W6jGQ0cA1dA==
+lamed_test@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.4.tgz#89d683927450648677b2ae415bc5650a7f99f900"
+  integrity sha512-CvJnqSFOaBuDGdp4in8iawWL4aAUtEp17jZDo+XCDl36oWVTO+/yDz8Q5azB0APzdBloO+phkBBmKQ34R/P+pg==
 
 lcid@^2.0.0:
   version "2.0.0"

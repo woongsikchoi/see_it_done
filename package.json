@@ -51,7 +51,7 @@
   "dependencies": {},
   "devDependencies": {
     "lamed_io": "^1.0.21",
-    "lamed_test": "^2.2.3",
+    "lamed_test": "^2.2.4",
     "babel-eslint": "^10.0.1",
     "codecov": "^3.3.0",
     "expect": "^24.7.1",
