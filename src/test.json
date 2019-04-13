@@ -1,0 +1,50 @@
+{
+  "author": "Perez Lamed van Niekerk",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "lamed_io": "^1.0.21",
+    "lamed_test": "^2.2.4",
+    "babel-eslint": "^10.0.1",
+    "codecov": "^3.3.0",
+    "expect": "^24.7.1",
+    "mocha": "^6.1.3",
+    "nyc": "^13.3.0",
+    "snazzy": "^8.0.0",
+    "standard": "^12.0.1",
+    "see_it_done": "*"
+  },
+  "scripts": {
+    "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\"",
+    "coverage_test": "nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"",
+    "coverage_report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage": "npm run coverage_test && npm run coverage_report",
+    "rules": "standard | snazzy",
+    "fix": "standard --fix",
+    "commit": "git commit -a -m \"release\"",
+    "bump": "npm version patch -m \"Bumping to %s\"",
+    "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
+    "release": "npm run rules && npm test && npm version patch -m \"Patch version %s\" && start npm run push",
+    "ncu": "ncu -u -l info --timeout 70000",
+    "updateAll": "npm run ncu && yarn && npm run commit && npm run release",
+    "sync": "git pull && npm run ncu && yarn && npm run commit"
+  },
+  "nyc": {
+    "exclude": [
+      "**/test.runner.js",
+      "**/readline.js**"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": [
+      "mocha"
+    ],
+    "ignore": [
+      "**/out/",
+      "/lib/select2/",
+      "/lib/ckeditor/",
+      "tmp.js"
+    ]
+  }
+}

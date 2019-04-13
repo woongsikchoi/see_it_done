@@ -1701,6 +1701,13 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
+lamed_folder@^1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.10.tgz#fdbaf2434eebda27bde9f5eea5af22b8d94d7c46"
+  integrity sha512-Ggum2+151SRVT5r+P0bKo4EuQpA77BPa9RK1u7P9nwye3EiEd0FSwRlIFF6iiojUJhA7oG08bOsoJBKdf8+lTQ==
+  dependencies:
+    lamed_test "^2.2.4"
+
 lamed_folder@^1.1.6:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.1.7.tgz#a0ab133681afd1cbd0ea8ec74bbfd66abc85a324"

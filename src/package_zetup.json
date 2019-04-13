@@ -1,0 +1,20 @@
+{
+  "package_add": "package_add.json",
+  "package_update": "package_update.json",
+  "projects_add_exclude": [
+    "lamed_test"
+  ],
+  "projects": [
+    "lamed_test",
+    "lamed_io",
+    "lamed_folder",
+    "lamed_flowchart",
+    "lamed_floweditor",
+    "lamed_learn"
+  ],
+  "commands" : {
+    "updateAll" : "start npm run updateAll",
+    "syncAll" : "start npm run sync"
+  },
+  "timeout" : "30"
+}

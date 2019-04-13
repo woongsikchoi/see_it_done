@@ -1,4 +1,5 @@
 console.log('Starting index.js.js...')
+// This is a sample js file for see_it_done
 /* jshint esversion: 6 */
 // ------------------------------------------------------
 
