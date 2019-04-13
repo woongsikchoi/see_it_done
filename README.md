@@ -1,11 +1,11 @@
 # see_it_done (put your name here)
 
-**AS A** <u>"JavaScript developer"</u>
-**I WANT TO ** <u>"kickstart for my projects and get the 
-automatic build, testing and relase pipline up and running"</u>
-**SO THAT I CAN** <u>"spend more time focus on new features"</u>
+<u>**AS A**</u> "JavaScript developer"<br>
+<u>**I WANT TO**</u> "kickstart for my projects and get the 
+automatic build, testing and relase pipline up and running"<br>
+<u>**SO THAT I CAN**</u> "spend more time focus on new features"
 
->**In short:** From lift-off to touchdown - get to the goal as quick as possible.
+>**In short:** From lift-off to touchdown - **get to the goal** as quick as possible.
 
 ### After executing the following instructions, replace with your README text:
 - Clone this repo to a folder on the same level as your other projects (all have the same parent folder)
