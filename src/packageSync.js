@@ -20,7 +20,6 @@ const _packSetup = require('./package_zetup.json')
 /*
 [Find all project json files]
 [do Add]
-[List differences]
 [do Update]
 //
 */
