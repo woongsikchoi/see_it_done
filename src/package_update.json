@@ -32,7 +32,9 @@
       "/lib/select2/",
       "/lib/ckeditor/",
       "tmp.js",
-      "**/templates/"
+      "**/templates/",
+      "**/dist/",
+      "**/docs/"
     ]
   }
 }
