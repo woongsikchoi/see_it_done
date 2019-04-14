@@ -16,7 +16,8 @@
   ],
   "commands" : {
     "updateAll" : "start npm run updateAll",
-    "syncAll" : "start npm run sync"
+    "syncAll" : "start npm run sync",
+    "commitAll" : "start npm run commitAll"
   },
   "timeout" : "30"
 }
