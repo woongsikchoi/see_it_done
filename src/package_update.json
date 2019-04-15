@@ -16,7 +16,7 @@
     "updateAll": "npm run ncu && npm run commit && npm run release",
     "commitAll": "npm run commit && npm run release",
     "update": "",
-    "sync": "git pull && npm run ncu && npm run commit"
+    "sync": "git pull && npm run ncu && npm test"
   },
   "nyc": {
     "exclude": [
