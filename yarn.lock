@@ -1701,38 +1701,34 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lamed_folder@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.2.0.tgz#e31da2ab7b7b75837c1f2de870a5416a94da19db"
-  integrity sha512-htO4YAw/E8ogZULnEOUk5pJNg4Ct3tgtCc9I6hQmC+NX25r01+Cy19ScEAD32/ysCwLRNxRL8T7x6ziaPiiZEg==
+lamed_folder@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/lamed_folder/-/lamed_folder-1.2.4.tgz#98ec32851d66c95ddd1d1b6d0716c5a82f6764ae"
+  integrity sha512-QSATVGP7uWv+3h7DUNDTpydvQTkkpPeBsJHlE5YQJzgVykU2GobbSzalA1xzApCBndpdQZ+prxdpz+4Cx4jCEw==
   dependencies:
-    lamed_string "^1.0.1"
-    lamed_test "^2.2.5"
+    lamed_string "^1.0.3"
+    lamed_test "^2.2.7"
 
-lamed_io@^1.0.22:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.0.22.tgz#8b62034026606b00df7bfbbc9971f14602361dea"
-  integrity sha512-FiwwmK/0lP7r3eu3hAVjfnz+kbwHaGGopJIrBs9/nzjNemEPD9pQ0HllUXeeUH1o7020VsYvyMEkk8Oac+zw2Q==
+lamed_io@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/lamed_io/-/lamed_io-1.1.3.tgz#c24671596f02bfa3704c6381144517a2a42deb64"
+  integrity sha512-oAshuXu1a8gfCND3ZGoSiBgfKC2mTPOFYJ/Ozb2BpJR6YlDirpDgrdji++DFehQvDFPqNIuSExDLH5ELBeMKmw==
   dependencies:
     clipboardy "^2.0.0"
-    lamed_folder "^1.2.0"
-    lamed_test "^2.2.5"
+    lamed_string "^1.0.3"
+    lamed_test "^2.2.7"
+    node-localstorage "^1.3.1"
     readline "^1.3.0"
 
-lamed_string@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/lamed_string/-/lamed_string-1.0.1.tgz#865e67f3f469d83774e03171c0f3296103025810"
-  integrity sha512-cogFUNzLbLkfamH5sFlRDwu4zZz3TupDVp7phjyiZ67061BLKyRl+lgRrge5X7iWuB8KGJ0HaVHA2ltvYWRuHQ==
+lamed_string@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/lamed_string/-/lamed_string-1.0.3.tgz#ed50bcbcbcf04ae19c8863c18170811449a10a86"
+  integrity sha512-IHxp3mzhBD0lWGyavfBMhlC2eHb92+DAG1aT8DH3St4/zn8sHIr8SrWDKlU/M1y4qcVwmYRxYnWYUsRvTPJUmg==
 
-lamed_test@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.5.tgz#e0b849eeee1dcc600deefbf77289dd5c94723145"
-  integrity sha512-T0y6l+9LeGZr7lv8miDymm9YqAzm21M0AxnHXQAsHD00EnLpufGDq2lS960Lkc5RhUXdHtR/Tbtt+z8bOAKsLw==
-
-lamed_test@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.6.tgz#9122b5813219d0c5c87945eb1c1a2f8ccbef1bfb"
-  integrity sha512-Z+1LNxL13ImzlHRJW872P+LLHoLb3bogw7HSD2uF2A9Bf/aiWgE2k2Sk/Z0UBhvH2ssyk2/W/DBhYsP81lc3yQ==
+lamed_test@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/lamed_test/-/lamed_test-2.2.7.tgz#29b0b932a4370f497604563b87408ffca1155d3a"
+  integrity sha512-sPA3sDVglqeHPSloTTQhazS1D0Ya7vvatnrkYQcAqzPipDT/HnBfuZyxpt3JjOdRbyJVE8yEZLR2i3+Fu4m/Nw==
 
 lcid@^2.0.0:
   version "2.0.0"
@@ -2011,6 +2007,13 @@ node-fetch@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
   integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
+
+node-localstorage@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/node-localstorage/-/node-localstorage-1.3.1.tgz#3177ef42837f398aee5dd75e319b281e40704243"
+  integrity sha512-NMWCSWWc6JbHT5PyWlNT2i8r7PgGYXVntmKawY83k/M0UJScZ5jirb61TLnqKwd815DfBQu+lR3sRw08SPzIaQ==
+  dependencies:
+    write-file-atomic "^1.1.4"
 
 normalize-package-data@^2.3.2:
   version "2.5.0"
@@ -2664,6 +2667,11 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
+slide@^1.1.5:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
+  integrity sha1-VusCfWW00tzmyy4tMsTUr8nh1wc=
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -3142,6 +3150,15 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+write-file-atomic@^1.1.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-1.3.4.tgz#f807a4f0b1d9e913ae7a48112e6cc3af1991b45f"
+  integrity sha1-+Aek8LHZ6ROuekgRLmzDrxmRtF8=
+  dependencies:
+    graceful-fs "^4.1.11"
+    imurmurhash "^0.1.4"
+    slide "^1.1.5"
 
 write-file-atomic@^2.4.2:
   version "2.4.2"
