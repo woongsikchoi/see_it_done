@@ -21,7 +21,7 @@
     "updateAll": "npm run ncu && npm run commit && npm run release",
     "patch": "npm version patch -m \"Patch version %s\"",
     "prep": "npm run fix && npm test && npm run patch",
-    "commitAll": "npm run commit && npm test && npm run push"
+    "commitAll": "yarn && npm run commit && npm test && npm run push"
   },
   "nyc": {
     "exclude": [
