@@ -14,9 +14,9 @@
     "release": "npm run rules && npm test && npm run patch && start npm run push",
     "ncu": "ncu -u -l info --timeout 70000 && yarn",
     "updateAll": "npm run ncu && npm run commit && npm run release",
-    "commitAll": "npm run commit && npm run release",
+    "commitAll": "npm run commit && npm test && npm run push",
     "update": "",
-    "sync": "git pull && npm run ncu && npm test"
+    "sync": "git pull && yarn && npm run ncu && npm test"
   },
   "nyc": {
     "exclude": [
