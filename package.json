@@ -17,11 +17,11 @@
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "release": "npm run rules && npm test && npm run patch && start npm run push",
     "ncu": "ncu -u -l info --timeout 70000 && yarn",
-    "sync": "git pull && npm run ncu && npm run commit",
+    "sync": "git pull && yarn && npm run ncu && npm test",
     "updateAll": "npm run ncu && npm run commit && npm run release",
     "patch": "npm version patch -m \"Patch version %s\"",
     "prep": "npm run fix && npm test && npm run patch",
-    "commitAll": "npm run commit && npm run release"
+    "commitAll": "yarn && npm run commit && npm test && npm run push"
   },
   "nyc": {
     "exclude": [

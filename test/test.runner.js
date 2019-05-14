@@ -11,7 +11,7 @@ const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, 
 
 const _run = require('./index.test')
 
-_Trace_Set(0)
+// _Trace_Set(0)
 // ------------------------------------------------------------------------------------------
 const _Node_Version = _test._Node_Version // eslint-disable-line
 _TraceLine()

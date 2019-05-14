@@ -68,7 +68,7 @@ const _root = _lfolder.fromRootFolder('', -1)
 const _projects = require('./package_zetup')
 const _timeout = _projects.timeout
 
-function writeBatch () {
+async function writeBatch () {
   let scripts = _projects.commands
   for (const item in scripts) {
     let command = scripts[item]
@@ -76,7 +76,8 @@ function writeBatch () {
     let file = buildFile(_projects.projects, command, _root, _timeout)
     _log(`Writing '${path}'...`)
     _logGreen(` '${command}'\n`)
-    _lio.writeFile(path, file)
+    file = file.replaceAll('\n', '\r\n')
+    await _lio.writeFile(path, file)
   }
 }
 writeBatch()
