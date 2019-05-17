@@ -22,7 +22,7 @@
     "updateAll" : {"npm" : "start npm run updateAll"},
     "syncAll" : {"npm" : "start npm run sync"},
     "commitAll" : {"npm" : "start npm run commitAll"},
-    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 0}
+    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3}
   },
   "timeout" : "30"
 }
