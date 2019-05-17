@@ -21,7 +21,7 @@
     "updateAll" : "start npm run updateAll",
     "syncAll" : "start npm run sync",
     "commitAll" : "start npm run commitAll",
-    "commitFast" : "start npm run commitAll"
+    "commitFast" : "start npm run commitFast"
   },
   "timeout" : "30"
 }
