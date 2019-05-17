@@ -19,10 +19,10 @@
     "see_it_start"
   ],
   "commands" : {
-    "updateAll" : "start npm run updateAll",
-    "syncAll" : "start npm run sync",
-    "commitAll" : "start npm run commitAll",
-    "commitFast" : "start npm run commitFast"
+    "updateAll" : {"npm" : "start npm run updateAll"},
+    "syncAll" : {"npm" : "start npm run sync"},
+    "commitAll" : {"npm" : "start npm run commitAll"},
+    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 0}
   },
   "timeout" : "30"
 }

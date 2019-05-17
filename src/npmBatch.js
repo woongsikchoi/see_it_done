@@ -71,9 +71,12 @@ const _timeout = _projects.timeout
 async function writeBatch () {
   let scripts = _projects.commands
   for (const item in scripts) {
-    let command = scripts[item]
+    let commdef = scripts[item]
+    let command = commdef['npm']
+    let timeout = commdef['timeout']
+    if (timeout === undefined) timeout = _timeout
     let path = _root + item + '.bat'
-    let file = buildFile(_projects.projects, command, _root, _timeout)
+    let file = buildFile(_projects.projects, command, _root, timeout)
     _log(`Writing '${path}'...`)
     _logGreen(` '${command}'\n`)
     file = file.replaceAll('\n', '\r\n')
