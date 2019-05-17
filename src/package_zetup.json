@@ -15,7 +15,8 @@
     "lamed_floweditor",
     "lamed_learn",
     "lamed_markdown",
-    "see_it_done"
+    "see_it_done",
+    "see_it_start"
   ],
   "commands" : {
     "updateAll" : "start npm run updateAll",
