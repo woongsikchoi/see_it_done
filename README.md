@@ -32,19 +32,24 @@ automatic build, testing and relase pipline up and running"<br>
 >**In short:** From lift-off to touchdown - **get to the goal** as quick as possible.
 
 ### After executing the following instructions, replace with your README text:
-- Clone this repo to a folder on the same level as your other projects (all have the same parent folder)
-- When creating a new project folder
-- Execute '**sid_clone.bat**' from your project folder.
-- Add your project to '**package_zetup.json**' and execute '**packageSync**'
+
+- Copy contents of "**see_it_start**" to your project folder
+- Edit "**package.json**" and "**.travis.yml**" and replace "**see_it_start**" with your project name.
+- Goto "**see_it_done**" project and
+  - Add your project to '**package_zetup.json**' and
+  - execute '**node src/packageSync**'
 - Execute following commands to setup the README.md
+  
 ```
 ll badges readme
 ll readme usage
 ```
 
+### To customise more:
+
 - In the src folder of **see_it_done** project edit
   - '**package_add.json**' (add default items for all your projects package files)
-  - '**package_update.json**' (add items you want to sync accross all your projects package files)
+  - '**package_update.json**' (add items you want to sync across all your projects package files)
   - '**package_zetup.json**' 
     - **add the projects** who's package files you want to sync to
     - add the project package files you want to **exclude** when defaults are synced
@@ -55,7 +60,7 @@ ll readme usage
 node src/packageSync
 ```
 - When all is setup, run the following command to **create a batch script** across your projects:
-```angular2html
+```
 node src/npmBatch
 ```
 

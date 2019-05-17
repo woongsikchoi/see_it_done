@@ -2,9 +2,11 @@
   "package_add": "package_add.json",
   "package_update": "package_update.json",
   "projects_add_exclude": [
-    "lamed_test"
+    "lamed_test",
+    "lamed_core"
   ],
   "projects": [
+    "lamed_core",
     "lamed_test",
     "lamed_io",
     "lamed_folder",
@@ -12,12 +14,14 @@
     "lamed_flowchart",
     "lamed_floweditor",
     "lamed_learn",
+    "lamed_markdown",
     "see_it_done"
   ],
   "commands" : {
     "updateAll" : "start npm run updateAll",
     "syncAll" : "start npm run sync",
-    "commitAll" : "start npm run commitAll"
+    "commitAll" : "start npm run commitAll",
+    "commitFast" : "start npm run commitAll"
   },
   "timeout" : "30"
 }
