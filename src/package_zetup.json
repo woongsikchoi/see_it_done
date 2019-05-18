@@ -4,9 +4,9 @@
   "projects": [
     "lamed_core",
     "lamed_test",
+    "lamed_string",
     "lamed_io",
     "lamed_folder",
-    "lamed_string",
     "lamed_flowchart",
     "lamed_floweditor",
     "lamed_learn",
