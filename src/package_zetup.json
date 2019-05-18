@@ -19,9 +19,9 @@
     "see_it_start"
   ],
   "commands" : {
-    "updateAll" : {"npm" : "start npm run updateAll"},
-    "syncAll" : {"npm" : "start npm run sync"},
-    "commitAll" : {"npm" : "start npm run commitAll"},
+    "upgrade" : {"npm" : "start npm run updateAll", "description": "Upgrade all projects"},
+    "pull" : {"npm" : "start npm run sync"},
+    "commitSave" : {"npm" : "start npm run commitAll"},
     "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3}
   },
   "timeout" : "30"
