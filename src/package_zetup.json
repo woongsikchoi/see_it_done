@@ -25,7 +25,7 @@
     "pull" : {"npm" : "start npm run sync"},
     "commitSave" : {"npm" : "start npm run commitAll"},
     "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3},
-    "commitLocal" : {"npm" : "start npm run commit", "timeout" : 3},
+    "commitLocal" : {"npm" : "start npm run commit", "timeout" : 0},
     "upgrade" : {"npm" : "start npm run updateAll", "description": "Upgrade all projects"},
     "release": {"npm": "start npm run release", "timeout": 10},
     "test" : {"npm": "start npm test", "timeout" : 3, "description": "Test all modules"},

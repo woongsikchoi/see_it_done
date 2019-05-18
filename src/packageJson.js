@@ -31,9 +31,9 @@ const _ProjectFolder = _lfolder.fromRootFolder()
 
 async function syncPackages () {
   let projects = _packSetup.projects
-  let exclude_add = _packSetup.projects_add_exclude
-  let exclude_git = _packSetup.projects_gitignore_exclude
-  const _gitIgnore = await _lio.readFile(_ProjectFolder +'.gitignore')
+  let exclude_add = _packSetup.projects_add_exclude // eslint-disable-line
+  let exclude_git = _packSetup.projects_gitignore_exclude // eslint-disable-line
+  const _gitIgnore = await _lio.readFile(_ProjectFolder + '.gitignore')
 
   for (let ii = 0; ii < projects.length; ii++) {
     let file = projects[ii]
@@ -82,7 +82,7 @@ syncPackages()
  */
 function jsonGet (packageName) {
   if (_lio.exist(packageName) === false) throw new Error(`'${packageName}' does not exist.`)
-  _log({packageName})
+  _log({ packageName })
   let package1 = require(packageName)
   return package1
 }
@@ -122,7 +122,7 @@ function jsonSync (template, pack, sync = false) {
       for (const index2 in item) {
         if (index2 === '//') continue
         let item2 = item[index2]
-        let property2 = {index2, item2}
+        let property2 = { index2, item2 }
         // _log({property2})
         let test1 = pack[index]
         let test2 = test1[index2]
@@ -134,7 +134,7 @@ function jsonSync (template, pack, sync = false) {
             delete test1[index2]
           } else {
             _logGreen(`Update '${index}.${index2}'`)
-            _log({property2})
+            _log({ property2 })
             test1[index2] = item2
           } // if value is '' remove it
         } else if (sync && test1[index2] !== item2) {
