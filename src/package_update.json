@@ -18,7 +18,8 @@
     "commitAll": "yarn && npm run fix && npm run commit && npm test && npm run push",
     "commitFast": "npm run commit && npm run push",
     "update": "",
-    "sync": "git pull && npm run ncu && yarn && npm test && npm commit"
+    "sync": "git pull && npm run ncu && yarn && npm test && npm commit",
+    "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\""
   },
   "nyc": {
     "exclude": [

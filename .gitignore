@@ -25,6 +25,7 @@ npm-debug.log
 .env
 .DS_Store
 package-lock.json
+yarn.lock
 
 # Webstorm
 .idea

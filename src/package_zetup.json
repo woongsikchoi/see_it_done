@@ -1,10 +1,6 @@
 {
   "package_add": "package_add.json",
   "package_update": "package_update.json",
-  "projects_add_exclude": [
-    "lamed_test",
-    "lamed_core"
-  ],
   "projects": [
     "lamed_core",
     "lamed_test",
@@ -17,6 +13,13 @@
     "lamed_markdown",
     "see_it_done",
     "see_it_start"
+  ],
+  "projects_add_exclude": [
+    "lamed_test",
+    "lamed_core"
+  ],
+  "projects_gitignore_exclude": [
+
   ],
   "commands" : {
     "upgrade" : {"npm" : "start npm run updateAll", "description": "Upgrade all projects"},

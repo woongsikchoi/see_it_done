@@ -5,9 +5,11 @@ console.log('Starting packageSync.js...')
 
 /* eslint-disable */
 const _test = require('lamed_test')
-const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed,
+const {
+  notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed,
   _ifTrace, _Trace_Set, _Trace_Get,
-  _Trace, _TraceLine, _TraceGreen, _TraceBold, _Trace_Table, _Trace_Heading } = _test
+  _Trace, _TraceLine, _TraceGreen, _TraceBold, _Trace_Table, _Trace_Heading
+} = _test
 /* eslint-enable */
 // _Trace_Set(0)
 
@@ -18,6 +20,7 @@ const _packAdd = require('./package_add.json')
 const _packUpdate = require('./package_update.json')
 const _packSetup = require('./package_zetup.json')
 const _root = _lfolder.fromRootFolder('', -1)
+const _ProjectFolder = _lfolder.fromRootFolder()
 
 /*
 [Find all project json files]
@@ -28,7 +31,9 @@ const _root = _lfolder.fromRootFolder('', -1)
 
 async function syncPackages () {
   let projects = _packSetup.projects
-  let exclude = _packSetup.projects_add_exclude
+  let exclude_add = _packSetup.projects_add_exclude
+  let exclude_git = _packSetup.projects_gitignore_exclude
+  const _gitIgnore = await _lio.readFile(_ProjectFolder +'.gitignore')
 
   for (let ii = 0; ii < projects.length; ii++) {
     let file = projects[ii]
@@ -38,7 +43,8 @@ async function syncPackages () {
     // Find the package.json file and sync
     let package1 = {}
     let packNew = {}
-    if (file.includesAny(exclude) === false) {
+    // Package.json add ---------------------------------
+    if (file.includesAny(exclude_add) === false) {
       package1 = jsonGet(packageName)
       packNew = jsonSync(_packAdd, package1)
       if (Ok(packNew)) {
@@ -47,15 +53,26 @@ async function syncPackages () {
       }
     }
 
+    // Package json update -------------------------
     package1 = jsonGet(packageName)
     packNew = jsonSync(_packUpdate, package1, true)
     if (Ok(packNew)) {
       let buffer = JSON.stringify(packNew, null, 2) + '\n'
       await _lio.writeFile(packageName, buffer)
     }
+
+    // GitIgnore -------------------------------------
+    if (file.includesAny(exclude_git) === false) {
+      let gitIgnorePath = _root + file + '/.gitIgnore'
+      let gitIgnore = await _lio.readFile(gitIgnorePath)
+      if (_gitIgnore !== gitIgnore) {
+        await _lio.writeFile(gitIgnorePath, _gitIgnore)
+      }
+    }
     // return
   }
 }
+
 syncPackages()
 
 /**
@@ -65,7 +82,7 @@ syncPackages()
  */
 function jsonGet (packageName) {
   if (_lio.exist(packageName) === false) throw new Error(`'${packageName}' does not exist.`)
-  _log({ packageName })
+  _log({packageName})
   let package1 = require(packageName)
   return package1
 }
@@ -105,7 +122,7 @@ function jsonSync (template, pack, sync = false) {
       for (const index2 in item) {
         if (index2 === '//') continue
         let item2 = item[index2]
-        let property2 = { index2, item2 }
+        let property2 = {index2, item2}
         // _log({property2})
         let test1 = pack[index]
         let test2 = test1[index2]
@@ -117,7 +134,7 @@ function jsonSync (template, pack, sync = false) {
             delete test1[index2]
           } else {
             _logGreen(`Update '${index}.${index2}'`)
-            _log({ property2 })
+            _log({property2})
             test1[index2] = item2
           } // if value is '' remove it
         } else if (sync && test1[index2] !== item2) {
