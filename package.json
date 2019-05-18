@@ -15,7 +15,7 @@
     "commit": "git add . && git commit -a -m \"config updates\"",
     "bump": "npm version patch -m \"Bumping to %s\"",
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
-    "release": "npm run fix && npm test && npm run patch && start npm run push",
+    "release": "npm run commit && npm run fix && npm test && npm run patch && start npm run push",
     "ncu": "ncu -u -l info --timeout 70000 && yarn",
     "sync": "git pull && npm run ncu && yarn && npm test && npm commit",
     "updateAll": "npm run ncu && npm run commit && npm run release",

@@ -22,7 +22,9 @@
     "upgrade" : {"npm" : "start npm run updateAll", "description": "Upgrade all projects"},
     "pull" : {"npm" : "start npm run sync"},
     "commitSave" : {"npm" : "start npm run commitAll"},
-    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3}
+    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3},
+    "release": {"npm": "start npm run release", "timeout": 10},
+    "test" : {"npm": "start npm test", "timeout" : 3, "description": "Test all modules"}
   },
   "timeout" : "30"
 }
