@@ -23,7 +23,8 @@
     "prep": "npm run fix && npm test && npm run patch",
     "commitAll": "yarn && npm run fix && npm run commit && npm test && npm run push",
     "status": "git log --since=2.weeks --pretty=format:\"%h - %an, %ar : %s\" && echo -------- && git status",
-    "commitFast": "npm run commit && npm run push"
+    "commitFast": "npm run commit && npm run push",
+    "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\""
   },
   "nyc": {
     "exclude": [
