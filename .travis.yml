@@ -9,10 +9,11 @@ node_js:
 - node
 - '11'
 - '10'
-# - '9'
+- '9'
 - '8'
-# - '6'
 - lts/*
+install:
+  - npm install
 script:
 - npm run test
 - npm run coverage

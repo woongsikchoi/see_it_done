@@ -12,7 +12,8 @@
     "lamed_learn",
     "see_it_done",
     "lamed_markdown",
-    "see_it_start"
+    "see_it_start",
+    "lamed_name"
   ],
   "projects_add_exclude": [
     "lamed_test",

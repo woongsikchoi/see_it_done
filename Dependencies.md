@@ -13,6 +13,7 @@ No | Project | Description | Dependencies | devDependencies | Total
 9 | **see_it_done(0.0.24)** | Agile project template | lamed_io(1.1.9)<br>lamed_string(1.1.6)<br>lamed_folder(1.2.11) | lamed_test(2.2.9) | 4 
 10 | **lamed_markdown(0.0.6)** | lamed_markdown template project | ---- | lamed_test(2.2.9) | 1 
 11 | **see_it_start(0.0.23)** | CI Project template | ---- | lamed_test(2.2.9) | 1 
+12 | **lamed_name(0.0.1)** | Naming of files | ---- | lamed_test(2.2.9) | 1 
 
 ## Excluded dependencies
 
