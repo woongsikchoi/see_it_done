@@ -83,6 +83,7 @@ async function syncPackages () {
   }
 
   await _lio.writeFile(_ProjectFolder + 'Dashboard.md', dashboards)
+  dependencyMD = dependencyMD + dependency_footer(exclude_dep)
   await _lio.writeFile(_ProjectFolder + 'Dependencies.md', dependencyMD)
 }
 
@@ -183,6 +184,20 @@ function dependency_Header() { // eslint-disable-line
     'No | Project | Description | Dependencies | devDependencies | Total\n' +
     ':----: | -------- | ------------ | :---------------: | :------------: | :-----:\n'
 
+  return result
+}
+
+/**
+ * Footer template for dependencies
+ * @returns {string}
+ */
+function dependency_footer(dependency_exclude) { // eslint-disable-line
+  let result = '\n## Excluded dependencies\n\n'
+
+  for (let ii = 0; ii < dependency_exclude.length; ii++) {
+    let item = dependency_exclude[ii]
+    result += '- ' + item + '\n'
+  }
   return result
 }
 
