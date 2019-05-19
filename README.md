@@ -78,4 +78,6 @@ node src/packageSync
 node src/npmBatch
 ```
 
+## [About Team](./team.md)
+
 [![license](https://img.shields.io/github/license/perezLamed/see_it_done.svg?style=flat)](https://github.com/perezLamed/see_it_done)
