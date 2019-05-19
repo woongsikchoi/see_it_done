@@ -69,14 +69,25 @@ ll readme usage
     - add the project package files you want to **exclude** when defaults are synced
     - add the **npm commands** you want to automatic run across projects
     - set the default timeout time
+    - set you .gitIgnore file you want to sync accross all your projects
 - When all is setup, run the following command to **sync all package.json** files across your projects:
 ```
 node src/packageSync
 ```
-- When all is setup, run the following command to **create a batch script** across your projects:
+- When all is setup, run the following command to **create batch scripts** across your projects:
 ```
 node src/npmBatch
 ```
+
+There are already batch scripts defined to do the following:
+- **Commit** accross all projects:
+  - local, (local commit only) 
+  - fast, (commit and push)
+  - safe (commit and push if all tests completed successfully)
+- **Pull** accross all projects
+- Remove files from git for all projects (after update of **.gitIgnore**)
+- **Upgrade** all dependencies across all projects (and run CI pipeline)
+- Run **unit tests** across all projects 
 
 ## [About Team](./team.md)
 

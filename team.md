@@ -32,7 +32,7 @@ main goal of the project is to help a person to learn new concepts and to retain
 This project has had a major impact on his life and is used daily to help him learn and remember new things.
 - Many supporting projects were started in order to facilitate the "**see it done**" project. 
 See [dashboard](https://github.com/perezLamed/see_it_done/blob/master/README.md).
-- In order to easily define processes, Lamed designed a flowchart markdown:
+- In order to easily define processes, Perez designed a flowchart markdown:
   - [lamed_flowchart](https://github.com/perezLamed/lamed_flowchart) project (Markdown flowcharts). 
   See [samples](https://perezlamed.github.io/lamed_flowchart/).
   - [lamed_floweditor](https://github.com/perezLamed/lamed_floweditor) (Markdown flowchart editor) 
