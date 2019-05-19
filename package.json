@@ -1,7 +1,7 @@
 {
   "name": "see_it_done",
   "version": "0.0.24",
-  "description": "see_it_done template project",
+  "description": "Agile project template",
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
   "scripts": {
@@ -24,7 +24,8 @@
     "commitAll": "yarn && npm run fix && npm run commit && npm test && npm run push",
     "status": "git log --since=2.weeks --pretty=format:\"%h - %an, %ar : %s\" && echo -------- && git status",
     "commitFast": "npm run commit && npm run push",
-    "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\""
+    "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
+    "test_yarn": "yarn && npm test"
   },
   "nyc": {
     "exclude": [
@@ -58,19 +59,18 @@
     "url": "https://github.com/perezLamed/see_it_done/issues"
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "lamed_folder": "^1.2.11",
-    "babel-eslint": "^10.0.1",
-    "codecov": "^3.5.0",
-    "expect": "^24.8.0",
+  "dependencies": {
     "lamed_io": "^1.1.9",
     "lamed_string": "^1.1.6",
+    "lamed_folder": "^1.2.11"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "codecov": "^3.5.0",
     "lamed_test": "^2.2.9",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "snazzy": "^8.0.0",
-    "standard": "^12.0.1",
-    "see_it_done": "*"
+    "standard": "^12.0.1"
   }
 }

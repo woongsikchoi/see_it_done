@@ -4,7 +4,6 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "lamed_test": "^2.2.4",
     "babel-eslint": "^10.0.1",
     "codecov": "^3.3.0",
     "mocha": "^6.1.3",

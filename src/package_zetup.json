@@ -10,8 +10,8 @@
     "lamed_flowchart",
     "lamed_floweditor",
     "lamed_learn",
-    "lamed_markdown",
     "see_it_done",
+    "lamed_markdown",
     "see_it_start"
   ],
   "projects_add_exclude": [
@@ -21,6 +21,14 @@
   "projects_gitignore_exclude": [
 
   ],
+  "projects_dependencies_exclude": [
+    "babel-eslint",
+    "mocha",
+    "snazzy",
+    "standard",
+    "codecov",
+    "nyc"
+  ],
   "commands" : {
     "pull" : {"npm" : "start npm run sync"},
     "commitSafe" : {"npm" : "start npm run commitAll"},
@@ -29,6 +37,7 @@
     "upgrade" : {"npm" : "start npm run updateAll", "description": "Upgrade all projects"},
     "release": {"npm": "start npm run release", "timeout": 10},
     "test" : {"npm": "start npm test", "timeout" : 3, "description": "Test all modules"},
+    "testYarn" : {"npm": "start npm run test_yarn", "timeout" : 7, "description": "Yarn and test all modules"},
     "gitfix" : {"npm": "start npm run gitfix", "timeout": 3}
   },
   "timeout" : "30"

@@ -33,6 +33,10 @@ async function syncPackages () {
   let projects = _packSetup.projects
   let exclude_add = _packSetup.projects_add_exclude // eslint-disable-line
   let exclude_git = _packSetup.projects_gitignore_exclude // eslint-disable-line
+  let exclude_dep = _packSetup.projects_dependencies_exclude // eslint-disable-line
+  let dependencyMD = dependency_Header()
+  let dashboards = dashboard_Header()
+
   const _gitIgnore = await _lio.readFile(_ProjectFolder + '.gitignore')
 
   for (let ii = 0; ii < projects.length; ii++) {
@@ -69,8 +73,17 @@ async function syncPackages () {
         await _lio.writeFile(gitIgnorePath, _gitIgnore)
       }
     }
+
+    // Dashboards
+    dashboards += dashboard_Template(ii + 1, file)
+    // Dependencies --------------------------------
+    dependencyMD += dependency(ii + 1, package1, exclude_dep)
+
     // return
   }
+
+  await _lio.writeFile(_ProjectFolder + 'Dashboard.md', dashboards)
+  await _lio.writeFile(_ProjectFolder + 'Dependencies.md', dependencyMD)
 }
 
 syncPackages()
@@ -146,6 +159,98 @@ function jsonSync (template, pack, sync = false) {
     }
   }
   if (update) return pack
+}
+
+/**
+ * Create dependency markdown information
+ * @param pack
+ * @returns {string}
+ */
+function dependency (no, pack, dependency_exclude) { // eslint-disable-line
+  const { name, version, description, dependencies, devDependencies } = pack
+  // _logRed(name)
+  let project = name + '(' + version + ')'
+  return dependency_Template(no, project, description, dependencies, devDependencies, dependency_exclude)
+}
+
+/**
+ * Header template for dependencies
+ * @returns {string}
+ */
+function dependency_Header() { // eslint-disable-line
+  let result =
+    '# Project dependencies\n\n' +
+    'No | Project | Description | Dependencies | devDependencies | Total\n' +
+    ':----: | -------- | ------------ | :---------------: | :------------: | :-----:\n'
+
+  return result
+}
+
+/**
+ * The dependency template for each project
+ * @param project
+ * @param description
+ * @param dependencies
+ * @param devDependencies
+ * @param dependency_exclude
+ * @returns {string}
+ */
+function dependency_Template(no, project, description, dependencies, devDependencies, dependency_exclude) { // eslint-disable-line
+  let result = `${no} | **${project}** | ${description} | `
+
+  let ii = 0
+  for (const index in dependencies) {
+    if (index === '//') continue // <--------------------------
+    if (index.includesAny(dependency_exclude)) continue // <----------------
+
+    let item = dependencies[index]
+    if (ii !== 0) result += '<br>'
+    let dep = index + '(' + item.replace('^', '') + ')'
+    result += dep
+    ii++
+  }
+  if (ii === 0) result += '----'
+
+  result += ' | '
+  let jj = 0
+  for (const index in devDependencies) {
+    if (index === '//') continue // <--------------------------
+    if (index.includesAny(dependency_exclude)) continue // <----------------
+
+    let item = devDependencies[index]
+    if (jj !== 0) result += '<br>'
+    let dep = index + '(' + item.replace('^', '') + ')'
+    result += dep
+    jj++
+  }
+  if (jj === 0) result += '----'
+
+  result += ` | ${(ii + jj)} \n`
+  return result
+}
+
+/**
+ * Header template for dashboard
+ * @returns {string}
+ */
+function dashboard_Header() { // eslint-disable-line
+  let result =
+    '# Project dashboards\n\n' +
+    'No | Project  | NPM | Build | Coverage | Quality | Downloads\n' +
+    ':----: | ---- | :----: | ---- | ----- | ----- | :----:\n'
+
+  return result
+}
+
+function dashboard_Template(no, project) { // eslint-disable-line
+  let result = `${no} | [${project}](https://github.com/perezLamed/${project}) | ` +
+    `[![npm](https://img.shields.io/npm/v/${project}.svg)](https://www.npmjs.org/package/${project}) |` +
+    `[![Build Status](https://travis-ci.org/perezLamed/${project}.svg?branch=master)](https://travis-ci.org/perezLamed/${project}) |` +
+    `[![codecov](https://codecov.io/gh/perezLamed/${project}/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/${project}) |` +
+    `[![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/${project}/badge)](https://www.codefactor.io/repository/github/perezlamed/${project}) |` +
+    `[![downloads](http://img.shields.io/npm/dt/${project}.svg?style=flat)](https://www.npmjs.org/package/${project})\n`
+
+  return result
 }
 
 // Exports --------------------------
