@@ -31,7 +31,7 @@
     "nyc"
   ],
   "commands" : {
-    "pull" : {"npm" : "start npm run sync"},
+    "pull" : {"npm" : "start npm run pull"},
     "commitSafe" : {"npm" : "start npm run commitAll"},
     "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3},
     "commitLocal" : {"npm" : "start npm run commit", "timeout" : 0},
