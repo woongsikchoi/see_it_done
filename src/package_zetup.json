@@ -31,7 +31,7 @@
     "nyc"
   ],
   "commands" : {
-    "pull" : {"npm" : "start npm run pull", "description" : "Pull changes from master for all projects and do yarn"},
+    "pull" : {"npm" : "start npm run pull", "timeout" : 10, "description" : "Pull changes from master for all projects and do yarn"},
     "commitSafe" : {"npm" : "start npm run commitAll", "description" : "Run tests and if success commit changes to master"},
     "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3, "description" : "Fast commit to master (no tests)"},
     "commitLocal" : {"npm" : "start npm run commit", "timeout" : 0, "description" : "Local commit only"},
