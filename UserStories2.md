@@ -1,0 +1,1 @@
+13 | **lamed_name <br> [![npm](https://img.shields.io/npm/v/lamed_name.svg)](https://www.npmjs.org/package/lamed_name)** | Naming of files | **AS A** <u>"JavaScript developer"</u> **I WANT TO** <u>"write simple error free code"</u> **SO THAT I CAN** <u>"to ensure quality and maintainability"</u>

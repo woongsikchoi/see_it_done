@@ -1,5 +1,5 @@
 {
-  "//" : "Ensure these items are synced accross projects",
+  "//" : "Ensure these items are synced across projects",
   "scripts": {
     "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
     "test_yarn": "yarn && npm test",
@@ -10,18 +10,19 @@
     "fix": "standard --fix",
     "status": "git log --since=2.weeks --pretty=format:\"%h - %an, %ar : %s\" && echo -------- && git status",
     "commit": "git add . && git commit -a -m \"config updates\"",
+    "commitAll": "yarn && npm run fix && npm run commit && npm test && npm run push",
+    "commitFast": "npm run commit && npm run push && git status",
+    "pull": "git pull && yarn && npm test",
+    "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "patch": "npm version patch -m \"Patch version %s\"",
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "prep": "npm run fix && npm test && npm run patch",
     "release": "npm run fix && npm test && npm run patch && start npm run push",
     "ncu": "ncu -u -l info --timeout 70000 && yarn",
-    "updateAll": "npm run ncu && npm run commit && npm run release",
-    "commitAll": "yarn && npm run fix && npm run commit && npm test && npm run push",
-    "commitFast": "npm run commit && npm run push && git status",
+    "updateAll": "",
+    "upgrade": "npm run ncu && npm run commit && npm run release",
     "update": "",
-    "sync" : "",
-    "pull": "git pull && yarn && npm test",
-    "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\""
+    "sync" : ""
   },
   "nyc": {
     "exclude": [

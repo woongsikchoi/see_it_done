@@ -28,7 +28,6 @@ const _ProjectFolder = _lfolder.fromRootFolder()
 [do Update]
 //
 */
-
 async function syncPackages () {
   let projects = _packSetup.projects
   let exclude_add = _packSetup.projects_add_exclude // eslint-disable-line
@@ -36,6 +35,7 @@ async function syncPackages () {
   let exclude_dep = _packSetup.projects_dependencies_exclude // eslint-disable-line
   let dependencyMD = dependency_Header()
   let dashboards = dashboard_Header()
+  let story = story_Header()
 
   const _gitIgnore = await _lio.readFile(_ProjectFolder + '.gitignore')
 
@@ -78,13 +78,15 @@ async function syncPackages () {
     dashboards += dashboard_Template(ii + 1, file)
     // Dependencies --------------------------------
     dependencyMD += dependency(ii + 1, package1, exclude_dep)
-
+    // User stories
+    story = story_(ii+1, package1)
     // return
   }
 
   await _lio.writeFile(_ProjectFolder + 'Dashboard.md', dashboards)
   dependencyMD = dependencyMD + dependency_footer(exclude_dep)
   await _lio.writeFile(_ProjectFolder + 'Dependencies.md', dependencyMD)
+  await _lio.writeFile(_ProjectFolder + 'UserStories2.md', story)
 }
 
 syncPackages()
@@ -168,9 +170,9 @@ function jsonSync (template, pack, sync = false) {
  * @returns {string}
  */
 function dependency (no, pack, dependency_exclude) { // eslint-disable-line
-  const { name, version, description, dependencies, devDependencies } = pack
+  const { name, description, dependencies, devDependencies } = pack
   // _logRed(name)
-  let project = name + '(' + version + ')'
+  let project = `${name} <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
   return dependency_Template(no, project, description, dependencies, devDependencies, dependency_exclude)
 }
 
@@ -240,7 +242,7 @@ function dependency_Template(no, project, description, dependencies, devDependen
   }
   if (jj === 0) result += '----'
 
-  result += ` | ${(ii + jj)} \n`
+  result += ` | ${(ii + jj)}\n`
   return result
 }
 
@@ -268,5 +270,44 @@ function dashboard_Template(no, project) { // eslint-disable-line
   return result
 }
 
+/**
+ * Create dependency markdown information
+ * @param pack
+ * @returns {string}
+ */
+function story_ (no, pack) { // eslint-disable-line
+  const { name, description, role, task, reason } = pack
+  // _logRed(name)
+  let project = `${name} <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
+  return story_Template(no, project, description, role, task, reason)
+}
+
+/**
+ * Header template for user stories
+ * @returns {string}
+ */
+function story_Header() { // eslint-disable-line
+  let result =
+    'No | Project | Description | Story\n' +
+    '---- | ---- | ---- | ----\n'
+
+  return result
+}
+
+/**
+ * The dependency template for each project
+ * @param project
+ * @param description
+ * @param role
+ * @param task
+ * @param reason
+ * @returns {string}
+ */
+function story_Template(no, project, description, role, task, reason) { // eslint-disable-line
+  let result = `${no} | **${project}** | ${description} | `
+  let story = `**AS A** <u>"${role}"</u> **I WANT TO** <u>"${task}"</u> **SO THAT I CAN** <u>"${reason}"</u>`
+
+  return result + story
+}
 // Exports --------------------------
 module.exports = {}
