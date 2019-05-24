@@ -17,7 +17,6 @@
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "release": "npm run fix && npm test && npm run patch && start npm run push",
     "ncu": "ncu -u -l info --timeout 70000 && yarn",
-    "updateAll": "",
     "patch": "npm version patch -m \"Patch version %s\"",
     "prep": "npm run fix && npm test && npm run patch",
     "commitAll": "yarn && npm run fix && npm run commit && npm test && npm run push",

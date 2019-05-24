@@ -79,14 +79,14 @@ async function syncPackages () {
     // Dependencies --------------------------------
     dependencyMD += dependency(ii + 1, package1, exclude_dep)
     // User stories
-    story = story_(ii+1, package1)
+    story += story_(ii+1, package1)
     // return
   }
 
   await _lio.writeFile(_ProjectFolder + 'Dashboard.md', dashboards)
   dependencyMD = dependencyMD + dependency_footer(exclude_dep)
   await _lio.writeFile(_ProjectFolder + 'Dependencies.md', dependencyMD)
-  await _lio.writeFile(_ProjectFolder + 'UserStories2.md', story)
+  await _lio.writeFile(_ProjectFolder + 'UserStories.md', story)
 }
 
 syncPackages()
@@ -288,6 +288,7 @@ function story_ (no, pack) { // eslint-disable-line
  */
 function story_Header() { // eslint-disable-line
   let result =
+    '# User Stories\n\n' +
     'No | Project | Description | Story\n' +
     '---- | ---- | ---- | ----\n'
 
@@ -305,7 +306,7 @@ function story_Header() { // eslint-disable-line
  */
 function story_Template(no, project, description, role, task, reason) { // eslint-disable-line
   let result = `${no} | **${project}** | ${description} | `
-  let story = `**AS A** <u>"${role}"</u> **I WANT TO** <u>"${task}"</u> **SO THAT I CAN** <u>"${reason}"</u>`
+  let story = `**AS A** <u>"${role}"</u> **I WANT TO** <u>"${task}"</u> **SO THAT I CAN** <u>"${reason}"</u>\n`
 
   return result + story
 }
