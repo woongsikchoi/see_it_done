@@ -79,7 +79,7 @@ async function syncPackages () {
     // Dependencies --------------------------------
     dependencyMD += dependency(ii + 1, package1, exclude_dep)
     // User stories
-    story += story_(ii+1, package1)
+    story += story_(ii + 1, package1)
     // return
   }
 
