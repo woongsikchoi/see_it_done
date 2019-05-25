@@ -18,10 +18,16 @@ const _lfolder = require('lamed_folder')
  *  Create the header for the batch file
  * @param root
  */
-function header (command, root = 'c:\\projects\\') {
-  let template =
-    'echo on\n' +
-    `REM ----[ ${command} ]---\n` +
+function header (npm, cmd, descr, root = 'c:\\projects\\') {
+  if (notOk(descr)) descr = npm
+  if (notOk(descr)) descr = cmd
+  let template = ''
+  if (Ok(npm)) {
+    // npm --------------------------------
+    template +=
+    'echo off\n' +
+    `REM ----[ ${descr} ]---\n` +
+    `echo "${npm}"\n` +
     `set path1=${root}\n` +
     'echo path=%path1%\n' +
     'REM ---------------------\n' +
@@ -29,6 +35,17 @@ function header (command, root = 'c:\\projects\\') {
     'cls\n' +
     '\n' +
     'cd %path1%\n\n'
+  } else {
+    // cmd ---------------------------------
+    template +=
+      'echo off\n' +
+      `REM ----[ ${descr} ]---\n` +
+      `echo "${cmd}"\n` +
+      'REM ---------------------\n' +
+      'pause\n' +
+      'cls\n\n'
+  }
+
   return template
 }
 
@@ -38,16 +55,31 @@ function header (command, root = 'c:\\projects\\') {
  * @param isFirst
  * @param timeout
  */
-function body (project, command, isFirst = false, timeout = 20) {
+function bodyNPM (project, npm, progress, isFirst = false, timeout = 20) {
   let template = ''
   if (isFirst === false) template += `timeout /t ${timeout}\n`
   template +=
     `cd ${project}\n` +
-    `${command}\n` +
+    `${npm}\n` +
     'cd %path1%\n' +
-    `echo ----------------------------------[${project}\n\n`
+    `echo ----------------------------------[${project} ${progress}]\n\n`
   return template
 }
+
+/**
+ * Create the body for the batch file
+ * @param project
+ * @param isFirst
+ * @param timeout
+ */
+function bodyCMD (project, cmd, progress, isFirst = false, timeout = 20) {
+  let template = ''
+  // if (isFirst === false) template += `timeout /t ${timeout}\n`
+  template += `echo ----------------------------------[${project} ${progress}] \n${cmd}\n\n`
+  template = template.replaceAll('$repo_name$', project)
+  return template
+}
+
 
 /**
  * Build the batch file
@@ -55,11 +87,24 @@ function body (project, command, isFirst = false, timeout = 20) {
  * @param root
  * @param timeout
  */
-function buildFile (projects, command, root = 'c:\\projects\\', timeout = 20) {
-  let result = header(command, root)
-  for (let ii = 0; ii < projects.length; ii++) {
-    let item = projects[ii]
-    result += body(item, command, (ii === 0), timeout)
+function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeout = 20) {
+  let result = header(npm, cmd, descr, root)
+
+  if (Ok(npm)) {
+    // npm -------------------------
+    for (let ii = 0; ii < projects.length; ii++) {
+      let item = projects[ii]
+      let progress = `(${(ii+1)} of ${projects.length})`
+      result += bodyNPM(item, npm, progress, (ii === 0), timeout)
+    }
+  } else {
+    // cmd -----------------------------
+    for (let ii = 0; ii < projects.length; ii++) {
+      let item = projects[ii]
+      let progress = `(${(ii+1)} of ${projects.length})`
+      result += bodyCMD(item, cmd, progress, (ii === 0), timeout)
+    }
+
   }
   return result
 }
@@ -72,13 +117,17 @@ async function writeBatch () {
   let scripts = _projects.commands
   for (const item in scripts) {
     let commdef = scripts[item]
-    let command = commdef['npm']
+    let npm = commdef['npm']
+    let cmd = commdef['cmd']
+    let descr = commdef['description']
     let timeout = commdef['timeout']
     if (timeout === undefined) timeout = _timeout
     let path = _root + item + '.bat'
-    let file = buildFile(_projects.projects, command, _root, timeout)
+    let file = buildBatFile(_projects.projects, npm, cmd, descr, _root, timeout)
+
     _log(`Writing '${path}'...`)
-    _logGreen(` '${command}'\n`)
+    if (Ok(npm)) _logGreen(` '${npm}'\n`)
+    else _logGreen(` '${cmd}'\n`)
     file = file.replaceAll('\n', '\r\n')
     await _lio.writeFile(path, file)
   }

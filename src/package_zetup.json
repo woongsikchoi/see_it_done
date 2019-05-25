@@ -40,7 +40,9 @@
     "release": {"npm": "start npm run release", "timeout": 10, "description" : "Release committed changes to master (no version inc)"},
     "test" : {"npm": "start npm test", "timeout" : 3, "description": "Test all projects"},
     "testYarn" : {"npm": "start npm run test_yarn", "timeout" : 7, "description": "Do yarn and test all modules"},
-    "gitfix" : {"npm": "start npm run gitfix", "timeout": 3, "description": "Ensure .gitIgnore files are ignored for all projects"}
+    "gitfix" : {"npm": "start npm run gitfix", "timeout": 3, "description": "Ensure .gitIgnore files are ignored for all projects"},
+    "setup" : {"cmd":  "git clone https://github.com/perezLamed/$repo_name$.git", "description" :  "Setup the lamed repos"},
+    "setupYarn" : {"npm": "start npm run test_yarn", "timeout" : 55, "description": "Do yarn and test all new modules"}
   },
   "timeout" : "30",
   "travis" : {
