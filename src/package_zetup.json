@@ -42,5 +42,15 @@
     "testYarn" : {"npm": "start npm run test_yarn", "timeout" : 7, "description": "Do yarn and test all modules"},
     "gitfix" : {"npm": "start npm run gitfix", "timeout": 3, "description": "Ensure .gitIgnore files are ignored for all projects"}
   },
-  "timeout" : "30"
+  "timeout" : "30",
+  "travis" : {
+    "os" : ["linux, osx"],
+    "os_quick": ["linux"],
+    "node_js": ["node", "11", "10", "9", "8", "7", "6", "lts/*"],
+    "node_js_quick": ["lts/*"]
+  },
+  "travis_exclude" : [
+    "lamed_vscode"
+  ],
+  "travis_mode": "quick"
 }
