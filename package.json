@@ -61,9 +61,9 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_io": "^1.1.10",
+    "lamed_io": "^1.1.11",
     "lamed_string": "^1.1.7",
-    "lamed_folder": "^1.2.13"
+    "lamed_folder": "^1.2.14"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
