@@ -23,9 +23,10 @@
     "status": "git log --since=2.weeks --pretty=format:\"%h - %an, %ar : %s\" && echo -------- && git status",
     "commitFast": "npm run commit && npm run push && git status",
     "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
-    "test_yarn": "yarn && npm test",
+    "test_yarn": "yarn && npm test && npm run fix",
     "pull": "git pull && yarn && npm test",
-    "upgrade": "npm run ncu && npm run commit && npm run release"
+    "upgrade": "npm run ncu && npm run commit && npm run release",
+    "beta": "npm run commit && npm run release"
   },
   "nyc": {
     "exclude": [

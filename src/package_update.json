@@ -2,7 +2,7 @@
   "//" : "Ensure these items are synced across projects",
   "scripts": {
     "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
-    "test_yarn": "yarn && npm test",
+    "test_yarn": "yarn && npm test && npm run fix",
     "coverage_test": "nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000",
     "coverage_report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "coverage": "npm run coverage_test && npm run coverage_report",
@@ -18,9 +18,10 @@
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "prep": "npm run fix && npm test && npm run patch",
     "release": "npm run fix && npm test && npm run patch && start npm run push",
+    "beta": "npm run commit && npm run release",
     "ncu": "ncu -u -l info --timeout 70000 && yarn",
-    "updateAll": "",
     "upgrade": "npm run ncu && npm run commit && npm run release",
+    "updateAll": "",
     "update": "",
     "sync" : ""
   },
