@@ -63,7 +63,7 @@
   "dependencies": {
     "lamed_io": "^1.1.11",
     "lamed_string": "^1.1.7",
-    "lamed_folder": "^1.2.14"
+    "lamed_folder": "^1.2.15"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
