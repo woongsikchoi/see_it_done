@@ -46,9 +46,9 @@
   },
   "timeout" : "30",
   "travis" : {
-    "os" : ["linux, osx"],
+    "os" : ["linux", "osx"],
     "os_quick": ["linux"],
-    "node_js": ["node", "11", "10", "9", "8", "7", "6", "lts/*"],
+    "node_js": ["node", "'11'", "'10'", "'8'", "'6'", "lts/*"],
     "node_js_quick": ["lts/*"]
   },
   "travis_exclude" : [

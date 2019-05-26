@@ -40,15 +40,15 @@ async function syncPackages () {
   const _gitIgnore = await _lio.readFile(_ProjectFolder + '.gitignore')
 
   for (let ii = 0; ii < projects.length; ii++) {
-    let file = projects[ii]
-    let packageName = _root + file + '/package.json'
+    let module = projects[ii]
+    let packageName = _root + module + '/package.json'
     // _log({item})
 
     // Find the package.json file and sync
     let package1 = {}
     let packNew = {}
     // Package.json add ---------------------------------
-    if (file.includesAny(exclude_add) === false) {
+    if (module.includesAny(exclude_add) === false) {
       package1 = jsonGet(packageName)
       packNew = jsonSync(_packAdd, package1)
       if (Ok(packNew)) {
@@ -66,8 +66,8 @@ async function syncPackages () {
     }
 
     // GitIgnore -------------------------------------
-    if (file.includesAny(exclude_git) === false) {
-      let gitIgnorePath = _root + file + '/.gitIgnore'
+    if (module.includesAny(exclude_git) === false) {
+      let gitIgnorePath = _root + module + '/.gitIgnore'
       let gitIgnore = await _lio.readFile(gitIgnorePath)
       if (_gitIgnore !== gitIgnore) {
         await _lio.writeFile(gitIgnorePath, _gitIgnore)
@@ -75,7 +75,7 @@ async function syncPackages () {
     }
 
     // Dashboards
-    dashboards += dashboard_Template(ii + 1, file)
+    dashboards += dashboard_Template(ii + 1, module)
     // Dependencies --------------------------------
     dependencyMD += dependency(ii + 1, package1, exclude_dep)
     // User stories
