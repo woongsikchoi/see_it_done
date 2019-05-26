@@ -80,7 +80,6 @@ function bodyCMD (project, cmd, progress, isFirst = false, timeout = 20) {
   return template
 }
 
-
 /**
  * Build the batch file
  * @param projects
@@ -94,17 +93,16 @@ function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeo
     // npm -------------------------
     for (let ii = 0; ii < projects.length; ii++) {
       let item = projects[ii]
-      let progress = `(${(ii+1)} of ${projects.length})`
+      let progress = `(${(ii + 1)} of ${projects.length})`
       result += bodyNPM(item, npm, progress, (ii === 0), timeout)
     }
   } else {
     // cmd -----------------------------
     for (let ii = 0; ii < projects.length; ii++) {
       let item = projects[ii]
-      let progress = `(${(ii+1)} of ${projects.length})`
+      let progress = `(${(ii + 1)} of ${projects.length})`
       result += bodyCMD(item, cmd, progress, (ii === 0), timeout)
     }
-
   }
   return result
 }

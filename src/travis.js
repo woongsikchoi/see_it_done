@@ -16,7 +16,6 @@ const _lfolder = require('lamed_folder')
 
 const _packSetup = require('./package_zetup.json')
 const _root = _lfolder.fromRootFolder('', -1)
-const _ProjectFolder = _lfolder.fromRootFolder()
 
 /**
  * Turn specific setting on
@@ -25,7 +24,7 @@ const _ProjectFolder = _lfolder.fromRootFolder()
  * @param setting - the setting
  * @returns {string} - travisSettings
  */
-function SettingOn(travisName, travisSettings, type, setting) {
+function SettingOn (travisName, travisSettings, type, setting) {
   let setting1 = '- ' + setting
   if (travisSettings.includes(setting1) === false) throw new Error(`"${travisName}" ${type} setting does not include "${setting1}"`)
   travisSettings = travisSettings.replace('# ' + setting1, setting1)
@@ -39,7 +38,7 @@ function SettingOn(travisName, travisSettings, type, setting) {
  * @param setting - The setting
  * @returns travisSettings
  */
-function SettingOff(travisName, travisSettings, type, setting) {
+function SettingOff (travisName, travisSettings, type, setting) {
   if (travisSettings.includes(setting) === false) throw new Error(`"${travisName}" ${type} setting does not include "${setting}"`)
   if (travisSettings.includes('# ' + setting)) return travisSettings
 
@@ -54,7 +53,7 @@ function SettingOff(travisName, travisSettings, type, setting) {
  * @string node_js - The node settings
  * @returns {*}
  */
-function travisSettingsOn(travisName, travisSettings, os, node_js) {
+function travisSettingsOn (travisName, travisSettings, os, nodeJS) {
   // Os
   for (let ii = 0; ii < os.length; ii++) {
     let os1 = os[ii]
@@ -62,9 +61,9 @@ function travisSettingsOn(travisName, travisSettings, os, node_js) {
   }
 
   // Node
-  for (let ii = 0; ii < node_js.length; ii++) {
-    let node_js1 = node_js[ii]
-    travisSettings = SettingOn(travisName, travisSettings, 'node_js', node_js1)
+  for (let ii = 0; ii < nodeJS.length; ii++) {
+    let nodeJs1 = nodeJS[ii]
+    travisSettings = SettingOn(travisName, travisSettings, 'node_js', nodeJs1)
   }
   return travisSettings
 }
@@ -74,7 +73,7 @@ function travisSettingsOn(travisName, travisSettings, os, node_js) {
  * @string travisName - The name of the .travis.yml file
  * @returns {Promise<*|any>}
  */
-async function travisSettingsOff(travisName) {
+async function travisSettingsOff (travisName) {
   let travisSettings = await _lio.readFile(travisName)
 
   // Os
@@ -95,28 +94,28 @@ async function travisSettingsOff(travisName) {
  * Update the .travis file for projects
  * @returns {Promise<void>}
  */
-async function travisUpdate() {
+async function travisUpdate () {
   let projects = _packSetup.projects
   let travis = _packSetup.travis
   let os = travis.os
-  let os_quick = travis.os_quick
-  let node_js = travis.node_js
-  let node_js_quick = travis.node_js_quick
-  let travis_exclude = _packSetup.travis_exclude
-  let travis_mode = _packSetup.travis_mode
+  let osQuick = travis.os_quick
+  let nodeJS = travis.node_js
+  let nodeJSquick = travis.node_js_quick
+  let travisExclude = _packSetup.travis_exclude
+  let travisMode = _packSetup.travis_mode
 
   for (let ii = 0; ii < projects.length; ii++) {
     let module = projects[ii]
-    if (module.includesAny(travis_exclude) === true) continue // <-------------------------------
-    _log({module})
+    if (module.includesAny(travisExclude) === true) continue // <-------------------------------
+    _log({ module })
 
     // .travis.yml sync ---------------------------------
     let travisName = _root + module + '/.travis.yml'
     let travisSettings = ''
     try {
       travisSettings = await travisSettingsOff(travisName)
-      if (travis_mode === 'quick') travisSettings = travisSettingsOn(travisName, travisSettings, os_quick, node_js_quick)
-      else travisSettings = travisSettingsOn(travisName, travisSettings, os, node_js)
+      if (travisMode === 'quick') travisSettings = travisSettingsOn(travisName, travisSettings, osQuick, nodeJSquick)
+      else travisSettings = travisSettingsOn(travisName, travisSettings, os, nodeJS)
     } catch (e) {
       throw e
     }
