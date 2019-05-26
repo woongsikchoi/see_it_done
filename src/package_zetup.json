@@ -34,7 +34,7 @@
   "commands" : {
     "pull" : {"npm" : "start npm run pull", "timeout" : 10, "description" : "Pull changes from master for all projects and do yarn"},
     "commitSafe" : {"npm" : "start npm run commitAll", "description" : "Run tests and if success commit changes to master"},
-    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 3, "description" : "Fast commit to master (no tests)"},
+    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 10, "description" : "Fast commit to master (no tests)"},
     "commitLocal" : {"npm" : "start npm run commit", "timeout" : 0, "description" : "Local commit only"},
     "upgrade" : {"npm" : "start npm run upgrade", "timeout": 55, "description": "Upgrade all project dependencies; on change inc version and release to master"},
     "release": {"npm": "start npm run release", "timeout": 10, "description" : "Release committed changes to master (no version inc)"},
