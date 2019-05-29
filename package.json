@@ -27,7 +27,7 @@
     "pull": "git pull && yarn && npm test",
     "upgrade": "npm run ncu && npm run commit && npm run release",
     "beta": "npm run commit && npm run release",
-    "install": "npm i -g babel-eslint codecov mocha nyc snazzy standard",
+    "install": "yarn global add babel-eslint codecov mocha nyc snazzy standard",
     "install2": "npm install -g npm@latest"
   },
   "nyc": {
@@ -63,7 +63,7 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_io": "^1.1.13",
+    "lamed_io": "^1.1.14",
     "lamed_string": "^1.1.8",
     "lamed_folder": "^1.2.16"
   },
