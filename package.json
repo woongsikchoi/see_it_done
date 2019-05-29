@@ -1,6 +1,6 @@
 {
   "name": "see_it_done",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "Agile project template",
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
@@ -68,8 +68,7 @@
     "lamed_folder": "^1.2.18",
     "lamed_io": "^1.1.15"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "role": "JavaScript developer",
   "task": "write simple error free code",
   "reason": "to ensure quality and maintainability"
