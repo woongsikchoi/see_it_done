@@ -26,7 +26,9 @@
     "test_yarn": "yarn && npm test && npm run fix",
     "pull": "git pull && yarn && npm test",
     "upgrade": "npm run ncu && npm run commit && npm run release",
-    "beta": "npm run commit && npm run release"
+    "beta": "npm run commit && npm run release",
+    "install": "npm i -g babel-eslint codecov mocha nyc snazzy standard",
+    "install2": "npm install -g npm@latest"
   },
   "nyc": {
     "exclude": [
@@ -66,13 +68,7 @@
     "lamed_folder": "^1.2.16"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "codecov": "^3.5.0",
-    "lamed_test": "^2.2.13",
-    "mocha": "^6.1.4",
-    "nyc": "^14.1.1",
-    "snazzy": "^8.0.0",
-    "standard": "^12.0.1"
+    "lamed_test": "^2.2.15"
   },
   "role": "JavaScript developer",
   "task": "write simple error free code",

@@ -18,7 +18,8 @@
   ],
   "projects_add_exclude": [
     "lamed_test",
-    "lamed_core"
+    "lamed_core",
+    "lamed_folder"
   ],
   "projects_gitignore_exclude": [
 

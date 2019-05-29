@@ -21,10 +21,12 @@
     "beta": "npm run commit && npm run release",
     "ncu": "ncu -u -l info --timeout 70000 && yarn",
     "upgrade": "npm run ncu && npm run commit && npm run release",
+    "install": "yarn global add babel-eslint codecov mocha nyc snazzy standard",
+    "install2" : "npm install -g npm@latest",
     "updateAll": "",
     "update": "",
     "sync" : ""
-  },
+},
   "nyc": {
     "exclude": [
       "**/test.runner.js",
@@ -32,7 +34,6 @@
     ]
   },
   "standard": {
-    "parser": "babel-eslint",
     "env": [
       "mocha"
     ],
