@@ -24,10 +24,10 @@
     "commitFast": "npm run commit && npm run push && git status",
     "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "test_yarn": "yarn && npm test && npm run fix",
-    "pull": "git pull && yarn && npm test",
+    "pull": "git pull && yarn --ignore-scripts && npm test",
     "upgrade": "npm run ncu && npm run commit && npm run release",
     "beta": "npm run commit && npm run release",
-    "install": "yarn global add babel-eslint codecov mocha nyc snazzy standard --offline",
+    "install": "yarn global add babel-eslint codecov mocha nyc snazzy standard",
     "install2": "npm install -g npm@latest"
   },
   "nyc": {
