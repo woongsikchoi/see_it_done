@@ -6,7 +6,6 @@
   "task": "write simple error free code",
   "reason": "to ensure quality and maintainability",
   "dependencies": {
-    "lamed_test": "^2.2.13"
   },
   "devDependencies": {
   }

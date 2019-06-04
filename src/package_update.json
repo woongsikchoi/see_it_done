@@ -2,7 +2,7 @@
   "//" : "Ensure these items are synced across projects",
   "scripts": {
     "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
-    "test_yarn": "yarn && npm test && npm run fix",
+    "test_yarn": "yarn --ignore-scripts && npm test && npm run fix",
     "coverage_test": "nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000",
     "coverage_report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "coverage": "npm run coverage_test && npm run coverage_report",
