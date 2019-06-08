@@ -83,13 +83,21 @@ async function syncPackages () {
     // return
   }
 
-  await _lio.writeFile(_ProjectFolder + 'Dashboard.md', dashboards)
-  dependencyMD = dependencyMD + dependency_footer(exclude_dep)
+  await _lio.writeFile(_ProjectFolder + 'Dashboard.md', dashboards + FooterLinks())
+  dependencyMD = dependencyMD + dependency_footer(exclude_dep) + FooterLinks()
   await _lio.writeFile(_ProjectFolder + 'Dependencies.md', dependencyMD)
-  await _lio.writeFile(_ProjectFolder + 'UserStories.md', story)
+  await _lio.writeFile(_ProjectFolder + 'UserStories.md', story + FooterLinks())
 }
 
 syncPackages()
+
+function FooterLinks () {
+  let result =
+  '- [Dashboard](./Dashboard.md),\n'+
+  '- [Dependencies](./Dependencies.md) and\n'+
+  '- [User stories](./UserStories.md)'
+  return result
+}
 
 /**
  * If the file exist, then return it
