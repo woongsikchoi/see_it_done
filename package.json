@@ -64,10 +64,10 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_test": "^2.2.16",
-    "lamed_string": "^1.1.10",
-    "lamed_folder": "^1.2.18",
-    "lamed_io": "^1.1.15"
+    "lamed_test": "^2.2.18",
+    "lamed_string": "^1.1.12",
+    "lamed_folder": "^1.2.20",
+    "lamed_io": "^1.1.16"
   },
   "devDependencies": {},
   "role": "JavaScript developer",
