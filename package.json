@@ -66,8 +66,8 @@
   "dependencies": {
     "lamed_test": "^2.3.0",
     "lamed_string": "^1.1.19",
-    "lamed_folder": "^1.2.26",
-    "lamed_io": "^1.1.26"
+    "lamed_folder": "^1.2.27",
+    "lamed_io": "^1.1.27"
   },
   "devDependencies": {},
   "role": "JavaScript developer",
