@@ -33,19 +33,19 @@
     "nyc"
   ],
   "commands" : {
-    "pull" : {"npm" : "start npm run pull", "timeout" : 20, "description" : "Pull changes from master for all projects and do yarn"},
+    "pull" : {"npm" : "call npm run pull", "timeout" : 10, "description" : "Pull changes from master for all projects and do yarn"},
     "commitSafe" : {"npm" : "start npm run commitAll", "description" : "Run tests and if success commit changes to master"},
-    "commitFast" : {"npm" : "start npm run commitFast", "timeout" : 15, "description" : "Fast commit to master (no tests)"},
+    "commitFast" : {"npm" : "call npm run commitFast", "timeout" : 5, "description" : "Fast commit to master (no tests)"},
     "commitLocal" : {"npm" : "start npm run commit", "timeout" : 0, "description" : "Local commit only"},
-    "upgrade" : {"npm" : "start npm run upgrade", "timeout": 199, "description": "Upgrade all project dependencies; on change inc version and release to master"},
-    "release": {"npm": "start npm run release", "timeout": 30, "description" : "Release committed changes to master (no version inc)"},
-    "test" : {"npm": "start npm test", "timeout" : 3, "description": "Test all projects"},
+    "upgrade" : {"npm" : "call npm run upgrade", "timeout": 100, "description": "Upgrade all project dependencies; on change inc version and release to master"},
+    "release": {"npm": "call npm run release", "timeout": 10, "description" : "Release committed changes to master (no version inc)"},
+    "test" : {"npm": "start npm test", "timeout" : 10, "description": "Test all projects"},
     "testYarn" : {"npm": "start npm run test_yarn", "timeout" : 15, "description": "Do yarn and test all modules"},
     "gitfix" : {"npm": "start npm run gitfix", "timeout": 3, "description": "Ensure .gitIgnore files are ignored for all projects"},
     "setup" : {"cmd":  "git clone https://github.com/perezLamed/$repo_name$.git", "description" :  "Setup the lamed repos"},
-    "setupYarn" : {"npm": "start npm run test_yarn", "timeout" : 50, "description": "Do yarn and test all new modules"}
+    "setupYarn" : {"npm": "call npm run test_yarn", "timeout" : 10, "description": "Do yarn and test all new modules"}
   },
-  "timeout" : "30",
+  "timeout" : "10",
   "travis" : {
     "os" : ["linux", "osx"],
     "os_quick": ["linux"],

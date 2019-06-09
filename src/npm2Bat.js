@@ -55,14 +55,13 @@ function header (npm, cmd, descr, root = 'c:\\projects\\') {
  * @param isFirst
  * @param timeout
  */
-function bodyNPM (project, npm, progress, isFirst = false, timeout = 20) {
-  let template = ''
+function bodyNPM (project, npm, progress, isFirst = false, timeout = 10) {
+  let template = `echo ----------------------------------[${project} ${progress}]\n`
   if (isFirst === false) template += `timeout /t ${timeout}\n`
   template +=
-    `cd ${project}\n` +
+  `cd ${project}\n` +
     `${npm}\n` +
-    'cd %path1%\n' +
-    `echo ----------------------------------[${project} ${progress}]\n\n`
+    'cd %path1%\n\n'
   return template
 }
 
@@ -72,7 +71,7 @@ function bodyNPM (project, npm, progress, isFirst = false, timeout = 20) {
  * @param isFirst
  * @param timeout
  */
-function bodyCMD (project, cmd, progress, isFirst = false, timeout = 20) {
+function bodyCMD (project, cmd, progress, isFirst = false, timeout = 10) {
   let template = ''
   // if (isFirst === false) template += `timeout /t ${timeout}\n`
   template += `echo ----------------------------------[${project} ${progress}] \n${cmd}\n\n`
@@ -86,7 +85,7 @@ function bodyCMD (project, cmd, progress, isFirst = false, timeout = 20) {
  * @param root
  * @param timeout
  */
-function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeout = 20) {
+function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeout = 10) {
   let result = header(npm, cmd, descr, root)
 
   if (Ok(npm)) {
