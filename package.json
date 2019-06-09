@@ -12,7 +12,7 @@
     "coverage": "npm run coverage_test && npm run coverage_report",
     "rules": "standard | snazzy",
     "fix": "standard --fix",
-    "commit": "git add . && git commit -a -m \"config updates\"",
+    "commit": "npm run fix && git add . && git commit -a -m \"config updates\"",
     "bump": "npm version patch -m \"Bumping to %s\"",
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",
     "release": "npm run fix && npm test && npm run patch && start npm run push",

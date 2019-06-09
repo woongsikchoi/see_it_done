@@ -93,8 +93,8 @@ syncPackages()
 
 function FooterLinks () {
   let result =
-  '- [Dashboard](./Dashboard.md),\n'+
-  '- [Dependencies](./Dependencies.md) and\n'+
+  '- [Dashboard](./Dashboard.md),\n' +
+  '- [Dependencies](./Dependencies.md) and\n' +
   '- [User stories](./UserStories.md)'
   return result
 }

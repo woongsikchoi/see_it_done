@@ -10,7 +10,7 @@
     "rules": "standard | snazzy",
     "fix": "standard --fix",
     "status": "git log --since=2.weeks --pretty=format:\"%h - %an, %ar : %s\" && echo -------- && git status",
-    "commit": "git add . && git commit -a -m \"config updates\"",
+    "commit": "npm run fix && git add . && git commit -a -m \"config updates\"",
     "commitAll": "yarn && npm run fix && npm run commit && npm test && npm run push",
     "commitFast": "npm run commit && npm run push && git status",
     "pull": "git pull && yarn --ignore-scripts && npm test",
