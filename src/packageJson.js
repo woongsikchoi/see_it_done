@@ -1,5 +1,8 @@
 'use strict'
-console.log('Starting packageSync.js...')
+console.log('Starting packageJson.js...')
+// Check projects versions
+// in package.json add '../lib' <--> 'version'
+
 /* jshint esversion: 6 */
 // ------------------------------------------------------
 
@@ -88,7 +91,6 @@ async function syncPackages () {
   await _lio.writeFile(_ProjectFolder + 'Dependencies.md', dependencyMD)
   await _lio.writeFile(_ProjectFolder + 'UserStories.md', story + FooterLinks())
 }
-
 syncPackages()
 
 function FooterLinks () {

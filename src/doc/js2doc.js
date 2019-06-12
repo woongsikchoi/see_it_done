@@ -65,12 +65,12 @@ project2doc('C:\\Projects\\lamed_test\\')
  * @param lineBr - The line break character. Default is \n
  * @returns {boolean} - True if the items and the comare values are the same
  */
-function Compare (result, stringValue, trim = false, lineBr = '\n')
-
+function Compare (result, stringValue, trim = false, lineBr = '\n') {}
+Compare()
 /**
  *
- * @param {*} result 
- * @param {*} stringValue 
- * @param {*} trim 
- * @param {*} lineBr 
+ * @param {*} result
+ * @param {*} stringValue
+ * @param {*} trim
+ * @param {*} lineBr
  */
