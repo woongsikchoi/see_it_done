@@ -16,7 +16,7 @@ const {
 /* eslint-enable */
 // _Trace_Set(0)
 
-const {tableCreateEmpty, tableCreate, tableCheck, tableColsAdd, tableRowAdd, tableColsNumber, tableRowSet} = require('lamed_table') // eslint-disable-line
+const {tableCreateEmpty, tableCreate, tableCheck, tableColsAdd, tableRowAdd, tableColsNumber, tableRowSet, tableRowFind, tableRowInclude} = require('lamed_table') // eslint-disable-line
 
 require('lamed_string')
 const _lio = require('lamed_io')
@@ -26,6 +26,10 @@ const _root = _lfolder.fromRootFolder('', -1)
 
 // const _ProjectFolder = _lfolder.fromRootFolder()
 
+/**
+ * Work with code changes locally
+ * @param {bool} local - If true then install all packages locally; else use npm packages
+ */
 async function runlocal (local = true) {
   let projects = _packSetup.projects
   let table = tableCreate(['name', 'version'], 'packages')
@@ -43,7 +47,7 @@ async function runlocal (local = true) {
     for (const npm in dependencies) {
       if (npm === '//') continue // <--------------------------
       let version = dependencies[npm]
-      let row = tableFind(table, 'name', npm)
+      let row = tableRowFind(table, 'name', npm)
       if (Ok(row)) {
         if (local) {
           // local --------------------------
@@ -67,21 +71,12 @@ async function runlocal (local = true) {
   // tableCheck(table, true)
   _log()
   _logLine()
-  _log(`Run 'setupyarn.bat to update dependencies`)
+  _log(`Run '"setupyarn.bat" to update dependencies`)
   _logLine()
 }
 
 runlocal(true)
 // runlocal(false)
-
-function tableFind (table, colName, value) {
-  let colNo = tableColsNumber(table, colName)
-  for (let ii = 0; ii < table.rows.length; ii++) {
-    let row = table.rows[ii]
-    let item = row[colNo]
-    if (item.toLowerCase() === value.toLowerCase()) return row
-  }
-}
 
 /**
  * If the file exist, then return it

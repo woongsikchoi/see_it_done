@@ -34,10 +34,11 @@
     "nyc"
   ],
   "commands" : {
-    "pull" : {"npm" : "call npm run pull", "timeout" : 10, "description" : "Pull changes from master for all projects and do yarn"},
+    "pull" : {"npm" : "call npm run pull", "timeout" : 0, "description" : "Pull changes from master for all projects and do yarn"},
+    "yarnforce" : {"npm" : "call npm run yarnforce", "timeout" : 0, "description" : "Force yarn swap between local and remote packages"},
     "commitSafe" : {"npm" : "start npm run commitAll", "description" : "Run tests and if success commit changes to master"},
     "commitFast" : {"npm" : "call npm run commitFast", "timeout" : 5, "description" : "Fast commit to master (no tests)"},
-    "commitLocal" : {"npm" : "start npm run commit", "timeout" : 0, "description" : "Local commit only"},
+    "commitLocal" : {"npm" : "call npm run commit", "timeout" : 0, "description" : "Local commit only"},
     "upgrade" : {"npm" : "call npm run upgrade", "timeout": 100, "description": "Upgrade all project dependencies; on change inc version and release to master"},
     "release": {"npm": "call npm run release", "timeout": 10, "description" : "Release committed changes to master (no version inc)"},
     "test" : {"npm": "start npm test", "timeout" : 10, "description": "Test all projects"},
