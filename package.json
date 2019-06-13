@@ -31,7 +31,7 @@
     "install2": "npm install -g npm@latest",
     "yarn2": "yarn --ignore-scripts",
     "yarnfast": "yarn --ignore-scripts --offline",
-    "yarnforce": "yarn --ignore-scripts --offline --force && npm run line",
+    "yarnforce": "yarn --ignore-scripts --offline --force",
     "line": "echo . && echo [-----------------------------------------------------------------------------] && echo ."
   },
   "nyc": {
@@ -67,11 +67,10 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
-    "lamed_folder": "../lamed_folder",
-    "lamed_io": "../lamed_io",
-    "lamed_string": "../lamed_string",
     "lamed_test": "../lamed_test",
-    "lamed_table": "../lamed_table"
+    "lamed_table": "../lamed_table",
+    "lamed_folder": "../lamed_folder",
+    "lamed_io": "../lamed_io"
   },
   "devDependencies": {},
   "role": "JavaScript developer",

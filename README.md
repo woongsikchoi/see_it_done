@@ -80,6 +80,9 @@ There are already batch scripts defined to do the following:
 - **Upgrade** all dependencies across all projects (and run CI pipeline)
 - Run **unit tests** across all projects 
 
+## Helpful tools
+- [Word Markdown Editor](http://www.writage.com)
+
 ## [About Team](./team.md)
 
 [![license](https://img.shields.io/github/license/perezLamed/see_it_done.svg?style=flat)](https://github.com/perezLamed/see_it_done)
