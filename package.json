@@ -32,7 +32,8 @@
     "yarn2": "yarn --ignore-scripts",
     "yarnfast": "yarn --ignore-scripts --offline",
     "line": "echo . && echo [-----------------------------------------------------------------------------] && echo .",
-    "local": "rmdir node_modules /s /q && npm install --ignore-scripts"
+    "local": "npm install --ignore-scripts",
+    "clean": "rmdir node_modules /s /q"
   },
   "nyc": {
     "exclude": [
@@ -68,6 +69,7 @@
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
     "lamed_test": "../lamed_test",
+    "lamed_string": "../lamed_string",
     "lamed_table": "../lamed_table",
     "lamed_folder": "../lamed_folder",
     "lamed_io": "../lamed_io"
