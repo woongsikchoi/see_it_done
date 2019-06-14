@@ -31,8 +31,8 @@
     "install2": "npm install -g npm@latest",
     "yarn2": "yarn --ignore-scripts",
     "yarnfast": "yarn --ignore-scripts --offline",
-    "yarnforce": "yarn --ignore-scripts --offline --force && npm run line",
-    "line": "echo . && echo [-----------------------------------------------------------------------------] && echo ."
+    "line": "echo . && echo [-----------------------------------------------------------------------------] && echo .",
+    "local": "rmdir node_modules /s /q && npm install --ignore-scripts"
   },
   "nyc": {
     "exclude": [

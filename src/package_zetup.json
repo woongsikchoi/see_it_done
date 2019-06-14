@@ -9,6 +9,7 @@
     "lamed_name",
     "lamed_folder",
     "lamed_table",
+    "lamed_dev",
     "lamed_vscode",
     "lamed_markdown",
     "lamed_flowchart",
@@ -35,7 +36,7 @@
   ],
   "commands" : {
     "pull" : {"npm" : "call npm run pull", "timeout" : 0, "description" : "Pull changes from master for all projects and do yarn"},
-    "yarnforce" : {"npm" : "call npm run yarnforce", "timeout" : 0, "description" : "Force yarn swap between local and remote packages"},
+    "local" : {"npm" : "call npm run local", "timeout" : 0, "description" : "Swap to local packages"},
     "commitSafe" : {"npm" : "start npm run commitAll", "description" : "Run tests and if success commit changes to master"},
     "commitFast" : {"npm" : "call npm run commitFast", "timeout" : 5, "description" : "Fast commit to master (no tests)"},
     "commitLocal" : {"npm" : "call npm run commit", "timeout" : 0, "description" : "Local commit only"},
