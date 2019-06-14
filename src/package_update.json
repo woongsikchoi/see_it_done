@@ -3,7 +3,7 @@
   "scripts": {
     "yarn2" : "yarn --ignore-scripts",
     "yarnfast" : "yarn --ignore-scripts --offline",
-    "yarnforce" : "npm install --ignore-scripts",
+    "yarnforce" : "rmdir node_modules /s /q && npm install --ignore-scripts",
     "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
     "test_yarn": "npm run yarn2 && npm test && npm run fix",
     "coverage_test": "nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000",
