@@ -42,7 +42,7 @@
     "commitLocal" : {"npm" : "call npm run commit", "timeout" : 0, "description" : "Local commit only"},
     "upgrade" : {"npm" : "call npm run upgrade", "timeout": 100, "description": "Upgrade all project dependencies; on change inc version and release to master"},
     "release": {"npm": "call npm run release", "timeout": 10, "description" : "Release committed changes to master (no version inc)"},
-    "test" : {"npm": "start npm test", "timeout" : 10, "description": "Test all projects"},
+    "test" : {"npm": "start npm test", "timeout" : 15, "description": "Test all projects"},
     "testYarn" : {"npm": "start npm run test_yarn", "timeout" : 15, "description": "Do yarn and test all modules"},
     "gitfix" : {"npm": "start npm run gitfix", "timeout": 3, "description": "Ensure .gitIgnore files are ignored for all projects"},
     "setup" : {"cmd":  "git clone https://github.com/perezLamed/$repo_name$.git", "description" :  "Setup the lamed repos"},
