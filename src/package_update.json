@@ -23,7 +23,7 @@
     "prep": "npm run fix && npm test && npm run patch",
     "release": "npm run fix && npm test && npm run patch && start npm run push",
     "beta": "npm run commit && npm run release",
-    "ncu": "ncu -u -l info --timeout 70000 && npm run yarnfast",
+    "ncu": "ncu -u -l info --timeout 70000 && npm run yarn2",
     "upgrade": "npm run ncu && npm run commit && npm run release && npm run line",
     "install": "yarn global add babel-eslint codecov mocha nyc snazzy standard",
     "install2" : "npm install -g npm@latest",
