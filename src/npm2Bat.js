@@ -49,7 +49,7 @@ function header (npm, cmd, descr, root = 'c:\\projects\\') {
   return template
 }
 
-function header (project, progress) {
+function header2 (project, progress) {
   let header = `echo ----------------------------------[${project} ${progress}]\n`
   return header
 }
@@ -60,15 +60,14 @@ function header (project, progress) {
  * @param timeout
  */
 function bodyNPM (project, npm, progress, isFirst = false, timeout = 10) {
-
   let template = ''
   if (isFirst === false) {
-    template += `timeout /t ${timeout}\n` + header(project, progress)
+    template += `timeout /t ${timeout}\n` + header2(project, progress)
   }
   template +=
   `cd ${project}\n` +
     `${npm}\n` +
-    'cd %path1%\n' + header(project, progress) + '\n'
+    'cd %path1%\n' + header2(project, progress) + '\n'
   return template
 }
 
@@ -99,7 +98,7 @@ function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeo
     // npm -------------------------
     for (let ii = 0; ii < projects.length; ii++) {
       let item = projects[ii]
-      let score = Math.round((ii + 1) *100 / projects.length)
+      let score = Math.round((ii + 1) * 100 / projects.length)
       let progress = ` ${score}%... (${(ii + 1)} of ${projects.length})`
       result += bodyNPM(item, npm, progress, (ii === 0), timeout)
     }
