@@ -49,6 +49,10 @@ function header (npm, cmd, descr, root = 'c:\\projects\\') {
   return template
 }
 
+function header (project, progress) {
+  let header = `echo ----------------------------------[${project} ${progress}]\n`
+  return header
+}
 /**
  * Create the body for the batch file
  * @param project
@@ -56,12 +60,15 @@ function header (npm, cmd, descr, root = 'c:\\projects\\') {
  * @param timeout
  */
 function bodyNPM (project, npm, progress, isFirst = false, timeout = 10) {
-  let template = `echo ----------------------------------[${project} ${progress}]\n`
-  if (isFirst === false) template += `timeout /t ${timeout}\n`
+
+  let template = ''
+  if (isFirst === false) {
+    template += `timeout /t ${timeout}\n` + header(project, progress)
+  }
   template +=
   `cd ${project}\n` +
     `${npm}\n` +
-    'cd %path1%\n\n'
+    'cd %path1%\n' + header(project, progress) + '\n'
   return template
 }
 
@@ -92,7 +99,8 @@ function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeo
     // npm -------------------------
     for (let ii = 0; ii < projects.length; ii++) {
       let item = projects[ii]
-      let progress = `(${(ii + 1)} of ${projects.length})`
+      let score = Math.round((ii + 1) *100 / projects.length)
+      let progress = ` ${score}%... (${(ii + 1)} of ${projects.length})`
       result += bodyNPM(item, npm, progress, (ii === 0), timeout)
     }
   } else {

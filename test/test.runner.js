@@ -12,13 +12,6 @@ const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, 
 const _run = require('./index.test')
 
 // _Trace_Set(0)
-// ------------------------------------------------------------------------------------------
-const _Node_Version = _test._Node_Version // eslint-disable-line
-_TraceLine()
-_Trace('TEST RESULTS:')
-_Trace(`Node version: ${_Node_Version.major}.${_Node_Version.minor}. ${_Node_Version.patch}`)
-_TraceLine()
-// ------------------------------------------------------------------------------------------
 
 describe('index.js', () => {
   it('About()', (done) => {
