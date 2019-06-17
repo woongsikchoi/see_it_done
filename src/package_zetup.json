@@ -39,6 +39,7 @@
     "lamed_folder"
   ],
   "projects_local_exclude" : [
+    "lamed_dev",
     "lamed_flowchart",
     "lamed_floweditor",
     "lamed_learn",

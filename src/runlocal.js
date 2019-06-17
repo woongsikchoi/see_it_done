@@ -78,8 +78,8 @@ async function runlocal (local = true) {
   _logLine()
 }
 
-runlocal(true)
-// runlocal(false)
+// runlocal(true)
+runlocal(false)
 
 /**
  * If the file exist, then return it
