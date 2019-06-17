@@ -16,7 +16,7 @@
     "commit": "npm run fix && git add . && git commit -a -m \"config updates\"",
     "commitAll": "npm run yarn2 && npm run fix && npm run commit && npm test && npm run push",
     "commitFast": "npm run commit && npm run push && git status && npm run line",
-    "pull": "git pull && npm run yarnfast && npm test && npm run line",
+    "pull": "git pull && npm run yarn2 && npm test && npm run line",
     "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "patch": "npm version patch -m \"Patch version %s\"",
     "push": "echo Push and release patch to master... && echo ------------------------------ && git push origin master",

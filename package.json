@@ -24,7 +24,7 @@
     "commitFast": "npm run commit && npm run push && git status && npm run line",
     "gitfix": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "test_yarn": "npm run yarn2 && npm test && npm run fix",
-    "pull": "git pull && npm run yarnfast && npm test && npm run line",
+    "pull": "git pull && npm run yarn2 && npm test && npm run line",
     "upgrade": "npm run ncu && npm run commit && npm run release && npm run line",
     "beta": "npm run commit && npm run release",
     "install": "yarn global add babel-eslint codecov mocha nyc snazzy standard",
