@@ -13,6 +13,7 @@ const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, 
 
 const _lio = require('lamed_io')
 const _lfolder = require('lamed_folder')
+require('lamed_string')
 
 /**
  *  Create the header for the batch file
@@ -91,13 +92,14 @@ function bodyCMD (project, cmd, progress, isFirst = false, timeout = 10) {
  * @param root
  * @param timeout
  */
-function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeout = 10) {
+function buildBatFile (projects, exclude, npm, cmd, descr, root = 'c:\\projects\\', timeout = 10) {
   let result = header(npm, cmd, descr, root)
 
   if (Ok(npm)) {
     // npm -------------------------
     for (let ii = 0; ii < projects.length; ii++) {
       let item = projects[ii]
+      if (item.includesAny(exclude)) continue // <----------------------------------------
       let score = Math.round((ii + 1) * 100 / projects.length)
       let progress = ` ${score}%... (${(ii + 1)} of ${projects.length})`
       result += bodyNPM(item, npm, progress, (ii === 0), timeout)
@@ -106,6 +108,7 @@ function buildBatFile (projects, npm, cmd, descr, root = 'c:\\projects\\', timeo
     // cmd -----------------------------
     for (let ii = 0; ii < projects.length; ii++) {
       let item = projects[ii]
+      if (item.includesAny(exclude)) continue // <------------------------------------
       let progress = `(${(ii + 1)} of ${projects.length})`
       result += bodyCMD(item, cmd, progress, (ii === 0), timeout)
     }
@@ -127,12 +130,13 @@ async function writeBatch () {
     let timeout = commdef['timeout']
     if (timeout === undefined) timeout = _timeout
     let path = _root + item + '.bat'
-    let file = buildBatFile(_projects.projects, npm, cmd, descr, _root, timeout)
+    let file = buildBatFile(_projects.projects, _projects.projects_bat_exclude, npm, cmd, descr, _root, timeout)
 
     _log(`Writing '${path}'...`)
     if (Ok(npm)) _logGreen(` '${npm}'\n`)
     else _logGreen(` '${cmd}'\n`)
     file = file.replaceAll('\n', '\r\n')
+    file += '\r\npause'
     await _lio.writeFile(path, file)
   }
 }

@@ -46,8 +46,10 @@
     "see_it_done",
     "see_it_start"
   ],
+  "projects_bat_exclude" : [
+    "lamed_dev"
+  ],
   "projects_gitignore_exclude": [
-
   ],
   "projects_dependencies_exclude": [
     "babel-eslint",
