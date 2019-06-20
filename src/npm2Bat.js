@@ -101,7 +101,7 @@ function buildBatFile (projects, exclude, npm, cmd, descr, root = 'c:\\projects\
       let item = projects[ii]
       if (item.includesAny(exclude)) continue // <----------------------------------------
       let score = Math.round((ii + 1) * 100 / projects.length)
-      let progress = ` ${score}%... (${(ii + 1)} of ${projects.length})`
+      let progress = ` ${score}%%... (${(ii + 1)} of ${projects.length})`
       result += bodyNPM(item, npm, progress, (ii === 0), timeout)
     }
   } else {
@@ -109,7 +109,8 @@ function buildBatFile (projects, exclude, npm, cmd, descr, root = 'c:\\projects\
     for (let ii = 0; ii < projects.length; ii++) {
       let item = projects[ii]
       if (item.includesAny(exclude)) continue // <------------------------------------
-      let progress = `(${(ii + 1)} of ${projects.length})`
+      let score = Math.round((ii + 1) * 100 / projects.length)
+      let progress = ` ${score}%%... (${(ii + 1)} of ${projects.length})`
       result += bodyCMD(item, cmd, progress, (ii === 0), timeout)
     }
   }
