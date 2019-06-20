@@ -36,6 +36,7 @@ async function syncPackages () {
   let exclude_add = _packSetup.projects_add_exclude // eslint-disable-line
   let exclude_git = _packSetup.projects_gitignore_exclude // eslint-disable-line
   let exclude_dep = _packSetup.projects_dependencies_exclude // eslint-disable-line
+  let exclude_bat = _packSetup.projects_bat_exclude // eslint-disable-line
   let dependencyMD = dependency_Header()
   let dashboards = dashboard_Header()
   let story = story_Header()
@@ -77,8 +78,9 @@ async function syncPackages () {
       }
     }
 
-    // Dashboards
-    dashboards += dashboard_Template(ii + 1, module)
+    // Dashboards -----------------------------------------
+    if (module.includesAny(exclude_bat) === false) dashboards += dashboard_Template(ii + 1, module)
+
     // Dependencies --------------------------------
     dependencyMD += dependency(ii + 1, package1, exclude_dep)
     // User stories
@@ -182,8 +184,10 @@ function jsonSync (template, pack, sync = false) {
 function dependency (no, pack, dependency_exclude) { // eslint-disable-line
   const { name, description, dependencies, devDependencies } = pack
   // _logRed(name)
-  let project = `${name} <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
-  return dependency_Template(no, project, description, dependencies, devDependencies, dependency_exclude)
+  // [lamed_core](https://github.com/perezLamed/lamed_core)
+  let project = `[${name}](https://github.com/perezLamed/${name}) <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
+  let description2 = `[${description}](https://github.com/perezLamed/${name}/blob/master/doc/functions.md)`
+  return dependency_Template(no, project, description2, dependencies, devDependencies, dependency_exclude)
 }
 
 /**
@@ -288,8 +292,9 @@ function dashboard_Template(no, project) { // eslint-disable-line
 function story_ (no, pack) { // eslint-disable-line
   const { name, description, role, task, reason } = pack
   // _logRed(name)
-  let project = `${name} <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
-  return story_Template(no, project, description, role, task, reason)
+  let project = `[${name}](https://github.com/perezLamed/${name}) <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
+  let description2 = `[${description}](https://github.com/perezLamed/${name}/blob/master/doc/functions.md)`
+  return story_Template(no, project, description2, role, task, reason)
 }
 
 /**
@@ -316,7 +321,7 @@ function story_Header() { // eslint-disable-line
  */
 function story_Template(no, project, description, role, task, reason) { // eslint-disable-line
   let result = `${no} | **${project}** | ${description} | `
-  let story = `**AS A** <u>"${role}"</u> **I WANT TO** <u>"${task}"</u> **SO THAT I CAN** <u>"${reason}"</u>\n`
+  let story = `**AS A** <u>"${role}"</u> <br>**I WANT TO** <u>"${task}"</u><br> **SO THAT I CAN** <u>"${reason}"</u>\n`
 
   return result + story
 }
