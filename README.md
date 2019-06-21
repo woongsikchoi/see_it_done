@@ -1,5 +1,23 @@
 # see_it_done (from startup to the end)
 
+## Badges to be implemented:
+![issues](https://img.shields.io/github/issues-raw/perezlamed/see_it_done.svg)
+![issues](https://img.shields.io/github/issues-closed-raw/perezlamed/see_it_done.svg)
+
+![code size](https://img.shields.io/github/languages/code-size/perezlamed/see_it_done.svg)
+![repo size](https://img.shields.io/github/repo-size/perezlamed/see_it_done.svg)
+![commit](https://img.shields.io/github/commit-activity/m/perezlamed/see_it_done.svg)
+![lastcommit](https://img.shields.io/github/last-commit/perezlamed/see_it_done.svg)
+
+[![Maintenance](https://img.shields.io/maintenance/yes/2019.svg)](https://github.com/perezlamed/see_it_done/graphs/commit-activity)
+[![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6046/branches/48313/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6046&bid=48313)
+![dependencies](https://david-dm.org/perezlamed/see_it_done.svg)
+
+![Github all releases](https://img.shields.io/github/downloads/perezlamed/see_it_done/total.svg)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![HitCount](http://hits.dwyl.io/perezlamed/see_it_done.svg)](http://hits.dwyl.io/perezlamed/see_it_done)
+ ---
+ 
 - [Dashboard](./Dashboard.md),
 - [Dependencies](./Dependencies.md) and
 - [User stories](./UserStories.md)
