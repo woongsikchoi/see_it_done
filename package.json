@@ -73,8 +73,8 @@
     "lamed_test": "^2.3.5",
     "lamed_string": "^1.1.21",
     "lamed_table": "^0.0.5",
-    "lamed_folder": "^1.2.30",
-    "lamed_io": "^1.1.32"
+    "lamed_folder": "^1.2.31",
+    "lamed_io": "^1.2.3"
   },
   "devDependencies": {},
   "role": "JavaScript developer",
