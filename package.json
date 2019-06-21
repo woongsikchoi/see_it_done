@@ -5,10 +5,10 @@
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
   "scripts": {
-    "test": "cd && npm run line && mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
+    "test": "npm run line && mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
     "test2": "nodemon --exec \"npm test\"",
-    "coverage_test": "cd && npm run line && nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000 && cd",
-    "coverage_report": "cd && nyc report --reporter=text-lcov > coverage.lcov && codecov && cd",
+    "coverage_test": "npm run line && nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000",
+    "coverage_report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "coverage": "npm run coverage_test && npm run coverage_report",
     "rules": "standard | snazzy",
     "fix": "cd && standard --fix",
