@@ -15,12 +15,12 @@
 
     "testall" : "cd && npm run fix && npm run test && cd",
     "commit": "cd && git add . && git commit -a -m \"config updates\" && cd",
-    "commitfix": "npm run testall && cd && git add . && git commit -a -m \"bug fixes\" && cd",
-    "commitnew": "cd && git add . && git commit -a -m \"Added new features\" && cd",
+    "commitfix": "npm run testall && cd && git add . && git commit -a -m \"Bug fixes\" && cd",
+    "commitnew": "npm run testall && cd && git add . && git commit -a -m \"Added new features\" && cd",
 
     "git": "cd && git add . && git commit -a -m \"sync changes\" && cd",
-    "gitfix": "npm run testall && npm run push",
-    "gitnew": "npm run testall && npm run v_minor && git add . && git commit -a -m \"Added new features\" && cd && npm run push",
+    "gitfix": "npm run commitfix && npm run v_patch && npm run push",
+    "gitnew": "npm run commitfix && npm run v_minor && npm run push",
     "v_patch": "npm version patch -m \"Patch version to %s\"",
     "v_minor": "npm version minor -m \"Upgrade version to %s\"",
     
