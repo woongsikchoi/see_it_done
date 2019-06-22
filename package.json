@@ -23,7 +23,7 @@
     "gitnew": "npm run commitfix && npm run v_minor && npm run push",
     "v_patch": "npm version patch -m \"Patch version to %s\"",
     "v_minor": "npm version minor -m \"Upgrade version to %s\"",
-    "push": "npm run line && echo PUSH and release to MASTER... && npm run line  && cd && git push origin master",
+    "push": "npm run line && echo PUSH and release to MASTER... && git push origin master",
     "bump": "npm version patch -m \"Bumping to %s\"",
     "release": "cd && npm run fix && npm test && npm run patch && start npm run push",
     "ncu": "cd && ncu -u -l info --timeout 70000 && cd && npm run yarn2",

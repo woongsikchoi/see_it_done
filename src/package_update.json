@@ -26,7 +26,7 @@
     "gitnew": "npm run commitfix && npm run v_minor && npm run push",
     "v_patch": "npm version patch -m \"Patch version to %s\"",
     "v_minor": "npm version minor -m \"Upgrade version to %s\"",
-    "push": "npm run line && echo PUSH and release to MASTER... && npm run line  && cd && git push origin master",
+    "push": "npm run line && echo PUSH and release to MASTER... && git push origin master",
     "pull": "cd && npm run line && git pull && npm run yarn2 && npm test && cd",
     "gitfixrep": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "patch": "npm version patch -m \"Patch version %s\"",
