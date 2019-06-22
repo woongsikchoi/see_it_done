@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
   "scripts": {
-    "test": "npm run line && mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
+    "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
     "test2": "nodemon --exec \"npm test\"",
     "coverage_test": "npm run line && nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000",
     "coverage_report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
@@ -13,11 +13,13 @@
     "rules": "standard | snazzy",
     "fix": "standard --fix",
 
-    "testall" : "cd && npm run fix && npm run test && cd && v_patch",
+    "testall" : "cd && npm run fix && npm run test && cd",
     "commit": "cd && git add . && git commit -a -m \"config updates\" && cd",
+    "commitfix": "npm run testall && cd && git add . && git commit -a -m \"bug fixes\" && cd",
+    "commitnew": "cd && git add . && git commit -a -m \"Added new features\" && cd",
 
     "git": "cd && git add . && git commit -a -m \"sync changes\" && cd",
-    "gitfix": "npm run testall && git add . && git commit -a -m \"bug fixes\" && cd && npm run push",
+    "gitfix": "npm run testall && npm run push",
     "gitnew": "npm run testall && npm run v_minor && git add . && git commit -a -m \"Added new features\" && cd && npm run push",
     "v_patch": "npm version patch -m \"Patch version to %s\"",
     "v_minor": "npm version minor -m \"Upgrade version to %s\"",
