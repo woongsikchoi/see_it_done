@@ -21,6 +21,7 @@
     "lamed_test",
     "lamed_string",
     "lamed_io",
+    "lamed_json",
     "lamed_name",
     "lamed_folder",
     "lamed_filesearch",
