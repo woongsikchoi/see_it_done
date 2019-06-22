@@ -14,6 +14,8 @@
     "fix": "standard --fix",
     "testall": "cd && npm run fix && npm run test && cd",
     "commit": "cd && git add . && git commit -a -m \"config updates\" && cd",
+    "commitFast": "cd && npm run line && npm run commit && npm run push && git status && cd",
+    "commitAll": "npm run yarn2 && npm run fix && npm run commit && npm test && npm run push",
     "commitfix": "npm run testall && cd && git add . && git commit -a -m \"Bug fixes\" && cd",
     "commitnew": "npm run testall && cd && git add . && git commit -a -m \"Added new features\" && cd",
     "git": "cd && git add . && git commit -a -m \"sync changes\" && cd",
@@ -21,15 +23,13 @@
     "gitnew": "npm run commitfix && npm run v_minor && npm run push",
     "v_patch": "npm version patch -m \"Patch version to %s\"",
     "v_minor": "npm version minor -m \"Upgrade version to %s\"",
-    "bump": "npm version patch -m \"Bumping to %s\"",
     "push": "npm run line && echo PUSH and release to MASTER... && npm run line  && cd && git push origin master",
+    "bump": "npm version patch -m \"Bumping to %s\"",
     "release": "cd && npm run fix && npm test && npm run patch && start npm run push",
     "ncu": "cd && ncu -u -l info --timeout 70000 && cd && npm run yarn2",
     "patch": "npm version patch -m \"Patch version %s\"",
     "prep": "npm run fix && npm test && npm run patch",
-    "commitAll": "npm run yarn2 && npm run fix && npm run commit && npm test && npm run push",
     "status": "npm run line && git log --since=2.weeks --pretty=format:\"%h - %an, %ar : %s\" && git status",
-    "commitFast": "cd && npm run line && npm run commit && npm run push && git status && cd",
     "gitfixrepo": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "test_yarn": "npm run yarn2 && npm test && npm run fix",
     "pull": "cd && npm run line && git pull && npm run yarn2 && npm test && cd",
@@ -43,7 +43,8 @@
     "local": "cd && npm install --ignore-scripts",
     "clean": "rmdir node_modules /s /q",
     "qa": "cd && npm run coverage_test && cd",
-    "add": "cd && yarn --ignore-scripts add --"
+    "add": "cd && yarn --ignore-scripts add --",
+    "gitfixrep": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\""
   },
   "nyc": {
     "exclude": [
