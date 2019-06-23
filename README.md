@@ -11,11 +11,15 @@
 
 [![Maintenance](https://img.shields.io/maintenance/yes/2019.svg)](https://github.com/perezlamed/see_it_done/graphs/commit-activity)
 [![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6046/branches/48313/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6046&bid=48313)
+
 ![dependencies](https://david-dm.org/perezlamed/see_it_done.svg)
+[Dependency graph](http://npm.broofa.com/?q=see_it_done)
 
 ![Github all releases](https://img.shields.io/github/downloads/perezlamed/see_it_done/total.svg)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![HitCount](http://hits.dwyl.io/perezlamed/see_it_done.svg)](http://hits.dwyl.io/perezlamed/see_it_done)
+[For readme sample see repo](https://www.npmjs.com/package/github-create-issue)
+ 
  ---
  
 - [Dashboard](./Dashboard.md),
