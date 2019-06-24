@@ -20,6 +20,8 @@
 [![HitCount](http://hits.dwyl.io/perezlamed/see_it_done.svg)](http://hits.dwyl.io/perezlamed/see_it_done)
 [For readme sample see repo](https://www.npmjs.com/package/github-create-issue)
  
+ [![Known Vulnerabilities](https://snyk.io/test/github/perezLamed/see_it_done/badge.svg?targetFile=package.json)](https://snyk.io/test/github/perezLamed/see_it_done?targetFile=package.json)
+ 
  ---
  
 - [Dashboard](./Dashboard.md),
