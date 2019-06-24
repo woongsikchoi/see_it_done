@@ -19,6 +19,7 @@
   "projects": [
     "lamed_core",
     "lamed_test",
+    "lamed_console",
     "lamed_string",
     "lamed_io",
     "lamed_json",
