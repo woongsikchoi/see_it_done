@@ -1,5 +1,9 @@
 # see_it_done (from startup to the end)
 
+- [Dashboard](./Dashboard.md),
+- [Dependencies](./Dependencies.md) and
+- [User stories](./UserStories.md)
+
 ## Badges to be implemented:
 ![issues](https://img.shields.io/github/issues-raw/perezlamed/see_it_done.svg)
 ![issues](https://img.shields.io/github/issues-closed-raw/perezlamed/see_it_done.svg)
@@ -24,10 +28,6 @@
  
  ---
  
-- [Dashboard](./Dashboard.md),
-- [Dependencies](./Dependencies.md) and
-- [User stories](./UserStories.md)
-
 <table>
     <tr>
         <td>
