@@ -35,7 +35,7 @@
     "pull": "cd && npm run line && git pull && npm run yarn2 && npm test && cd",
     "upgrade": "npm run ncu && npm run commit && npm run release && npm run line",
     "beta": "npm run commit && npm run release",
-    "install": "cd && yarn global add babel-eslint codecov mocha nyc snazzy standard",
+    "install": "cd && yarn global add babel-eslint codecov mocha nyc snazzy standard symlink-dir",
     "install2": "npm install -g npm@latest",
     "yarn2": "cd && yarn --ignore-scripts",
     "yarnfast": "yarn --ignore-scripts --offline",
