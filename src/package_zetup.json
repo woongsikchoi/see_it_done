@@ -18,6 +18,7 @@
   "package_update": "package_update.json",
   "projects": [
     "lamed_core",
+    "lamed_trace",
     "lamed_test",
     "lamed_console",
     "lamed_string",
