@@ -18,9 +18,8 @@
   "package_update": "package_update.json",
   "projects": [
     "lamed_core",
-    "lamed_con",
-    "lamed_test",
     "lamed_console",
+    "lamed_test",
     "lamed_string",
     "lamed_name",
     "lamed_io",
