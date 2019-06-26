@@ -6,15 +6,9 @@ console.log('Starting packageJson.js...')
 /* jshint esversion: 6 */
 // ------------------------------------------------------
 
-/* eslint-disable */
 const _test = require('lamed_test')
-const {
-  notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed,
-  _ifTrace, _Trace_Set, _Trace_Get,
-  _Trace, _TraceLine, _TraceGreen, _TraceBold, _Trace_Table, _Trace_Heading
-} = _test
-/* eslint-enable */
-// _Trace_Set(0)
+const { Ok, notOk, notOk_Then, Equal, notEqual, con, testAND } = _test // eslint-disable-line
+// con.traceSet(0)
 
 const _lio = require('lamed_io')
 const _lfolder = require('lamed_folder')
@@ -46,7 +40,7 @@ async function syncPackages () {
   for (let ii = 0; ii < projects.length; ii++) {
     let module = projects[ii]
     let packageName = _root + module + '/package.json'
-    // _log({item})
+    // con.log({item})
 
     // Find the package.json file and sync
     let package1 = {}
@@ -110,7 +104,7 @@ function FooterLinks () {
  */
 function jsonGet (packageName) {
   if (_lio.exist(packageName) === false) throw new Error(`'${packageName}' does not exist.`)
-  _log({ packageName })
+  con.log({ packageName })
   let package1 = require(packageName)
   return package1
 }
@@ -133,7 +127,7 @@ function jsonSync (template, pack, sync = false) {
     let test = pack[index]
     if (notOk(test)) {
       update = true
-      _logGreen(`Update '${index}'`)
+      con.logGreen(`Update '${index}'`)
       pack[index] = item
       continue // <-------------------------------------
     }
@@ -141,33 +135,33 @@ function jsonSync (template, pack, sync = false) {
       // Simple type ------------------------------
       if (sync && pack[index] !== item) {
         update = true
-        _logGreen(`Update '${index}'`)
+        con.logGreen(`Update '${index}'`)
         pack[index] = item
       }
-      // _log({property})
+      // con.log({property})
     } else {
       // This is an object  -------------
       for (const index2 in item) {
         if (index2 === '//') continue
         let item2 = item[index2]
         let property2 = { index2, item2 }
-        // _log({property2})
+        // con.log({property2})
         let test1 = pack[index]
         let test2 = test1[index2]
-        // _log({test2})
+        // con.log({test2})
         if (notOk(test2)) {
           update = true
           if (item2 === '') {
-            _logGreen(`Remove '${index}.${index2}'`)
+            con.logGreen(`Remove '${index}.${index2}'`)
             delete test1[index2]
           } else {
-            _logGreen(`Update '${index}.${index2}'`)
-            _log({ property2 })
+            con.logGreen(`Update '${index}.${index2}'`)
+            con.log({ property2 })
             test1[index2] = item2
           } // if value is '' remove it
         } else if (sync && test1[index2] !== item2) {
           update = true
-          _logGreen(`Update '${index}.${index2}'`)
+          con.logGreen(`Update '${index}.${index2}'`)
           test1[index2] = item2
         }
       }
@@ -183,7 +177,7 @@ function jsonSync (template, pack, sync = false) {
  */
 function dependency (no, pack, dependency_exclude) { // eslint-disable-line
   const { name, description, dependencies, devDependencies } = pack
-  // _logRed(name)
+  // con.logRed(name)
   // [lamed_core](https://github.com/perezLamed/lamed_core)
   let project = `[${name}](https://github.com/perezLamed/${name}) <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
   let description2 = `[${description}](https://github.com/perezLamed/${name}/blob/master/doc/functions.md)`
@@ -291,7 +285,7 @@ function dashboard_Template(no, project) { // eslint-disable-line
  */
 function story_ (no, pack) { // eslint-disable-line
   const { name, description, role, task, reason } = pack
-  // _logRed(name)
+  // con.logRed(name)
   let project = `[${name}](https://github.com/perezLamed/${name}) <br> [![npm](https://img.shields.io/npm/v/${name}.svg)](https://www.npmjs.org/package/${name})`
   let description2 = `[${description}](https://github.com/perezLamed/${name}/blob/master/doc/functions.md)`
   return story_Template(no, project, description2, role, task, reason)

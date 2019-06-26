@@ -6,15 +6,9 @@ console.log('Starting runlocal.js...')
 // Created by : Perez Lamed van Niekerk
 // ------------------------------------------------------
 
-/* eslint-disable */
 const _test = require('lamed_test')
-const {
-  notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed,
-  _ifTrace, _Trace_Set, _Trace_Get,
-  _Trace, _TraceLine, _TraceGreen, _TraceBold, _Trace_Table, _Trace_Heading, testAND
-} = _test
-/* eslint-enable */
-// _Trace_Set(0)
+const { Ok, notOk, notOk_Then, Equal, notEqual, con, testAND } = _test // eslint-disable-line
+// con.traceSet(0)
 
 const _table = require('lamed_table') // eslint-disable-line
 
@@ -39,7 +33,7 @@ async function runlocal (local = true) {
 
     if (module.includesAny(project_exclude)) continue // <-----------------------------------
     let packageName = _root + module + '/package.json'
-    _log({ packageName })
+    con.log({ packageName })
 
     // Find the package.json file and sync
     let package1 = jsonGet(packageName)
@@ -55,13 +49,13 @@ async function runlocal (local = true) {
         if (local) {
           // local --------------------------
           if (version.includes('../') === false) {
-            _log({ npm, version, row })
+            con.log({ npm, version, row })
             dependencies[npm] = '../' + npm // Set to local repo
           }
         } else {
           // Remove ------------------------
           if (version.includes('../') === true) {
-            _log({ npm, version, row })
+            con.log({ npm, version, row })
             dependencies[npm] = '^' + row[1] // Restore the version
           }
         }
@@ -72,10 +66,10 @@ async function runlocal (local = true) {
     _lio.writeFileSync(packageName, buffer)
   }
   // tableCheck(table, true)
-  _log()
-  _logLine()
-  _log(`Run '"local.bat" to update dependencies`)
-  _logLine()
+  con.log()
+  con.logLine()
+  con.log(`Run '"local.bat" to update dependencies`)
+  con.logLine()
 }
 
 // runlocal(true)
@@ -88,7 +82,7 @@ runlocal(false)
  */
 function jsonGet (packageName) {
   if (_lio.exist(packageName) === false) throw new Error(`'${packageName}' does not exist.`)
-  _log({ packageName })
+  con.log({ packageName })
   let package1 = require(packageName)
   return package1
 }

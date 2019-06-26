@@ -3,13 +3,9 @@ console.log('Starting npmBatch.js...')
 /* jshint esversion: 6 */
 // ------------------------------------------------------
 
-/* eslint-disable */
 const _test = require('lamed_test')
-const { notEqual, Equal, Ok, notOk, _log, _logT, _logLine, _logGreen, _logBold, _logRed,
-  _ifTrace, _Trace_Set, _Trace_Get,
-  _Trace, _TraceLine, _TraceGreen, _TraceBold, _Trace_Table, _Trace_Heading } = _test
-/* eslint-enable */
-// _Trace_Set(0)
+const { Ok, notOk, notOk_Then, Equal, notEqual, con, testAND } = _test // eslint-disable-line
+// con.traceSet(0)
 
 const _lio = require('lamed_io')
 const _lfolder = require('lamed_folder')
@@ -133,9 +129,9 @@ async function writeBatch () {
     let path = _root + item + '.bat'
     let file = buildBatFile(_projects.projects, _projects.projects_bat_exclude, npm, cmd, descr, _root, timeout)
 
-    _log(`Writing '${path}'...`)
-    if (Ok(npm)) _logGreen(` '${npm}'\n`)
-    else _logGreen(` '${cmd}'\n`)
+    con.log(`Writing '${path}'...`)
+    if (Ok(npm)) con.logGreen(` '${npm}'\n`)
+    else con.logGreen(` '${cmd}'\n`)
     file = file.replaceAll('\n', '\r\n')
     file += '\r\npause'
     await _lio.writeFile(path, file)
