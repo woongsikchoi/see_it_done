@@ -6,7 +6,6 @@ const _test = require('lamed_test')
 const { Ok, notOk, notOk_Then, Equal, notEqual, con, testAND } = _test // eslint-disable-line
 // con.traceSet(0)
 
-
 const _run = require('./index.test')
 
 describe('index.js', () => {
