@@ -82,11 +82,11 @@
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
     "git-state": "^4.1.0",
-    "lamed_folder": "^1.2.34",
-    "lamed_io": "^1.2.12",
-    "lamed_string": "^1.1.25",
-    "lamed_table": "^0.0.8",
-    "lamed_test": "^2.5.3"
+    "lamed_folder": "^1.2.35",
+    "lamed_io": "^1.2.13",
+    "lamed_string": "^1.1.26",
+    "lamed_table": "^0.0.9",
+    "lamed_test": "^2.5.7"
   },
   "devDependencies": {},
   "role": "JavaScript developer",
