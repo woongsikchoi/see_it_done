@@ -85,7 +85,7 @@
     "lamed_folder": "^1.2.35",
     "lamed_io": "^1.2.13",
     "lamed_string": "^1.1.26",
-    "lamed_table": "^0.0.9",
+    "lamed_table": "^0.0.11",
     "lamed_test": "^2.5.7"
   },
   "devDependencies": {},
