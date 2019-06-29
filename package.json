@@ -82,10 +82,10 @@
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
     "git-state": "^4.1.0",
-    "lamed_folder": "^1.2.37",
-    "lamed_io": "^1.2.15",
-    "lamed_string": "^1.1.26",
-    "lamed_table": "^0.0.13",
+    "lamed_folder": "^1.2.38",
+    "lamed_io": "^1.2.16",
+    "lamed_string": "^1.2.0",
+    "lamed_table": "^0.0.16",
     "lamed_test": "^2.5.9"
   },
   "devDependencies": {},
