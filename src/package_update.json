@@ -37,7 +37,7 @@
     "beta": "npm run commit && npm run release",
     "ncu": "cd && ncu -u -l info --timeout 70000 && cd && npm run yarn2",
     "upgrade": "npm run ncu && npm run commit && npm run release && npm run line",
-    "install": "cd && yarn global add babel-eslint codecov mocha nyc snazzy standard symlink-dir eslint",
+    "install": "cd && yarn global add babel-eslint codecov mocha nyc snazzy standard symlink-dir eslint chalk",
     "install2" : "npm install -g npm@latest",
     "line" : "echo ----------------------- && cd && echo -----------------------",
     "updateAll": "",
