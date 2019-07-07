@@ -47,7 +47,7 @@
     "commitredo": "npm run testall && cd && git add . && git commit -a -m \"Refactor and improve code\" && cd",
     "gitredo": "npm run commitredo && npm run v_patch && npm run push",
     "global": "cd && npm i -g  eslint babel-eslint codecov mocha nyc snazzy standard symlink-dir",
-    "install": "npm run global",
+    "install": "",
     "compiler": "cd && npm i --dev webpack webpack-cli webpack-strip-block uglifyjs-webpack-plugin"
   },
   "nyc": {

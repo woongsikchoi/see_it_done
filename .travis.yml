@@ -13,7 +13,7 @@ node_js:
 # - '6'
 - lts/*
 install:
-- npm install
+- npm run global
 script:
 - npm run test
 - npm run coverage
