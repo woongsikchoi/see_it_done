@@ -35,7 +35,6 @@
     "pull": "cd && npm run line && git pull && npm run yarn2 && npm test && cd",
     "upgrade": "npm run ncu && npm run commit && npm run release && npm run line",
     "beta": "npm run commit && npm run release",
-    "install": "cd && yarn global add babel-eslint codecov mocha nyc snazzy standard symlink-dir eslint",
     "install2": "npm install -g npm@latest",
     "yarn2": "cd && del package-lock.json && yarn --ignore-scripts",
     "yarnfast": "yarn --ignore-scripts --offline",
@@ -46,7 +45,8 @@
     "add": "cd && yarn --ignore-scripts add --",
     "gitfixrep": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "commitredo": "npm run testall && cd && git add . && git commit -a -m \"Refactor and improve code\" && cd",
-    "gitredo": "npm run commitredo && npm run v_patch && npm run push"
+    "gitredo": "npm run commitredo && npm run v_patch && npm run push",
+    "global": "cd && npm i -g babel-eslint codecov mocha nyc snazzy standard symlink-dir eslint webpack webpack-cli webpack-strip-block uglifyjs-webpack-plugin"
   },
   "nyc": {
     "exclude": [
