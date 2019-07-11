@@ -19,7 +19,7 @@ function TestAll (done) {
   con.traceBold(`--------------------------> ${arguments.callee.name}()`) // eslint-disable-line
 
   // test_1(done)
-  done()
+  return testAND(module.filename, true)
 }
 
 /**

@@ -16,7 +16,7 @@
 [![Maintenance](https://img.shields.io/maintenance/yes/2019.svg)](https://github.com/perezlamed/see_it_done/graphs/commit-activity)
 [![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6046/branches/48313/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6046&bid=48313)
 
-![dependencies](https://david-dm.org/perezlamed/see_it_done.svg)
+[![dependencies Status](https://david-dm.org/perezlamed/see_it_done/status.svg)](https://david-dm.org/perezlamed/see_it_done)
 [Dependency graph](http://npm.broofa.com/?q=see_it_done)
 
 ![Github all releases](https://img.shields.io/github/downloads/perezlamed/see_it_done/total.svg)

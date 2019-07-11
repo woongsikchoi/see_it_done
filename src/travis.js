@@ -109,13 +109,13 @@ async function travisUpdate () {
     // .travis.yml sync ---------------------------------
     let travisName = _root + module + '/.travis.yml'
     let travisSettings = ''
-    try {
-      travisSettings = await travisSettingsOff(travisName)
-      if (travisMode === 'quick') travisSettings = travisSettingsOn(travisName, travisSettings, osQuick, nodeJSquick)
-      else travisSettings = travisSettingsOn(travisName, travisSettings, os, nodeJS)
-    } catch (e) {
-      throw e
-    }
+    // try {
+    travisSettings = await travisSettingsOff(travisName)
+    if (travisMode === 'quick') travisSettings = travisSettingsOn(travisName, travisSettings, osQuick, nodeJSquick)
+    else travisSettings = travisSettingsOn(travisName, travisSettings, os, nodeJS)
+    // } catch (e) {
+    //   throw e
+    // }
 
     await _lio.writeFile(travisName, travisSettings)
     // return // Only do first one

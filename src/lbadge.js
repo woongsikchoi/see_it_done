@@ -18,7 +18,7 @@ con.useChalk(require('chalk'))
  * @param project - The project name
  * @returns {string} - The link
  */
-function projectLink(userName, project) {
+function projectLink (userName, project) {
   return `[${project}](https://github.com/${userName}/${project})`
 }
 unZip(() => projectLink('perezlamed', 'lamed_core'),
@@ -35,7 +35,7 @@ function npm (project) {
 unZip(() => npm('lamed_core'),
   '[![npm](https://img.shields.io/npm/v/lamed_core.svg)](https://www.npmjs.org/package/lamed_core)')
 
-function travisBuild(userName, project) {
+function travisBuild (userName, project) {
   return `[![Build Status](https://travis-ci.org/${userName}/${project}.svg?branch=master)](https://travis-ci.org/${userName}/${project})`
 }
 unZip(() => travisBuild('perezlamed', 'lamed_core'),
@@ -53,7 +53,7 @@ function codeFactor (userName, project) {
 unZip(() => codeFactor('perezlamed', 'lamed_core'),
   '[![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/lamed_core/badge)](https://www.codefactor.io/repository/github/perezlamed/lamed_core)')
 
-function download_Total (project) {
+function download_Total (project) { // eslint-disable-line
   return `[![downloads](http://img.shields.io/npm/dt/${project}.svg?style=flat)](https://www.npmjs.org/package/${project})`
 }
 unZip(() => download_Total('lamed_core'),
