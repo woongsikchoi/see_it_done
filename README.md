@@ -5,16 +5,15 @@
 - [User stories](./UserStories.md)
 
 ## Badges to be implemented:
-![issues](https://img.shields.io/github/issues-raw/perezlamed/see_it_done.svg)
-![issues](https://img.shields.io/github/issues-closed-raw/perezlamed/see_it_done.svg)
+[![open issues](https://img.shields.io/github/issues-raw/perezlamed/see_it_done.svg)](https://github.com/perezLamed/see_it_done/issues)
+[![closed issues](https://img.shields.io/github/issues-closed-raw/perezlamed/see_it_done.svg)](https://github.com/perezLamed/see_it_done/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed)
 
-![code size](https://img.shields.io/github/languages/code-size/perezlamed/see_it_done.svg)
-![repo size](https://img.shields.io/github/repo-size/perezlamed/see_it_done.svg)
-![commit](https://img.shields.io/github/commit-activity/m/perezlamed/see_it_done.svg)
-![lastcommit](https://img.shields.io/github/last-commit/perezlamed/see_it_done.svg)
+[![code size](https://img.shields.io/github/languages/code-size/perezlamed/see_it_done.svg)](http://npm.broofa.com/?q=see_it_done)
+[![repo size](https://img.shields.io/github/repo-size/perezlamed/see_it_done.svg)](http://npm.broofa.com/?q=see_it_done)
 
+[![commit activity](https://img.shields.io/github/commit-activity/m/perezlamed/see_it_done.svg)](https://github.com/perezLamed/see_it_done/graphs/contributors)
+[![lastcommit](https://img.shields.io/github/last-commit/perezlamed/see_it_done.svg)](https://github.com/perezLamed/see_it_done/graphs/commit-activity)
 [![Maintenance](https://img.shields.io/maintenance/yes/2019.svg)](https://github.com/perezlamed/see_it_done/graphs/commit-activity)
-[![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6046/branches/48313/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6046&bid=48313)
 
 [![dependencies Status](https://david-dm.org/perezlamed/see_it_done/status.svg)](https://david-dm.org/perezlamed/see_it_done)
 [Dependency graph](http://npm.broofa.com/?q=see_it_done)
@@ -22,11 +21,13 @@
 ![Github all releases](https://img.shields.io/github/downloads/perezlamed/see_it_done/total.svg)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![HitCount](http://hits.dwyl.io/perezlamed/see_it_done.svg)](http://hits.dwyl.io/perezlamed/see_it_done)
-[For readme sample see repo](https://www.npmjs.com/package/github-create-issue)
  
  [![Known Vulnerabilities](https://snyk.io/test/github/perezLamed/see_it_done/badge.svg?targetFile=package.json)](https://snyk.io/test/github/perezLamed/see_it_done?targetFile=package.json)
  
  ---
+[![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6046/branches/48313/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6046&bid=48313)
+[For readme sample see repo](https://www.npmjs.com/package/github-create-issue)
+
  
 <table>
     <tr>
