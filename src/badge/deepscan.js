@@ -12,9 +12,15 @@ const { Ok, notOk, notOk_Then, Equal, notEqual, con, testAND, unZip } = _test //
 // con.useChalk(require('chalk'))
 // con.traceSet(0)
 
+const _deepScan = {
+  "perezLamed/see_it_done": "[![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6046/branches/48313/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6046&bid=48313)"
+}
 
-
-  [![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6046/branches/48313/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6046&bid=48313)
+function deepScan(userName, project) {
+  let key = userName + '/' + project
+  let value = _deepScan[key]
+  return value
+}
 
 // Exports --------------------------
-module.exports = {}
+module.exports = { deepScan }
