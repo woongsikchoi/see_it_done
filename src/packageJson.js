@@ -13,6 +13,7 @@ const { Ok, notOk, notOk_Then, Equal, notEqual, con, testAND } = _test // eslint
 const _lio = require('lamed_io')
 const _lfolder = require('lamed_folder')
 require('lamed_string')
+const _help = require('./helper')
 const _packAdd = require('./package_add.json')
 const _packUpdate = require('./package_update.json')
 const _packSetup = require('./package_zetup.json')
@@ -25,17 +26,17 @@ const _ProjectFolder = _lfolder.fromRootFolder()
 [do Update]
 //
 */
-async function syncPackages () {
+function syncPackages () {
   let projects = _packSetup.projects
   let exclude_add = _packSetup.projects_add_exclude // eslint-disable-line
   let exclude_git = _packSetup.projects_gitignore_exclude // eslint-disable-line
   let exclude_dep = _packSetup.projects_dependencies_exclude // eslint-disable-line
   let exclude_bat = _packSetup.projects_bat_exclude // eslint-disable-line
   let dependencyMD = dependency_Header()
-  let dashboards = dashboard_Header()
+  // let dashboards = dashboard_Header()
   let story = story_Header()
 
-  const _gitIgnore = await _lio.readFile(_ProjectFolder + '.gitignore')
+  const _gitIgnore = _lio.readFileSync(_ProjectFolder + '.gitignore')
 
   for (let ii = 0; ii < projects.length; ii++) {
     let module = projects[ii]
@@ -47,33 +48,33 @@ async function syncPackages () {
     let packNew = {}
     // Package.json add ---------------------------------
     if (module.includesAny(exclude_add) === false) {
-      package1 = jsonGet(packageName)
+      package1 = _help.jsonGet(packageName)
       packNew = jsonSync(_packAdd, package1)
       if (Ok(packNew)) {
         let buffer = JSON.stringify(packNew, null, 2) + '\n'
-        await _lio.writeFile(packageName, buffer)
+        _lio.writeFileSync(packageName, buffer)
       }
     }
 
     // Package json update -------------------------
-    package1 = jsonGet(packageName)
+    package1 = _help.jsonGet(packageName)
     packNew = jsonSync(_packUpdate, package1, true)
     if (Ok(packNew)) {
       let buffer = JSON.stringify(packNew, null, 2) + '\n'
-      await _lio.writeFile(packageName, buffer)
+      _lio.writeFileSync(packageName, buffer)
     }
 
     // GitIgnore -------------------------------------
     if (module.includesAny(exclude_git) === false) {
       let gitIgnorePath = _root + module + '/.gitIgnore'
-      let gitIgnore = await _lio.readFile(gitIgnorePath)
+      let gitIgnore = _lio.readFileSync(gitIgnorePath)
       if (_gitIgnore !== gitIgnore) {
-        await _lio.writeFile(gitIgnorePath, _gitIgnore)
+        _lio.writeFileSync(gitIgnorePath, _gitIgnore)
       }
     }
 
     // Dashboards -----------------------------------------
-    if (module.includesAny(exclude_bat) === false) dashboards += dashboard_Template(ii + 1, module)
+    // if (module.includesAny(exclude_bat) === false) dashboards += dashboard_Template(ii + 1, module)
 
     // Dependencies --------------------------------
     dependencyMD += dependency(ii + 1, package1, exclude_dep)
@@ -82,32 +83,12 @@ async function syncPackages () {
     // return
   }
 
-  await _lio.writeFile(_ProjectFolder + 'Dashboard.md', dashboards + FooterLinks())
-  dependencyMD = dependencyMD + dependency_footer(exclude_dep) + FooterLinks()
-  await _lio.writeFile(_ProjectFolder + 'Dependencies.md', dependencyMD)
-  await _lio.writeFile(_ProjectFolder + 'UserStories.md', story + FooterLinks())
+  // _lio.writeFileSync(_ProjectFolder + 'docs/Dashboard.md', dashboards + _help.FooterLinks())
+  dependencyMD = dependencyMD + dependency_footer(exclude_dep) + _help.FooterLinks()
+  _lio.writeFileSync(_ProjectFolder + 'docs/Dependencies.md', dependencyMD)
+  _lio.writeFileSync(_ProjectFolder + 'docs/UserStories.md', story + _help.FooterLinks())
 }
 syncPackages()
-
-function FooterLinks () {
-  let result =
-  '- [Dashboard](./Dashboard.md),\n' +
-  '- [Dependencies](./Dependencies.md) and\n' +
-  '- [User stories](./UserStories.md)'
-  return result
-}
-
-/**
- * If the file exist, then return it
- * @param name
- * @returns {*}
- */
-function jsonGet (packageName) {
-  if (_lio.exist(packageName) === false) throw new Error(`'${packageName}' does not exist.`)
-  con.log({ packageName })
-  let package1 = require(packageName)
-  return package1
-}
 
 /**
  * Add items if not exist, and sync items if sycn is true
