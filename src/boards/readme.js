@@ -26,9 +26,9 @@ function Readme () {
   md += '**Github:**\n'
   // github
   md += badge.github.codeSize + '\n'
+  md += badge.github.repoSize + '\n'
   md += badge.github.hitCount + '\n'
   md += badge.github.releases + '\n'
-  md += badge.github.repoSize + '\n'
 
   // development
   md += '\n**Development:**\n'
