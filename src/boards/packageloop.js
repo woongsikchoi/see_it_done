@@ -28,8 +28,8 @@ function packageloop (table) {
     let module = projects[ii]
     let packageName = _root + module + '/package.json'
     let package1 = _help.jsonGet(packageName)
-    let row = []
-    for (let ii = 0; ii < table.DATA.cols.length; ii++) {
+    let row = [ii + 1]
+    for (let ii = 1; ii < table.DATA.cols.length; ii++) {
       let col = table.DATA.cols[ii]
       let value = package1[col]
       if (col.includes('.')) {
@@ -58,12 +58,12 @@ function mergeColumns (colResult, dtTest, name, version, func) {
   let versions = dtTest.Cols.toArray(version)
   let merge = mergeLists(names, versions, func)
   dtTest.array2Col(merge, colResult)
-  // if (colResult === name) dtTest.Cols.Drop(version) // If the result is part of the merge -> remove the other column
-  // else if (colResult === version) dtTest.Cols.Drop(name)
+  if (colResult === name) dtTest.Cols.Drop(version) // If the result is part of the merge -> remove the other column
+  else if (colResult === version) dtTest.Cols.Drop(name)
 }
 
 function packageloopTest () {
-  let dtTest = new _table.TableDef(['name', 'version', 'readme.role']) //, 'readme.task', 'readme.reason'])
+  let dtTest = new _table.TableDef(['id', 'name', 'version', 'readme.role']) //, 'readme.task', 'readme.reason'])
   packageloop(dtTest)
   // dtTest.show()
 
@@ -71,6 +71,7 @@ function packageloopTest () {
   // let versions = dtTest.Cols.toArray('version')
   // let merge = mergeLists(names, versions, (x, y) => { return x + '<br>' + y })
   mergeColumns('name', dtTest, 'name', 'version', (x, y) => { return `**${x}** <br> (${y})` })
+  dtTest.Cols.Drop('id')
   // dtTest.array2Col(merge, 'name')
   // dtTest.Cols.Drop('version')
   dtTest.show()
