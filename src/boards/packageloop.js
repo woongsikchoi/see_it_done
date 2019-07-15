@@ -45,37 +45,15 @@ function packageloop (table) {
   }
 }
 
-function mergeLists (names, versions, func) {
-  let merge = []
-  names.forEach((item, ii) => {
-    merge.push(func(item, versions[ii]))
-  })
-  return merge
-}
-
-function mergeColumns (colResult, dtTest, name, version, func) {
-  let names = dtTest.Cols.toArray(name)
-  let versions = dtTest.Cols.toArray(version)
-  let merge = mergeLists(names, versions, func)
-  dtTest.array2Col(merge, colResult)
-  if (colResult === name) dtTest.Cols.Drop(version) // If the result is part of the merge -> remove the other column
-  else if (colResult === version) dtTest.Cols.Drop(name)
-}
-
 function packageloopTest () {
   let dtTest = new _table.TableDef(['id', 'name', 'version', 'readme.role']) //, 'readme.task', 'readme.reason'])
   packageloop(dtTest)
-  // dtTest.show()
-
-  // let names = dtTest.Cols.toArray('name')
-  // let versions = dtTest.Cols.toArray('version')
-  // let merge = mergeLists(names, versions, (x, y) => { return x + '<br>' + y })
-  mergeColumns('name', dtTest, 'name', 'version', (x, y) => { return `**${x}** <br> (${y})` })
-  dtTest.Cols.Drop('id')
-  // dtTest.array2Col(merge, 'name')
-  // dtTest.Cols.Drop('version')
   dtTest.show()
 
+  dtTest.Cols.Merge('version', 'name', 'version', (x, y) => { return `**${x}** <br> (${y})` })
+  dtTest.Cols.Drop('id')
+  dtTest.show()
+  //
   // dtTest.DATA.cols = ['name', 'version', 'As a', 'I want to', 'So that I can']
   let md = dtTest.toMD()
   let outfile = _ProjectFolder + 'docs/UserStories2.md'
