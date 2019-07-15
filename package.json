@@ -86,12 +86,16 @@
     "lamed_badge": "^0.2.2",
     "lamed_folder": "^1.2.52",
     "lamed_io": "^1.3.12",
-    "lamed_string": "^1.5.7",
+    "lamed_string": "^1.5.8",
     "lamed_table": "^1.5.3",
     "lamed_test": "^2.8.4"
   },
   "devDependencies": {},
-  "role": "JavaScript developer",
-  "task": "see dashboards and specification of my packages",
-  "reason": "to ensure quality and maintainability accross all projects"
+  "readme": {
+    "role": "JavaScript developer",
+    "task": "see dashboards and specification of my packages",
+    "reason": "to ensure quality and maintainability accross all projects",
+    "npm": true,
+    "include": []
+  }
 }

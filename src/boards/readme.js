@@ -17,14 +17,28 @@ const _lio = require('lamed_io')
 const _lfolder = require('lamed_folder')
 const _ProjectFolder = _lfolder.fromRootFolder()
 
-function Readme () {
+function ReadmeGenerate () {
   let username = 'perezlamed'
   let project = 'see_it_done'
 
   let badge = new _badge.Badge(username, project)
   let md = ''
-  md += '**Github:**\n'
+  // releases
+  md += '\n**Releases:**\n'
+  md += badge.releases.npmRelease + '\n'
+  md += badge.releases.travisBuild + '\n'
+  md += badge.releases.codeCoverage + '\n'
+  md += badge.releases.npmDownloads + '\n'
+
+  // quality
+  md += '\n**Quality:**\n'
+  md += badge.quality.codeDependencies + '\n'
+  md += badge.quality.codeFactor + '\n'
+  md += badge.quality.deepScan + '\n'
+  md += badge.quality.vulnerabilities + '\n'
+
   // github
+  md += '**Github:**\n'
   md += badge.github.codeSize + '\n'
   md += badge.github.repoSize + '\n'
   md += badge.github.hitCount + '\n'
@@ -38,22 +52,8 @@ function Readme () {
   md += badge.development.lastCommit + '\n'
   md += badge.development.maintenance + '\n'
 
-  // releases
-  md += '\n**Releases:**\n'
-  md += badge.releases.codeCoverage + '\n'
-  md += badge.releases.npmDownloads + '\n'
-  md += badge.releases.npmRelease + '\n'
-  md += badge.releases.travisBuild + '\n'
-
-  // quality
-  md += '\n**Quality:**\n'
-  md += badge.quality.codeDependencies + '\n'
-  md += badge.quality.codeFactor + '\n'
-  md += badge.quality.deepScan + '\n'
-  md += badge.quality.vulnerabilities + '\n'
-
   // Write test file
   let outfile = _ProjectFolder + 'docs/readme.md'
   _lio.writeFileSync(outfile, md)
 }
-Readme()
+ReadmeGenerate()

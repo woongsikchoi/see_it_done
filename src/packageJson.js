@@ -235,29 +235,29 @@ function dependency_Template(no, project, description, dependencies, devDependen
   return result
 }
 
-/**
- * Header template for dashboard
- * @returns {string}
- */
-function dashboard_Header() { // eslint-disable-line
-  let result =
-    '# Project dashboards\n\n' +
-    'No | Project  | NPM | Build | Coverage | Quality | Downloads\n' +
-    ':----: | ---- | :----: | ---- | ----- | ----- | :----:\n'
+// /**
+//  * Header template for dashboard
+//  * @returns {string}
+//  */
+// function dashboard_Header() { // eslint-disable-line
+//   let result =
+//     '# Project dashboards\n\n' +
+//     'No | Project  | NPM | Build | Coverage | Quality | Downloads\n' +
+//     ':----: | ---- | :----: | ---- | ----- | ----- | :----:\n'
 
-  return result
-}
+//   return result
+// }
 
-function dashboard_Template(no, project) { // eslint-disable-line
-  let result = `${no} | [${project}](https://github.com/perezLamed/${project}) | ` +
-    `[![npm](https://img.shields.io/npm/v/${project}.svg)](https://www.npmjs.org/package/${project}) |` +
-    `[![Build Status](https://travis-ci.org/perezLamed/${project}.svg?branch=master)](https://travis-ci.org/perezLamed/${project}) |` +
-    `[![codecov](https://codecov.io/gh/perezLamed/${project}/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/${project}) |` +
-    `[![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/${project}/badge)](https://www.codefactor.io/repository/github/perezlamed/${project}) |` +
-    `[![downloads](http://img.shields.io/npm/dt/${project}.svg?style=flat)](https://www.npmjs.org/package/${project})\n`
+// function dashboard_Template(no, project) { // eslint-disable-line
+//   let result = `${no} | [${project}](https://github.com/perezLamed/${project}) | ` +
+//     `[![npm](https://img.shields.io/npm/v/${project}.svg)](https://www.npmjs.org/package/${project}) |` +
+//     `[![Build Status](https://travis-ci.org/perezLamed/${project}.svg?branch=master)](https://travis-ci.org/perezLamed/${project}) |` +
+//     `[![codecov](https://codecov.io/gh/perezLamed/${project}/branch/master/graph/badge.svg)](https://codecov.io/gh/perezLamed/${project}) |` +
+//     `[![CodeFactor](https://www.codefactor.io/repository/github/perezlamed/${project}/badge)](https://www.codefactor.io/repository/github/perezlamed/${project}) |` +
+//     `[![downloads](http://img.shields.io/npm/dt/${project}.svg?style=flat)](https://www.npmjs.org/package/${project})\n`
 
-  return result
-}
+//   return result
+// }
 
 /**
  * Create dependency markdown information
