@@ -97,5 +97,8 @@
     "reason": "to ensure quality and maintainability accross all projects",
     "npm": true,
     "include": []
-  }
+  },
+  "role": "JavaScript developer",
+  "task": "write simple error free code",
+  "reason": "to ensure quality and maintainability"
 }
