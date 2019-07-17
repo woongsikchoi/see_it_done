@@ -22,7 +22,7 @@ const _help = require('../helper')
 const _ProjectFolder = _lfolder.fromRootFolder()
 
 function dashboard () {
-  let Badge = new _badge.badgeFunction() // eslint-disable-line
+  let Badge = new _badge.BadgeFunction() // eslint-disable-line
 
   let username = 'perezlamed'
   let projects = _packSetup.projects
