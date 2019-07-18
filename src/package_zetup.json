@@ -22,6 +22,8 @@
     "lamed_test",
     "lamed_string",
     "lamed_arraycompare",
+    "lamed_array",
+    "lamed_binarray",
     "lamed_name",
     "lamed_badge",
     "lamed_io",
