@@ -2,9 +2,11 @@
   "//" : "Only add if it does not exist in package.json",
   "author": "Perez Lamed van Niekerk",
   "license": "MIT",
-  "role": "JavaScript developer",
-  "task": "write simple error free code",
-  "reason": "to ensure quality and maintainability",
+  "about": {
+    "role": "JavaScript developer",
+    "task": "write simple error free code",
+    "reason": "to ensure quality and maintainability"
+  },
   "dependencies": {
   },
   "devDependencies": {

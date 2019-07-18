@@ -91,14 +91,11 @@
     "lamed_test": "^2.8.4"
   },
   "devDependencies": {},
-  "readme": {
+  "about": {
     "role": "JavaScript developer",
     "task": "see dashboards and specification of my packages",
     "reason": "to ensure quality and maintainability accross all projects",
     "npm": true,
     "include": []
-  },
-  "role": "JavaScript developer",
-  "task": "write simple error free code",
-  "reason": "to ensure quality and maintainability"
+  }
 }
