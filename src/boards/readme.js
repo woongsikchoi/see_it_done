@@ -46,7 +46,7 @@ function ReadmeGenerate () {
   md += badge.development.commits + '\n'
 
   // github
-  md += '**Github:**\n'
+  md += '**\nGithub:**\n'
   md += badge.github.codeSize + '\n'
   md += badge.github.repoSize + '\n'
   md += badge.github.releases + '\n'

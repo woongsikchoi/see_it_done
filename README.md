@@ -18,6 +18,7 @@
 [![last commit](https://img.shields.io/github/last-commit/perezlamed/see_it_done.svg)](https://github.com/perezlamed/see_it_done/graphs/commit-activity)
 [![Maintenance](https://img.shields.io/maintenance/yes/2019.svg)](https://github.com/perezlamed/see_it_done/graphs/commit-activity)
 [![commit activity](https://img.shields.io/github/commit-activity/m/perezlamed/see_it_done.svg)](https://github.com/perezlamed/see_it_done/graphs/contributors)
+
 **Github:**
 [![code size](https://img.shields.io/github/languages/code-size/perezlamed/see_it_done.svg)](http://npm.broofa.com/?q=see_it_done)
 [![repo size](https://img.shields.io/github/repo-size/perezlamed/see_it_done.svg)](http://npm.broofa.com/?q=see_it_done)
