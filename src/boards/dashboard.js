@@ -26,37 +26,26 @@ function dashboard () {
 
   let username = 'perezlamed'
   let projects = _packSetup.projects
-  let links = projects.map(x => Badge.githubLink(username, x))
-  let releases = projects.map(x => Badge.releaseNPM(x))
-  let builds = projects.map(x => Badge.releaseTravisBuild(username, x))
-  let coverages = projects.map(x => Badge.releaseCodeCoverage(username, x))
-  let issues = projects.map(x => Badge.devIssuesOpen(username, x))
-  let deepScans = projects.map(x => Badge.qualityDeepScan(username, x))
-  // let codeFactors = projects.map(x => Badge.qualityCodeFactor(username, x))
-  // let commits = projects.map( x => badge.devLastCommit(username, x))
-  let depends = projects.map(x => Badge.qualityCodeDependencies(username, x))
-  let hits = projects.map(x => Badge.githubHitcount(username, x))
-
-  // Ignore lamed_dev for some items
-  let ignore = projects.indexOf('lamed_dev')
-  let ignoreStr = '----'
-  releases[ignore] = ignoreStr
-  builds[ignore] = ignoreStr
-  coverages[ignore] = ignoreStr
 
   // con.log({links, releases, builds, coverages, issues, commits, codeFactors, deepScans, hits})
   let dtDashboard = new _table.TableDef(['no', 'module'], 'dashboard')
-  dtDashboard.arrayAppend(links)
-  dtDashboard.array2Col(releases, 'npm')
-  dtDashboard.array2Col(builds, 'travis')
-  dtDashboard.array2Col(coverages, 'coverage')
-  dtDashboard.array2Col(issues, 'issues')
-  dtDashboard.array2Col(deepScans, 'deepScans')
-  // dtDashboard.array2Col(codeFactors, 'codeFactors')
-  // dtDashboard.array2Col(commits, 'commits')
-  dtDashboard.array2Col(depends, 'dependencies')
-  dtDashboard.array2Col(hits, 'hits')
+  dtDashboard.arrayAppend(projects.map(x => Badge.githubLink(username, x)))
+  dtDashboard.array2Col(projects.map(x => Badge.releaseNPM(x)), 'npm')
+  dtDashboard.array2Col(projects.map(x => Badge.releaseTravisBuild(username, x)), 'travis')
+  dtDashboard.array2Col(projects.map(x => Badge.releaseCodeCoverage(username, x)), 'coverage')
+  dtDashboard.array2Col(projects.map(x => Badge.devIssuesOpen(username, x)), 'issues')
+  dtDashboard.array2Col(projects.map(x => Badge.qualityDeepScan(username, x)), 'deepScans')
+  // dtDashboard.array2Col(projects.map(x => Badge.qualityCodeFactor(username, x)), 'codeFactors')
+  // dtDashboard.array2Col(projects.map( x => badge.devLastCommit(username, x)), 'commits')
+  // dtDashboard.array2Col(projects.map(x => Badge.qualityCodeDependencies(username, x)), 'dependencies')
+  // dtDashboard.array2Col(projects.map(x => Badge.githubHitcount(username, x)), 'hits')
   // dtDashboard.show()
+  let row = dtDashboard.Rows.Include('module', 'lamed_dev', true)
+  let ignoreStr = '----'
+  dtDashboard.Rows.Set(row, 'npm', ignoreStr)
+  dtDashboard.Rows.Set(row, 'travis', ignoreStr)
+  dtDashboard.Rows.Set(row, 'coverage', ignoreStr)
+
   let md = dtDashboard.toMD()
   md += _help.FooterLinks()
 

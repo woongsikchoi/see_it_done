@@ -32,25 +32,25 @@ function ReadmeGenerate () {
 
   // quality
   md += '\n**Quality:**\n'
-  md += badge.quality.codeDependencies + '\n'
   md += badge.quality.codeFactor + '\n'
   md += badge.quality.deepScan + '\n'
   md += badge.quality.vulnerabilities + '\n'
+  md += badge.quality.codeDependencies + '\n'
+
+  // development
+  md += '\n**Development:**\n'
+  md += badge.development.issuesOpen + '\n'
+  md += badge.development.issuesClosed + '\n'
+  md += badge.development.lastCommit + '\n'
+  md += badge.development.maintenance + '\n'
+  md += badge.development.commits + '\n'
 
   // github
   md += '**Github:**\n'
   md += badge.github.codeSize + '\n'
   md += badge.github.repoSize + '\n'
-  md += badge.github.hitCount + '\n'
   md += badge.github.releases + '\n'
-
-  // development
-  md += '\n**Development:**\n'
-  md += badge.development.commits + '\n'
-  md += badge.development.issuesClosed + '\n'
-  md += badge.development.issuesOpen + '\n'
-  md += badge.development.lastCommit + '\n'
-  md += badge.development.maintenance + '\n'
+  md += badge.github.hitCount + '\n'
 
   // Write test file
   let outfile = _ProjectFolder + 'docs/readme.md'
