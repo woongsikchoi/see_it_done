@@ -136,6 +136,8 @@ async function writeBatch () {
     file += '\r\npause'
     await _lio.writeFile(path, file)
   }
+  let projects = _projects.projects
+  con.log({ projects })
 }
 writeBatch()
 
