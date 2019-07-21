@@ -46,12 +46,13 @@ function packageloop (table) {
 }
 
 function packageloopTest () {
-  let dtTest = new _table.TableDef(['id', 'name', 'version', 'readme.role']) //, 'readme.task', 'readme.reason'])
+  let dtTest = new _table.TableDef(['id', 'name', 'version', 'about.role', 'about.task', 'about.reason'])
   packageloop(dtTest)
   dtTest.show()
 
   dtTest.Cols.Merge('version', 'name', 'version', (x, y) => { return `**${x}** <br> (${y})` })
   dtTest.Cols.Drop('id')
+  dtTest.DATA.cols = ['version', 'role', 'task', 'reason']
   dtTest.show()
   //
   // dtTest.DATA.cols = ['name', 'version', 'As a', 'I want to', 'So that I can']
