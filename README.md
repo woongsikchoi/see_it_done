@@ -1,5 +1,7 @@
 # see_it_done (from startup to the end)
 
+See : http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
+
 **Releases:**
 [![npm](https://img.shields.io/npm/v/see_it_done.svg)](https://www.npmjs.org/package/see_it_done)
 [![Build Status](https://travis-ci.org/perezlamed/see_it_done.svg?branch=master)](https://travis-ci.org/perezlamed/see_it_done)
