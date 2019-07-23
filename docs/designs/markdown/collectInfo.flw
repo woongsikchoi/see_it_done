@@ -1,0 +1,7 @@
+(collect information)
+<is word doc?> [convert 2 md] ?? [create md files]
+[convert 2 md]
+[create md files]
+/edit/
+[sort 2 folders]
+(end)

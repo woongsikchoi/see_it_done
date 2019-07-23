@@ -1,0 +1,42 @@
+<html>
+  <header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.11.3/flowchart.min.js" ></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src= "lamed_flowchart.js"></script>
+  </header>
+  <body>
+    <table border="0">
+      <tr valign="top">
+        <td><div id="diagram"></div></td>
+      </tr>
+    </table>
+    
+  </body>
+</html>
+
+<script>
+  // Flowchart ------------------------
+  function updateFlow(flow) {
+    diagram_div.html('');
+    diagram_div.html('');
+    // log_div.html('');
+
+    // let data = editor.getValue();
+    //  console.log(data);
+    // let flow = lflow.Flowchart_FromData(data);
+    //    console.log(flow);    
+    diagram = flowchart.parse( flow);
+    diagram.drawSVG('diagram');
+  }
+    // let log_div = jQuery('#log');
+    let diagram_div = jQuery('#diagram');
+
+    // var data = '(Do flow)\n[Task1]\n[Task2]\n[Task3]\n(end)\n';
+    var data = '(new document)\n[create work folder]\n[copy md template]\n[[collect information]]\n/edit/\n[[generate md]]\n(end)\n';
+
+  var codeFlowchart = 'a=>start: new document\nt1=>operation: create work folder\nt2=>operation: copy md template\nf1=>subroutine: collect information\nio1=>inputoutput: edit\nf2=>subroutine: generate md\nz=>end: end\na->t1\nt1->t2\nt2->f1\nf1->io1\nio1->f2\nf2->z\n';
+
+    updateFlow(codeFlowchart);
+  
+  </script>

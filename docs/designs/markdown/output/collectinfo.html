@@ -1,0 +1,42 @@
+<html>
+  <header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.11.3/flowchart.min.js" ></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src= "lamed_flowchart.js"></script>
+  </header>
+  <body>
+    <table border="0">
+      <tr valign="top">
+        <td><div id="diagram"></div></td>
+      </tr>
+    </table>
+    
+  </body>
+</html>
+
+<script>
+  // Flowchart ------------------------
+  function updateFlow(flow) {
+    diagram_div.html('');
+    diagram_div.html('');
+    // log_div.html('');
+
+    // let data = editor.getValue();
+    //  console.log(data);
+    // let flow = lflow.Flowchart_FromData(data);
+    //    console.log(flow);    
+    diagram = flowchart.parse( flow);
+    diagram.drawSVG('diagram');
+  }
+    // let log_div = jQuery('#log');
+    let diagram_div = jQuery('#diagram');
+
+    // var data = '(Do flow)\n[Task1]\n[Task2]\n[Task3]\n(end)\n';
+    var data = '(collect information)\n<is word doc?> [convert 2 md] ?? [create md files]\n[convert 2 md]\n[create md files]\n/edit/\n[sort 2 folders]\n(end)\n';
+
+  var codeFlowchart = 'a=>start: collect information\nc1=>condition: is word doc?\nt1=>operation: create md files\nt2=>operation: convert 2 md\nio1=>inputoutput: edit\nt3=>operation: sort 2 folders\nz=>end: end\na->c1\nc1(no)->t1\nc1(yes)->t2\nt2->t1\nt1->io1\nio1->t3\nt3->z\n';
+
+    updateFlow(codeFlowchart);
+  
+  </script>

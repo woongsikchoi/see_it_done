@@ -1,0 +1,12 @@
+(generate final md)
+/edit/
+[merge]
+<is done?> [review] ?? /edit/
+[review]
+<numbering> [merge numbers] ?? [done]
+[merge numbers]
+[review2]
+<is correct?> (end) ?? /edit/
+(end)
+[done]
+(end)
