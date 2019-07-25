@@ -16,10 +16,34 @@
   "timeout" : "10",
   "package_add": "package_add.json",
   "package_update": "package_update.json",
+  "packages" : {
+    "test" : [
+      "lamed_core",
+      "lamed_console",
+      "lamed_random",
+      "lamed_test"  
+    ],
+    "development": [
+      "lamed_build",
+      "lamed_dev",
+      "lamed_badge",
+      "lamed_learn",
+      "see_it_done",
+      "see_it_start"  
+    ],
+    "general": [
+    "lamed_string",
+    "lamed_array2",
+    "lamed_arraycompare",
+    "lamed_arraydef",
+
+    ]
+  },
   "projects": [
     "lamed_core",
     "lamed_console",
     "lamed_test",
+    "lamed_build",
     "lamed_string",
     "lamed_array2",
     "lamed_arraycompare",
