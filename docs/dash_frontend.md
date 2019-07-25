@@ -1,0 +1,9 @@
+## Frontend
+
+| No |Module |Npm |Travis |Coverage |Issues |Deepscans |
+|  ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+1 |[lamed_flowchart](https://github.com/perezlamed/lamed_flowchart) |[![npm](https://img.shields.io/npm/v/lamed_flowchart.svg)](https://www.npmjs.org/package/lamed_flowchart) |[![Build Status](https://travis-ci.org/perezlamed/lamed_flowchart.svg?branch=master)](https://travis-ci.org/perezlamed/lamed_flowchart) |[![codecov](https://codecov.io/gh/perezlamed/lamed_flowchart/branch/master/graph/badge.svg)](https://codecov.io/gh/perezlamed/lamed_flowchart) |[![open issues](https://img.shields.io/github/issues-raw/perezlamed/lamed_flowchart.svg)](https://github.com/perezlamed/lamed_flowchart/issues) |[![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6360/branches/52834/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6360&bid=52834) |
+2 |[lamed_floweditor](https://github.com/perezlamed/lamed_floweditor) |[![npm](https://img.shields.io/npm/v/lamed_floweditor.svg)](https://www.npmjs.org/package/lamed_floweditor) |[![Build Status](https://travis-ci.org/perezlamed/lamed_floweditor.svg?branch=master)](https://travis-ci.org/perezlamed/lamed_floweditor) |[![codecov](https://codecov.io/gh/perezlamed/lamed_floweditor/branch/master/graph/badge.svg)](https://codecov.io/gh/perezlamed/lamed_floweditor) |[![open issues](https://img.shields.io/github/issues-raw/perezlamed/lamed_floweditor.svg)](https://github.com/perezlamed/lamed_floweditor/issues) |[![DeepScan grade](https://deepscan.io/api/teams/1597/projects/6361/branches/52835/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=1597&pid=6361&bid=52835) |
+- [Dashboard](./Dashboard.md),
+- [Dependencies](./Dependencies.md) and
+- [User stories](./UserStories.md)

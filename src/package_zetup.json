@@ -32,11 +32,26 @@
       "see_it_start"  
     ],
     "general": [
-    "lamed_string",
-    "lamed_array2",
-    "lamed_arraycompare",
-    "lamed_arraydef",
-
+      "lamed_string",
+      "lamed_array2",
+      "lamed_arraycompare",
+      "lamed_arraydef",
+      "lamed_name",
+      "lamed_io",
+      "lamed_folder",
+      "lamed_filesearch",
+      "lamed_table"
+    ],
+    "focused": [
+      "lamed_json",
+      "lamed_vscode",
+      "lamed_consoleapp",
+      "common_word_list",
+      "lamed_markdown" 
+    ],
+    "frontend": [
+      "lamed_flowchart",
+      "lamed_floweditor"  
     ]
   },
   "projects": [
