@@ -65,7 +65,7 @@ function projects () {
   }
   return result
 }
-con.unZip(()=> projects())
+con.unZip(() => projects())
 
 function dashboard2 () {
   let username = 'perezlamed'
@@ -78,7 +78,7 @@ function dashboard2 () {
     let mods = _packSetup.packages[item]
     let md1 = dashboardCreate(mods, username, item)
     let file = `dash_${item}.md`
-    _lio.writeFileSync(_ProjectFolder + 'docs/' +file, md1)
+    _lio.writeFileSync(_ProjectFolder + 'docs/' + file, md1)
     md += `- [${item} (${mods.length})](${file})\n`
   }
   _lio.writeFileSync(_ProjectFolder + 'docs/' + 'Dashboard2.md', md)
