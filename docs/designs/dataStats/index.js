@@ -67,17 +67,21 @@ function arrayTotals (arr) {
   let q1 = arr[Math.round(n / 4)]
   let q3 = arr[Math.round(n * 3 / 4)]
   let range = Math.abs(max - min)
+  // unq, std1, std3, stdRng = avg-std1 ... avg+std3, q1Rng, q2Rng, q3Rng, q4Rng
   let result = { count: n, avg, std, range, sum, min, q1, med, q3, max }
   return result
 }
 con.unZip(() => arrayTotals([1, 2, 3, 4, 5]))
 unZip(() => arrayTotals(randomArray()))
 
-function statsShow() {
+function statsShow () {
   // Sample set distrubution
   let input = [11, 5, 15, 6, 20, 6, 3]
 
-  let Averge = 9.43
+  let avg = 9.43
+  let std = 6.19
+  let std1 = (avg - std).toFixed(0)
+  let std3 = (avg + std).toFixed(0)
   let sum = 66
   let Med = 6
   let range = 17
@@ -86,16 +90,26 @@ function statsShow() {
   let max = 20
   let q1 = 5
   let q3 = 15
-  con.log({ input })
+  let unq = '100%'
   con.log('')
   con.log(chalk.bold.underline(`Stats: (count:${count})`))
-  con.log({ Averge, range, sum })
+  con.log({ input })
+  con.log({ avg, std, std1, std3 })
+  con.log({ range, sum, unq })
   con.log({ min, q1, Med, q3, max })
-  con.log('2' + chalk.white.bgRed(' 3 ') + '4' + chalk.white.bgGreen(' 5 ') + chalk.white.bgBlue(' 6 ') +
-    chalk.white.bgGreen(' 7 8 9 10 11 12 13 14 15 ') + '16 17 18 19' + chalk.white.bgRed(' 20 ') + '21')
-  con.log('      ^--^-------^----------------^')
+  con.logGreen('  [-------------STD-------------------]')
+  con.log('[2' + chalk.white.bgRed(' 3 ') + '4' + chalk.white.bgGreen(' 5 ') + chalk.white.bgBlue(' 6 ') +
+    chalk.white.bgGreen(' 7 8 9 10 11 12 13 14 15 ') + '16 17 18 19' + chalk.white.bgRed(' 20 ') + '21]')
+  con.logGreen('       ^--M------A-----------------^')
 }
 statsShow()
+
+function Diagram () {
+  for (let ii = 0; ii <= 20; ii++) {
+    con.log(ii)
+    //
+  }
+}
 
 // Exports --------------------------
 module.exports = {}
