@@ -82,6 +82,7 @@
   },
   "homepage": "https://github.com/perezLamed/see_it_done#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
     "git-state": "^4.1.0",
     "lamed_badge": "^0.2.12",
     "lamed_folder": "^1.2.59",
