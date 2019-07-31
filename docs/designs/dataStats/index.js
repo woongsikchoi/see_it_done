@@ -12,6 +12,8 @@ const chalk = require('chalk')
 con.useChalk(chalk)
 // con.traceSet(0)
 
+const _core = require('lamed_core')
+
 /**
  * Returns a random float number between min (inclusive) and max (exclusive)
  */
@@ -90,17 +92,20 @@ function statsShow () {
   let max = 20
   let q1 = 5
   let q3 = 15
-  let unq = '100%'
+  let unq = '86%'
   con.log('')
   con.log(chalk.bold.underline(`Stats: (count:${count})`))
   con.log({ input })
   con.log({ avg, std, std1, std3 })
   con.log({ range, sum, unq })
   con.log({ min, q1, Med, q3, max })
-  con.logGreen('  [-------------STD-------------------]')
-  con.log('[2' + chalk.white.bgRed(' 3 ') + '4' + chalk.white.bgGreen(' 5 ') + chalk.white.bgBlue(' 6 ') +
-    chalk.white.bgGreen(' 7 8 9 10 11 12 13 14 15 ') + '16 17 18 19' + chalk.white.bgRed(' 20 ') + '21]')
-  con.logGreen('       ^--M------A-----------------^')
+  con.log('')
+  con.log('            █')
+  con.log('   █     █  █              █           █              █')
+  con.log('[ '+chalk.white.bgRed('03 ') + '04 ' + chalk.white.bgGreen('05 ') + chalk.white.bgBlue('06 ') +
+    chalk.white.bgGreen('07 08 09 10 11 12 13 14 15 ') + '16 17 18 19' + chalk.white.bgRed(' 20 ') + ']')
+  con.logGreen('         ^--M--------A-----------------^')
+  con.logGreen('  [-----------------STD-------------------]')
 }
 statsShow()
 
@@ -110,6 +115,29 @@ function Diagram () {
     //
   }
 }
+
+function dataLine(min, max) {
+  con.log('')
+  let result = []
+  let rng = max - min
+  let size = rng.toString().length
+  if (size < 2) size = 2
+  let index = Math.floor((rng / 20) + 0.9)
+  con.log({ index })
+  // min -= index 
+  let line = '[ '
+  for (let ii = 0; ii <= 21; ii++) {
+    let value = (min + (ii*index))
+    result.push(value)
+    let no = _core.strPad(value, size)
+    line += no + ' '
+    if (value >= max) break
+  }
+  line = line+ ']'
+  con.log(line)  
+  con.log({ result })
+}
+dataLine(3,20)
 
 // Exports --------------------------
 module.exports = {}
