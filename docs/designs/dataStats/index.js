@@ -45,10 +45,11 @@ function randomArray(min = 1, max = 100, total = 20, intValues = true) {
 }
 unZip(() => randomArray())
 
-function arrayTotals (arr) {
+function arrayTotals (arr, fixed = 0) {
   var max = arr[0]
   var min = arr[0]
   let sum = arr[0]
+  let rms = arr[0] * arr[0]
   // var avg = sum / arr.length
   arr.sort()
   let n = arr.length
@@ -60,17 +61,22 @@ function arrayTotals (arr) {
       min = arr[i]
     }
     sum = sum + arr[i]
+    rms = rms + (arr[i] * arr[i])
   }
-  let avg = sum / n
+  let avg = (sum / n).toFixed(fixed)
+  rms = Math.sqrt(rms / (n+1)).toFixed(fixed)
   // 0.32std = 25%; 0.675std = 50%; 
   // 1std = 68%; 1.28std = 80%; 2std = 96%
-  let std = Math.sqrt(arr.map(x => Math.pow(x-avg,2)).reduce((a,b) => a+b)/n).toFixed(3)
+  let std = Math.sqrt(arr.map(x => Math.pow(x-avg,2)).reduce((a,b) => a+b)/n).toFixed(fixed)
   let med = arr[Math.round(n / 2)]
   let q1 = arr[Math.round(n / 4)]
   let q3 = arr[Math.round(n * 3 / 4)]
   let range = Math.abs(max - min)
   // unq, std1, std3, stdRng = avg-std1 ... avg+std3, q1Rng, q2Rng, q3Rng, q4Rng
-  let result = { count: n, avg, std, range, sum, min, q1, med, q3, max }
+  // rms https://en.wikipedia.org/wiki/Root_mean_square (cos / sin wave average)
+  // Learning https://www.coursera.org/courses?query=statistics&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5BrefinementList%5D%5Blanguage%5D%5B0%5D=English&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5BrefinementList%5D%5Bskills%5D%5B0%5D=Statistics&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5BrefinementList%5D%5BproductDifficultyLevel%5D%5B0%5D=Beginner&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5Bpage%5D=1&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5Bconfigure%5D%5BclickAnalytics%5D=true&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5Bconfigure%5D%5BhitsPerPage%5D=10&configure%5BclickAnalytics%5D=true
+
+  let result = { count: n, avg, rms, std, range, sum, min, line: { q1, med, q3, max } }
   return result
 }
 con.unZip(() => arrayTotals([1, 2, 3, 4, 5]))
