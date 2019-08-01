@@ -13,37 +13,7 @@ con.useChalk(chalk)
 // con.traceSet(0)
 
 const _core = require('lamed_core')
-
-/**
- * Returns a random float number between min (inclusive) and max (exclusive)
- */
-function randomFloat(min = 1, max = 100) {
-  return Math.random() * (max - min) + min;
-}
-con.unZip(() => randomFloat(5,10))
-con.unZip(() => randomFloat(5,10))
-
-/**
-* Returns a random integer between min (inclusive) and max (inclusive).
-*/
-function randomInt(min = 1, max = 100) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-con.unZip(() => randomInt(1,10))
-con.unZip(() => randomInt(1,10))
-
-
-function randomArray(min = 1, max = 100, total = 20, intValues = true) {
-  let result = []
-  for (let ii = 0; ii < total; ii++) {
-    if (intValues) result.push(randomInt(min, max))
-    else result.push(randomFloat(min,max))
-  }
-  return result
-}
-unZip(() => randomArray())
+const _random = require('lamed_random')
 
 function arrayTotals (arr, fixed = 0) {
   var max = arr[0]
@@ -64,7 +34,7 @@ function arrayTotals (arr, fixed = 0) {
     rms = rms + (arr[i] * arr[i])
   }
   let avg = (sum / n)
-  rms = Math.sqrt(rms / (n+1)).toFixed(fixed)
+  rms = Math.sqrt(rms / (n+1))
   // 0.32std = 25%; 0.675std = 50%; 
   // 1std = 68%; 1.28std = 80%; 2std = 96%
   let var1 = arr.map(x => Math.pow(x - avg,2)).reduce((a,b) => a+b)/n
@@ -85,7 +55,9 @@ con.unZip(() => arrayTotals([1, 2, 3, 4, 5]))
 con.unZip(() => arrayTotals([5, 5, 4, 5, 5]))
 con.unZip(() => arrayTotals([1,1,1,1]))
 con.unZip(() => arrayTotals([10,14,10,10]))
-unZip(() => arrayTotals(randomArray()))
+unZip(() => arrayTotals(_random.randomArray()))
+con.unZip(() => arrayTotals([1, 2, 3, 4, 5,6,7,8,9]))
+
 
 function statsShow () {
   // Sample set distrubution
@@ -126,29 +98,6 @@ function Diagram () {
     //
   }
 }
-
-function dataLine(min, max) {
-  con.log('')
-  let result = []
-  let rng = max - min
-  let size = rng.toString().length
-  if (size < 2) size = 2
-  let index = Math.floor((rng / 20) + 0.9)
-  con.log({ index })
-  // min -= index 
-  let line = '[ '
-  for (let ii = 0; ii <= 21; ii++) {
-    let value = (min + (ii*index))
-    result.push(value)
-    let no = _core.strPad(value, size)
-    line += no + ' '
-    if (value >= max) break
-  }
-  line = line+ ']'
-  con.log(line)  
-  con.log({ result })
-}
-dataLine(3,20)
 
 // Exports --------------------------
 module.exports = {}
