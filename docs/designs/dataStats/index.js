@@ -63,11 +63,13 @@ function arrayTotals (arr, fixed = 0) {
     sum = sum + arr[i]
     rms = rms + (arr[i] * arr[i])
   }
-  let avg = (sum / n).toFixed(fixed)
+  let avg = (sum / n)
   rms = Math.sqrt(rms / (n+1)).toFixed(fixed)
   // 0.32std = 25%; 0.675std = 50%; 
   // 1std = 68%; 1.28std = 80%; 2std = 96%
-  let std = Math.sqrt(arr.map(x => Math.pow(x-avg,2)).reduce((a,b) => a+b)/n).toFixed(fixed)
+  let var1 = arr.map(x => Math.pow(x - avg,2)).reduce((a,b) => a+b)/n
+  let std = Math.sqrt(var1)
+  // let std = Math.sqrt(arr.map(x => Math.pow(x-avg,2)).reduce((a,b) => a+b)/n).toFixed(fixed)
   let med = arr[Math.round(n / 2)]
   let q1 = arr[Math.round(n / 4)]
   let q3 = arr[Math.round(n * 3 / 4)]
@@ -76,10 +78,13 @@ function arrayTotals (arr, fixed = 0) {
   // rms https://en.wikipedia.org/wiki/Root_mean_square (cos / sin wave average)
   // Learning https://www.coursera.org/courses?query=statistics&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5BrefinementList%5D%5Blanguage%5D%5B0%5D=English&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5BrefinementList%5D%5Bskills%5D%5B0%5D=Statistics&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5BrefinementList%5D%5BproductDifficultyLevel%5D%5B0%5D=Beginner&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5Bpage%5D=1&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5Bconfigure%5D%5BclickAnalytics%5D=true&indices%5Bprod_all_products_custom_ranking_revenuelast28d%5D%5Bconfigure%5D%5BhitsPerPage%5D=10&configure%5BclickAnalytics%5D=true
 
-  let result = { count: n, avg, rms, std, range, sum, min, line: { q1, med, q3, max } }
+  let result = { count: n, avg, var1, rms, std, range, sum, min, line: { q1, med, q3, max } }
   return result
 }
 con.unZip(() => arrayTotals([1, 2, 3, 4, 5]))
+con.unZip(() => arrayTotals([5, 5, 4, 5, 5]))
+con.unZip(() => arrayTotals([1,1,1,1]))
+con.unZip(() => arrayTotals([10,14,10,10]))
 unZip(() => arrayTotals(randomArray()))
 
 function statsShow () {
