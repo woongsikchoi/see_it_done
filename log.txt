@@ -1,0 +1,380 @@
+d48cd2f - PerezLamed, 6 days ago : Patch version 1.3.6
+0e192a5 - PerezLamed, 6 days ago : config updates
+1ce4cfc - PerezLamed, 6 days ago : small update
+94a4439 - learning, 6 days ago : update dataStats
+d1dbb18 - learning, 6 days ago : small improvements
+c8c459c - PerezLamed, 6 days ago : Create data line
+c76ba2f - PerezLamed, 7 days ago : Merge branch 'master' of https://github.com/perezLamed/see_it_done
+38e338d - PerezLamed, 7 days ago : Update dashboard.js
+c4c68a6 - learning, 7 days ago : Update dataStats.xlsx
+1861d8e - learning, 7 days ago : Improved stats data
+b2853da - learning, 8 days ago : update data stats
+3e3edad - PerezLamed, 8 days ago : config updates
+b7af48c - PerezLamed, 8 days ago : data stats
+44b6b38 - learning, 9 days ago : update designs
+3ef5b38 - PerezLamed, 12 days ago : new dashboards
+941c875 - PerezLamed, 13 days ago : Patch version 1.3.5
+d640618 - PerezLamed, 13 days ago : config updates
+1cd7416 - PerezLamed, 13 days ago : Patch version 1.3.4
+a430063 - PerezLamed, 13 days ago : config updates
+eceefe0 - learning, 2 weeks ago : Patch version to 1.3.3
+028d540 - learning, 2 weeks ago : Bug fixes
+6e7d3d9 - learning, 2 weeks ago : markdown designs
+21e6e03 - PerezLamed, 2 weeks ago : Patch version 1.3.2
+ba9588c - PerezLamed, 2 weeks ago : config updates
+cfe4b25 - PerezLamed, 2 weeks ago : add common words
+2db79dd - PerezLamed, 2 weeks ago : add lamed_array2
+23a2403 - PerezLamed, 2 weeks ago : small updates
+2fadf00 - PerezLamed, 3 weeks ago : Patch version to 1.3.1
+8a4b24e - PerezLamed, 3 weeks ago : Bug fixes
+35d8398 - PerezLamed, 3 weeks ago : Upgrade version to 1.3.0
+fafb6c6 - PerezLamed, 3 weeks ago : Added new features
+7253f35 - PerezLamed, 3 weeks ago : Update package_zetup.json
+d66b144 - PerezLamed, 3 weeks ago : Update package_zetup.json
+2369958 - PerezLamed, 3 weeks ago : update readme
+c769623 - PerezLamed, 3 weeks ago : update dashboards
+14ecc11 - PerezLamed, 3 weeks ago : Patch version 1.2.5
+d9cbef4 - PerezLamed, 3 weeks ago : config updates
+b070642 - learning, 3 weeks ago : config updates
+bf1b7b4 - PerezLamed, 3 weeks ago : debug dashboard
+1283c85 - PerezLamed, 3 weeks ago : add common_words
+c1c6f47 - learning, 3 weeks ago : add common_words
+1eb625f - PerezLamed, 3 weeks ago : Create commonWords.xlsx
+d77ebcc - PerezLamed, 3 weeks ago : Patch version to 1.2.4
+1aabb7c - PerezLamed, 3 weeks ago : Bug fixes
+29048e6 - learning, 3 weeks ago : Patch version to 1.2.3
+65e82ba - learning, 3 weeks ago : Bug fixes
+2e32476 - learning, 3 weeks ago : improvements
+84bde74 - learning, 3 weeks ago : Create packageloop.js
+1985dce - learning, 3 weeks ago : Create addins_v01.xlsx
+2ef5089 - PerezLamed, 3 weeks ago : Patch version 1.2.2
+019d938 - PerezLamed, 3 weeks ago : config updates
+5ede8b2 - PerezLamed, 3 weeks ago : Patch version to 1.2.1
+6f47f15 - PerezLamed, 3 weeks ago : Bug fixes
+c18f9eb - PerezLamed, 3 weeks ago : Upgrade version to 1.2.0
+5899875 - PerezLamed, 3 weeks ago : Added new features
+2121709 - PerezLamed, 4 weeks ago : added badge
+7fd5e0f - PerezLamed, 4 weeks ago : Patch version 1.1.22
+1f1f69a - PerezLamed, 4 weeks ago : config updates
+fd831ba - PerezLamed, 4 weeks ago : moved badge to own repo
+818cfe0 - PerezLamed, 4 weeks ago : add deepscan
+54dbed4 - PerezLamed, 4 weeks ago : Create badge main function
+c08b5e5 - PerezLamed, 4 weeks ago : add more badges
+2560c05 - PerezLamed, 4 weeks ago : Improve badges
+b4197b7 - PerezLamed, 4 weeks ago : Merge branch 'master' of https://github.com/perezLamed/see_it_done
+241906b - learning, 4 weeks ago : Update package_zetup.json
+c7b1f48 - PerezLamed, 4 weeks ago : Patch version to 1.1.21
+e96d99d - PerezLamed, 4 weeks ago : Bug fixes
+6795e53 - PerezLamed, 4 weeks ago : Create lbadge.js
+828d14f - learning, 4 weeks ago : config updates
+7fd43ed - PerezLamed, 4 weeks ago : config updates
+8869969 - PerezLamed, 4 weeks ago : config updates
+67abb3b - PerezLamed, 4 weeks ago : Patch version 1.1.20
+c3d7d53 - PerezLamed, 4 weeks ago : config updates
+2dee742 - PerezLamed, 4 weeks ago : config updates
+4237088 - PerezLamed, 5 weeks ago : Patch version 1.1.19
+46d7fe5 - PerezLamed, 5 weeks ago : config updates
+d9a51c5 - PerezLamed, 5 weeks ago : Patch version 1.1.18
+a8996f8 - PerezLamed, 5 weeks ago : config updates
+e521547 - PerezLamed, 5 weeks ago : Patch version 1.1.17
+f6beab0 - PerezLamed, 5 weeks ago : config updates
+8d04d0e - PerezLamed, 5 weeks ago : Patch version 1.1.16
+bc93151 - PerezLamed, 5 weeks ago : config updates
+7708542 - learning, 5 weeks ago : config updates
+b8351a9 - learning, 5 weeks ago : Patch version 1.1.15
+964f6a6 - learning, 5 weeks ago : config updates
+acf0f93 - PerezLamed, 5 weeks ago : Update package_update.json
+d2f3c17 - PerezLamed, 5 weeks ago : Patch version 1.1.14
+faae7cf - PerezLamed, 5 weeks ago : config updates
+a3c7169 - learning, 5 weeks ago : Update package_update.json
+33d9f66 - PerezLamed, 5 weeks ago : Patch version 1.1.13
+990cc4d - PerezLamed, 5 weeks ago : config updates
+40d9ac1 - PerezLamed, 5 weeks ago : Patch version 1.1.12
+b15c091 - PerezLamed, 5 weeks ago : config updates
+2241f01 - PerezLamed, 5 weeks ago : Patch version 1.1.11
+44d363f - PerezLamed, 5 weeks ago : config updates
+6e016f7 - PerezLamed, 5 weeks ago : Patch version 1.1.10
+5b419d8 - PerezLamed, 5 weeks ago : config updates
+61897eb - PerezLamed, 6 weeks ago : Patch version 1.1.9
+098fd50 - PerezLamed, 6 weeks ago : config updates
+3f8d4cc - PerezLamed, 6 weeks ago : Patch version 1.1.8
+2f2e0a7 - PerezLamed, 6 weeks ago : config updates
+dbf45ef - PerezLamed, 6 weeks ago : Patch version 1.1.7
+1bc4d06 - PerezLamed, 6 weeks ago : config updates
+8b9b513 - PerezLamed, 6 weeks ago : Patch version 1.1.6
+d56a653 - PerezLamed, 6 weeks ago : config updates
+ec43514 - PerezLamed, 6 weeks ago : Patch version 1.1.5
+e85e5bd - PerezLamed, 6 weeks ago : config updates
+4b2b558 - PerezLamed, 6 weeks ago : Patch version 1.1.4
+140325e - PerezLamed, 6 weeks ago : config updates
+dc5b192 - PerezLamed, 6 weeks ago : Patch version 1.1.3
+6b97254 - PerezLamed, 6 weeks ago : config updates
+994e33b - PerezLamed, 6 weeks ago : Update test.runner.js
+77d22de - PerezLamed, 6 weeks ago : config updates
+1aa10a5 - PerezLamed, 6 weeks ago : config updates
+3a09bf3 - PerezLamed, 6 weeks ago : fix
+fded7e0 - PerezLamed, 6 weeks ago : config updates
+da9ae2f - learning, 6 weeks ago : Update package_update.json
+43af39a - PerezLamed, 6 weeks ago : add con
+110ae7e - learning, 6 weeks ago : Update package_zetup.json
+008c2a2 - PerezLamed, 6 weeks ago : Patch version to 1.1.2
+99dd1fd - PerezLamed, 6 weeks ago : Bug fixes
+fb3e098 - PerezLamed, 6 weeks ago : Upgrade version to 1.1.0
+51021c7 - PerezLamed, 6 weeks ago : Patch version 1.0.5
+05f58f2 - PerezLamed, 6 weeks ago : Patch version 1.0.4
+d011d4f - PerezLamed, 6 weeks ago : Patch version to 1.0.3
+5878fbc - PerezLamed, 6 weeks ago : Refactor and improve code
+3dc63a8 - PerezLamed, 6 weeks ago : Patch version to 1.0.2
+f472f90 - PerezLamed, 6 weeks ago : Refactor and improve code
+fc61c13 - PerezLamed, 6 weeks ago : config updates
+f1d71b9 - PerezLamed, 6 weeks ago : Patch version to 1.0.1
+9e53710 - PerezLamed, 6 weeks ago : Refactor and improve code
+ba285cc - PerezLamed, 6 weeks ago : Patch version 0.2.2
+19e708a - PerezLamed, 6 weeks ago : config updates
+fbd912e - learning, 6 weeks ago : update projects
+48632d7 - learning, 6 weeks ago : New designs
+ba1db9c - PerezLamed, 6 weeks ago : Update README.md
+3e7984f - PerezLamed, 7 weeks ago : Patch version 0.2.1
+5a86aa9 - PerezLamed, 7 weeks ago : config updates
+9cd4202 - PerezLamed, 7 weeks ago : config updates
+92fb7ff - PerezLamed, 7 weeks ago : Upgrade version to 0.2.0
+30bcb82 - PerezLamed, 7 weeks ago : Bug fixes
+0de98ee - PerezLamed, 7 weeks ago : Upgrade version to 0.1.0
+9b18e04 - PerezLamed, 7 weeks ago : Bug fixes
+446167d - PerezLamed, 7 weeks ago : config updates
+d088549 - PerezLamed, 7 weeks ago : config updates
+605a54c - PerezLamed, 7 weeks ago : Patch version to 0.0.10
+58f2560 - PerezLamed, 7 weeks ago : Bug fixes
+cb8b916 - PerezLamed, 7 weeks ago : Patch version to 0.0.9
+7c44af1 - PerezLamed, 7 weeks ago : Bug fixes
+f0c9856 - PerezLamed, 7 weeks ago : bug fixes
+824d99c - PerezLamed, 7 weeks ago : sync changes
+d6e97b9 - PerezLamed, 7 weeks ago : 0.2.0
+2756aab - PerezLamed, 7 weeks ago : 0.1.1
+128fddf - PerezLamed, 7 weeks ago : 0.1.0
+751697b - PerezLamed, 7 weeks ago : config updates
+cfe9394 - PerezLamed, 7 weeks ago : 2.2.0
+7cd19ca - PerezLamed, 7 weeks ago : 2.1.1
+b89c568 - PerezLamed, 7 weeks ago : 2.1.0
+5d3042b - PerezLamed, 7 weeks ago : 2.0.0
+b143a56 - PerezLamed, 7 weeks ago : 1.1.0
+d79e5b0 - PerezLamed, 7 weeks ago : Bumping to 1.0.7
+32720a8 - PerezLamed, 7 weeks ago : Patch version 1.0.6
+8f23e99 - PerezLamed, 7 weeks ago : config updates
+b3c0dcd - PerezLamed, 7 weeks ago : Update README.md
+e19d757 - PerezLamed, 7 weeks ago : config updates
+0cac4ee - PerezLamed, 7 weeks ago : config updates
+8cd7fde - learning, 7 weeks ago : Update package_update.json
+b61b01d - PerezLamed, 7 weeks ago : Patch version 1.0.5
+78ed177 - PerezLamed, 7 weeks ago : config updates
+8adbe3b - PerezLamed, 7 weeks ago : Patch version 1.0.4
+dd3ebb7 - PerezLamed, 7 weeks ago : config updates
+22c9321 - learning, 7 weeks ago : config updates
+eb6618b - learning, 7 weeks ago : update bat generation
+02765e0 - PerezLamed, 7 weeks ago : config updates
+55e944a - PerezLamed, 7 weeks ago : Patch version 1.0.3
+1cf86da - PerezLamed, 7 weeks ago : config updates
+339d32b - PerezLamed, 7 weeks ago : update batch files
+2e3de8c - PerezLamed, 7 weeks ago : config updates
+92c489c - PerezLamed, 7 weeks ago : config updates
+86d0598 - PerezLamed, 8 weeks ago : config updates
+51a35f1 - PerezLamed, 8 weeks ago : config updates
+273b25e - PerezLamed, 8 weeks ago : config updates
+b734abc - PerezLamed, 8 weeks ago : config updates
+adc41fc - learning, 8 weeks ago : Update package_update.json
+441e86f - learning, 8 weeks ago : Update package_update.json
+dd82abf - PerezLamed, 8 weeks ago : fix setup
+c74dbfb - learning, 8 weeks ago : config updates
+86abeef - learning, 8 weeks ago : config updates
+870e863 - PerezLamed, 8 weeks ago : Create comment2doc.js
+7871986 - PerezLamed, 8 weeks ago : config updates
+d7e4850 - PerezLamed, 8 weeks ago : add lamed_table
+624cf55 - learning, 8 weeks ago : Update package.json
+28c767c - PerezLamed, 8 weeks ago : update
+034516e - PerezLamed, 8 weeks ago : Create js2doc.js
+402149f - PerezLamed, 8 weeks ago : update bat files
+1c771ca - PerezLamed, 8 weeks ago : config updates
+b789705 - PerezLamed, 8 weeks ago : Patch version 1.0.2
+ae8269a - PerezLamed, 8 weeks ago : config updates
+cfaf3ca - PerezLamed, 8 weeks ago : Patch version 1.0.1
+99ef5cd - PerezLamed, 8 weeks ago : config updates
+e20906e - PerezLamed, 8 weeks ago : config updates
+94c3aec - PerezLamed, 9 weeks ago : config updates
+a0f5419 - PerezLamed, 9 weeks ago : Patch version 0.0.37
+9f84bac - PerezLamed, 9 weeks ago : config updates
+aaf187c - PerezLamed, 9 weeks ago : Patch version 0.0.36
+568232e - PerezLamed, 9 weeks ago : config updates
+73c9e18 - PerezLamed, 9 weeks ago : Patch version 0.0.35
+24ac9fc - PerezLamed, 9 weeks ago : config updates
+5a7145e - PerezLamed, 9 weeks ago : Patch version 0.0.34
+ca77836 - PerezLamed, 9 weeks ago : config updates
+66e2d09 - PerezLamed, 9 weeks ago : Patch version 0.0.33
+df8ac34 - PerezLamed, 9 weeks ago : config updates
+7af1e24 - PerezLamed, 9 weeks ago : config updates
+2f0a0f0 - PerezLamed, 9 weeks ago : config updates
+e89d2e0 - PerezLamed, 9 weeks ago : config updates
+4a41c24 - PerezLamed, 9 weeks ago : config updates
+9a69ace - PerezLamed, 10 weeks ago : Update package_zetup.json
+e7fc3bb - PerezLamed, 10 weeks ago : Patch version 0.0.32
+5c6301b - PerezLamed, 10 weeks ago : config updates
+fed90c3 - PerezLamed, 10 weeks ago : update
+41432e6 - PerezLamed, 10 weeks ago : config updates
+1e0f397 - PerezLamed, 2 months ago : Update package_zetup.json
+0a0e1cd - PerezLamed, 2 months ago : Patch version 0.0.31
+476d776 - PerezLamed, 2 months ago : config updates
+8b02ec4 - PerezLamed, 2 months ago : config updates
+29523e0 - PerezLamed, 2 months ago : Patch version 0.0.30
+7cbc674 - PerezLamed, 2 months ago : config updates
+4c27dbf - PerezLamed, 2 months ago : Patch version 0.0.29
+caf5b81 - PerezLamed, 2 months ago : config updates
+0229372 - PerezLamed, 2 months ago : config updates
+9725fed - PerezLamed, 2 months ago : config updates
+88d8bb3 - PerezLamed, 2 months ago : add setup command
+45c743a - PerezLamed, 2 months ago : Patch version 0.0.28
+f3e9729 - PerezLamed, 2 months ago : config updates
+ef2f6f0 - PerezLamed, 2 months ago : config updates
+2bc5627 - PerezLamed, 2 months ago : Patch version 0.0.27
+bb3ba35 - PerezLamed, 2 months ago : config updates
+59bc828 - PerezLamed, 2 months ago : Patch version 0.0.26
+0890eba - PerezLamed, 2 months ago : config updates
+e6a2656 - PerezLamed, 2 months ago : Patch version 0.0.25
+7bf9ad3 - PerezLamed, 2 months ago : config updates
+ee0af0c - PerezLamed, 2 months ago : config updates
+b03da34 - PerezLamed, 2 months ago : config updates
+8dc8e1a - learning, 3 months ago : config updates
+1c430f7 - learning, 3 months ago : config updates
+ce38e55 - learning, 3 months ago : config updates
+ba2664d - learning, 3 months ago : Update module integrations
+be2b64d - PerezLamed, 3 months ago : config updates
+927b595 - PerezLamed, 3 months ago : config updates
+74f2c0f - PerezLamed, 3 months ago : config updates
+debb531 - learning, 3 months ago : update setup files
+8f652cd - learning, 3 months ago : config updates
+062135e - learning, 3 months ago : pull script update
+fd0e63d - PerezLamed, 3 months ago : config updates
+062ae42 - PerezLamed, 3 months ago : config updates
+b2e6505 - PerezLamed, 3 months ago : config updates
+a1233b5 - PerezLamed, 3 months ago : Patch version 0.0.24
+caa5618 - PerezLamed, 3 months ago : config updates
+60fa6a1 - PerezLamed, 3 months ago : Update readme
+12ca2bc - PerezLamed, 3 months ago : Update team.md
+9fe27e5 - PerezLamed, 3 months ago : add team
+ae590e1 - PerezLamed, 3 months ago : Update tree.md
+5cc7607 - PerezLamed, 3 months ago : config updates
+8237f98 - PerezLamed, 3 months ago : Patch version 0.0.23
+7be9321 - PerezLamed, 3 months ago : config updates
+4a557f9 - PerezLamed, 3 months ago : Patch version 0.0.22
+5e2da71 - PerezLamed, 3 months ago : config updates
+72fb5d9 - PerezLamed, 3 months ago : config updates
+900b583 - PerezLamed, 3 months ago : .gitignore fix
+a6b5486 - PerezLamed, 3 months ago : config updates
+1ee83cb - PerezLamed, 3 months ago : Patch version 0.0.21
+10f5bab - PerezLamed, 3 months ago : config updates
+036a2da - PerezLamed, 3 months ago : Update package_zetup.json
+4b2d53e - PerezLamed, 3 months ago : Update readme
+b5005b9 - PerezLamed, 3 months ago : config updates
+e5ce880 - PerezLamed, 3 months ago : config updates
+33b8bbe - PerezLamed, 3 months ago : config updates
+a81ef9e - learning, 3 months ago : Update package_zetup.json
+8ba5feb - learning, 3 months ago : config updates
+f1a5271 - learning, 3 months ago : config updates
+4eada03 - learning, 3 months ago : Update package_update.json
+6466fd8 - blabla, 3 months ago : Update package_update.json
+c32ebb0 - blabla, 3 months ago : update
+ebfa74d - PerezLamed, 3 months ago : Create yarn.lock
+41316ac - PerezLamed, 3 months ago : Patch version 0.0.20
+d691a3d - PerezLamed, 3 months ago : Patch release
+423895a - PerezLamed, 3 months ago : Merge branch 'master' of https://github.com/perezLamed/see_it_done
+69ab1f9 - PerezLamed, 3 months ago : Patch version 0.0.19
+8c72d46 - PerezLamed, 3 months ago : Patch release
+986b0d8 - perezLamed, 4 months ago : Update package_update.json
+bf15ec9 - perezLamed, 4 months ago : Patch release
+ce231c1 - perezLamed, 4 months ago : Patch release
+a9ed6e7 - perezLamed, 4 months ago : Patch release
+c410b4e - perezLamed, 4 months ago : Patch release
+850bfde - perezLamed, 4 months ago : Update package_update.json
+72b71ab - PerezLamed, 4 months ago : Patch version 0.0.18
+f933b3a - PerezLamed, 4 months ago : Patch release
+25abeb8 - PerezLamed, 4 months ago : refactor
+e7fd046 - PerezLamed, 4 months ago : update to package.json
+20b8b1f - PerezLamed, 4 months ago : Patch version 0.0.17
+fce33e4 - PerezLamed, 4 months ago : release
+587ee69 - PerezLamed, 4 months ago : Update README.md
+eb1f69e - PerezLamed, 4 months ago : Update README.md
+0451f5d - PerezLamed, 4 months ago : update readme
+8f39300 - PerezLamed, 4 months ago : Patch version 0.0.16
+30016f9 - PerezLamed, 4 months ago : release
+e6a34b0 - PerezLamed, 4 months ago : Add npm sync scripts
+126b49b - PerezLamed, 4 months ago : Update packageSync.js
+2f97967 - PerezLamed, 4 months ago : Added batch methods
+c3f7611 - PerezLamed, 4 months ago : release
+8db3a8b - PerezLamed, 4 months ago : small updates
+6eb1569 - PerezLamed, 4 months ago : Merge branch 'master' of https://github.com/perezLamed/see_it_done
+efdebf2 - Perez, 4 months ago : Update .travis.yml
+3aeb99a - PerezLamed, 4 months ago : release
+77738a3 - perezLamed, 4 months ago : Patch version 0.0.15
+9059264 - perezLamed, 4 months ago : release
+0f961be - perezLamed, 4 months ago : Patch version 0.0.14
+81054f3 - perezLamed, 4 months ago : release
+118b9c3 - perezLamed, 4 months ago : Update update.bat
+b960822 - perezLamed, 4 months ago : Update README.md
+6ea6c4a - perezLamed, 4 months ago : Patch version 0.0.13
+ddca7d0 - perezLamed, 4 months ago : release
+e325873 - perezLamed, 4 months ago : Patch version 0.0.12
+22568af - perezLamed, 4 months ago : release
+9773c30 - perezLamed, 4 months ago : Patch version 0.0.11
+8379195 - perezLamed, 4 months ago : release
+6953f4d - perezLamed, 4 months ago : Patch version 0.0.10
+a998e8a - perezLamed, 4 months ago : release
+61505d4 - PerezLamed, 4 months ago : Update update.bat
+66ab452 - PerezLamed, 4 months ago : Patch version 0.0.9
+5bfe13c - PerezLamed, 4 months ago : release
+3f46430 - PerezLamed, 4 months ago : Patch version 0.0.8
+3dc4432 - PerezLamed, 4 months ago : release
+e10bc83 - PerezLamed, 4 months ago : Add sync.bat
+46f8ba0 - PerezLamed, 4 months ago : release
+969425a - PerezLamed, 4 months ago : Patch version 0.0.7
+eac2cc4 - PerezLamed, 4 months ago : release
+95af12a - PerezLamed, 4 months ago : Update package.json
+0d23e3d - PerezLamed, 4 months ago : Merge branch 'master' of https://github.com/perezLamed/see_it_done
+2955a14 - PerezLamed, 4 months ago : Revert "Update package.json"
+34cd57b - PerezLamed, 4 months ago : Update package.json
+eda4d77 - perezLamed, 4 months ago : Update update.bat
+c7c8d38 - perezLamed, 4 months ago : Patch version 0.0.6
+dfb90d0 - perezLamed, 4 months ago : release
+c600c95 - PerezLamed, 4 months ago : Patch version 0.0.5
+0b22de7 - PerezLamed, 4 months ago : release
+998ac7a - perezLamed, 4 months ago : Create GenLog.bat
+8dc6999 - PerezLamed, 5 months ago : Patch version 0.0.4
+5db4024 - PerezLamed, 5 months ago : release
+7a08b4a - PerezLamed, 5 months ago : Update package.json
+d8b875a - PerezLamed, 5 months ago : Create update.bat
+c864671 - PerezLamed, 5 months ago : Patch version 0.0.3
+533c320 - PerezLamed, 5 months ago : release
+b6b146f - PerezLamed, 5 months ago : Update .travis.yml
+b87f1c4 - PerezLamed, 5 months ago : Update index.test.js
+d392276 - PerezLamed, 5 months ago : Update README.md
+a363ec9 - PerezLamed, 5 months ago : release
+93b7285 - PerezLamed, 5 months ago : Patch version 0.0.2
+659730f - PerezLamed, 5 months ago : release
+6efb98a - Perez, 5 months ago : Update UserStories.md
+d21e54b - Perez, 5 months ago : update readme
+ef216b4 - PerezLamed, 5 months ago : Update Burndown_flowEditor.xlsx
+401e44e - Perez, 5 months ago : Update README.md
+470a5e7 - Perez, 5 months ago : update readme
+e9f7bfa - Perez, 5 months ago : Update README.md
+4fd7fb7 - PerezLamed, 5 months ago : update readme
+611c15f - PerezLamed, 5 months ago : new stories
+590d31c - PerezLamed, 5 months ago : improvement scripts
+163db16 - PerezLamed, 5 months ago : update templates
+2de0ede - PerezLamed, 5 months ago : test new project
+faca106 - PerezLamed, 5 months ago : refactor
+428e632 - PerezLamed, 5 months ago : update plan
+8995c37 - PerezLamed, 5 months ago : update readme
+b3dcce2 - PerezLamed, 5 months ago : add badges
+cdcdc4f - PerezLamed, 5 months ago : new app template
+9b23e2e - PerezLamed, 5 months ago : finsish designs
+e1e4e9f - PerezLamed, 6 months ago : added checklist templates
+7e43ec0 - PerezLamed, 6 months ago : pictures
+58854b0 - Perez, 6 months ago : Create README.md
+ff0461d - Perez, 6 months ago : Initial commit
