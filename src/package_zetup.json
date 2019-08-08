@@ -94,7 +94,9 @@
   "projects_bat_exclude" : [
     "lamed_dev"
   ],
-  "projects_gitignore_exclude": [],
+  "projects_gitignore_exclude": [
+    "see_it_zone"
+  ],
   "projects_dependencies_exclude": [
     "babel-eslint",
     "mocha",
