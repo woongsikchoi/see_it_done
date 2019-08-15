@@ -7,7 +7,6 @@
     "commitFast" : {"npm" : "call npm run commitFast", "timeout" : 5, "description" : "Fast commit to master (no tests)"},
     "commitLocal" : {"npm" : "call npm run commit", "timeout" : 0, "description" : "Local commit only"},
     "upgrade" : {"npm" : "call npm run upgrade", "timeout": 100, "description": "Upgrade all project dependencies; on change inc version and release to master"},
-    "release": {"npm": "call npm run release", "timeout": 10, "description" : "Release committed changes to master (no version inc)"},
     "test" : {"npm": "start npm test", "timeout" : 15, "description": "Test all projects"},
     "testYarn" : {"npm": "start npm run test_yarn", "timeout" : 15, "description": "Do yarn and test all modules"},
     "gitfix" : {"npm": "start npm run gitfix", "timeout": 3, "description": "Ensure .gitIgnore files are ignored for all projects"},
@@ -30,7 +29,8 @@
       "lamed_badge",
       "lamed_learn",
       "see_it_done",
-      "see_it_start"  
+      "see_it_start",
+      "see_it_zone"  
     ],
     "general": [
       "lamed_string",
@@ -59,7 +59,6 @@
     "lamed_core",
     "lamed_console",
     "lamed_test",
-    "lamed_build",
     "lamed_string",
     "lamed_array2",
     "lamed_arraycompare",
@@ -72,22 +71,20 @@
     "lamed_folder",
     "lamed_filesearch",
     "lamed_table",
+    "lamed_learn",
     "lamed_dev",
+    "lamed_build",
     "lamed_consoleapp",
     "common_word_list",
     "lamed_vscode",
     "lamed_markdown",
     "lamed_flowchart",
     "lamed_floweditor",
-    "lamed_learn",
     "see_it_done",
-    "see_it_start"
+    "see_it_start",
+    "see_it_zone"
   ],
-  "projects_add_exclude": [
-    "lamed_test",
-    "lamed_core",
-    "lamed_folder"
-  ],
+  "projects_add_exclude": [],
   "projects_local_exclude" : [
     "lamed_dev",
     "lamed_flowchart",
@@ -100,6 +97,7 @@
     "lamed_dev"
   ],
   "projects_gitignore_exclude": [
+    "see_it_zone"
   ],
   "projects_dependencies_exclude": [
     "babel-eslint",
