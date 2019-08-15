@@ -1,6 +1,7 @@
 {
   "commands" : {
     "pull" : {"npm" : "call npm run pull", "timeout" : 0, "description" : "Pull changes from master for all projects and do yarn"},
+    "undo" : {"npm" : "git reset --hard", "timeout" : 0, "description" : "Undo changes to all repos"},
     "local" : {"npm" : "call npm run local", "timeout" : 0, "description" : "Swap to local packages"},
     "commitSafe" : {"npm" : "start npm run commitAll", "description" : "Run tests and if success commit changes to master"},
     "commitFast" : {"npm" : "call npm run commitFast", "timeout" : 5, "description" : "Fast commit to master (no tests)"},
