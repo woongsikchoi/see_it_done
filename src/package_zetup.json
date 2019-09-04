@@ -59,6 +59,7 @@
     "lamed_core",
     "lamed_console",
     "lamed_test",
+    "lamed_pcinfo",
     "lamed_string",
     "lamed_array2",
     "lamed_arraycompare",
