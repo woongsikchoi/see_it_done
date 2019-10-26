@@ -86,7 +86,7 @@
     "chalk": "^2.4.2",
     "git-state": "^4.1.0",
     "lamed_arraydef": "^0.1.0",
-    "lamed_badge": "^0.2.17",
+    "lamed_badge": "^0.2.19",
     "lamed_folder": "^1.2.60",
     "lamed_io": "^1.5.5",
     "lamed_random": "^0.0.5",

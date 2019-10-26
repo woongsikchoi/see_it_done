@@ -31,6 +31,7 @@ function dashboardCreate (projects, username, name = 'dashboard') {
   dtDashboard.array2Col(projects.map(x => Badge.releaseCodeCoverage(username, x)), 'coverage')
   dtDashboard.array2Col(projects.map(x => Badge.devIssuesOpen(username, x)), 'issues')
   dtDashboard.array2Col(projects.map(x => Badge.qualityDeepScan(username, x)), 'deepScans')
+  dtDashboard.array2Col(projects.map(x => Badge.devLastCommit(username, x)), 'lastCommit')
   // dtDashboard.array2Col(projects.map(x => Badge.qualityCodeFactor(username, x)), 'codeFactors')
   // dtDashboard.array2Col(projects.map( x => badge.devLastCommit(username, x)), 'commits')
   // dtDashboard.array2Col(projects.map(x => Badge.qualityCodeDependencies(username, x)), 'dependencies')

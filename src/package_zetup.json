@@ -44,6 +44,7 @@
       "lamed_table"
     ],
     "focused": [
+      "lamed_pcinfo",
       "lamed_json",
       "lamed_vscode",
       "lamed_consoleapp",
