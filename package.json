@@ -91,7 +91,7 @@
     "lamed_io": "^1.5.5",
     "lamed_random": "^0.0.5",
     "lamed_string": "^1.9.2",
-    "lamed_table": "^1.8.3",
+    "lamed_table": "^1.9.0",
     "lamed_test": "^2.8.9"
   },
   "devDependencies": {},
