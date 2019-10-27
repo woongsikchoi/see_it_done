@@ -68,7 +68,8 @@
       "tmp.js",
       "**/templates/",
       "**/dist/",
-      "**/docs/"
+      "**/docs/",
+      "**/cdn/"
     ]
   }
 }
