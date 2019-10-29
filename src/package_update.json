@@ -6,7 +6,7 @@
     "yarnfast" : "yarn --ignore-scripts --offline",
     "clean" :"rmdir node_modules /s /q",
     "local": "npm run yarn2",
-    "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
+    "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 6000",
     "test_yarn": "npm run yarn2 && npm test && npm run fix",
     "qa" : "cd && npm run coverage_test && cd",
     "coverage_test": "npm run line && nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000",
