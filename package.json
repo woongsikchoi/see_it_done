@@ -85,14 +85,14 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "git-state": "^4.1.0",
-    "lamed_arraydef": "^0.1.4",
-    "lamed_badge": "^0.2.24",
-    "lamed_folder": "^1.2.63",
+    "lamed_arraydef": "^0.1.5",
+    "lamed_badge": "^0.2.25",
+    "lamed_folder": "^1.2.64",
     "lamed_io": "^1.5.8",
-    "lamed_random": "^0.0.8",
-    "lamed_string": "^1.9.11",
-    "lamed_table": "^1.9.6",
-    "lamed_test": "^2.8.15"
+    "lamed_random": "^0.0.9",
+    "lamed_string": "^1.9.12",
+    "lamed_table": "^1.9.7",
+    "lamed_test": "^2.8.16"
   },
   "devDependencies": {},
   "about": {
