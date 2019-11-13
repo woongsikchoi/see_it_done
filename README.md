@@ -28,6 +28,9 @@ See : http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
 [![Github releases](https://img.shields.io/github/downloads/perezlamed/see_it_done/total.svg)](https://github.com/perezlamed/see_it_done/releases)
 [![HitCount](http://hits.dwyl.io/perezlamed/see_it_done.svg)](https://github.com/perezlamed/see_it_done/graphs/traffic)
 
+## Build History
+![Build History](https://buildstats.info/travisci/chart/perezLamed/see_it_done)
+
 - [Dashboard](./docs/Dashboard.md),
 - [Dependencies](./docs/Dependencies.md) and
 - [User stories](./docs/UserStories.md)
