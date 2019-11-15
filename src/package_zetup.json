@@ -28,6 +28,7 @@
       "lamed_dev",
       "lamed_badge",
       "lamed_learn",
+      "lamed_readme",
       "see_it_done",
       "see_it_start",
       "see_it_zone"  
@@ -74,6 +75,7 @@
     "lamed_filesearch",
     "lamed_table",
     "lamed_learn",
+    "lamed_readme",
     "lamed_dev",
     "lamed_build",
     "lamed_consoleapp",
@@ -116,7 +118,9 @@
     "node_js_quick": ["lts/*"]
   },
   "travis_exclude" : [
-    "lamed_vscode"
+    "lamed_vscode",
+    "lamed_build",
+    "see_it_zone"
   ],
   "travis_mode": "quick"
 }

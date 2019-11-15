@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
   "scripts": {
-    "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 3000",
+    "test": "mocha \"./{,!(node_modules)/**/}*.runner.js\" --timeout 6000",
     "test2": "nodemon --exec \"npm test\"",
     "coverage_test": "npm run line && nyc mocha \"./{,!(node_modules)/**/}*.runner.js\"  --timeout 3000",
     "coverage_report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
@@ -47,7 +47,7 @@
     "gitfixrep": "git rm -r --cached . && git add . && git commit -m \".gitignore fix\"",
     "commitredo": "npm run testall && cd && git add . && git commit -a -m \"Refactor and improve code\" && cd",
     "gitredo": "npm run commitredo && npm run v_patch && npm run push",
-    "global": "cd && npm i -g  eslint babel-eslint codecov mocha nyc snazzy standard symlink-dir",
+    "global": "cd && npm i -g  eslint babel-eslint codecov mocha nyc snazzy standard symlink-dir console-countdown",
     "compiler": "cd && npm i --dev webpack webpack-cli webpack-strip-block uglifyjs-webpack-plugin"
   },
   "nyc": {
@@ -69,7 +69,8 @@
       "tmp.js",
       "**/templates/",
       "**/dist/",
-      "**/docs/"
+      "**/docs/",
+      "**/cdn/"
     ]
   },
   "repository": {
