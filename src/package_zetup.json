@@ -32,7 +32,8 @@
       "io_parsepackage",
       "see_it_done",
       "see_it_start",
-      "see_it_zone"  
+      "see_it_zone",
+      "lamed_flow"  
     ],
     "general": [
       "lamed_string",
@@ -84,6 +85,7 @@
     "common_word_list",
     "lamed_vscode",
     "lamed_markdown",
+    "lamed_flow",
     "lamed_flowchart",
     "lamed_floweditor",
     "see_it_done",
@@ -93,6 +95,7 @@
   "projects_add_exclude": [],
   "projects_local_exclude" : [
     "lamed_dev",
+    "lamed_flow",
     "lamed_flowchart",
     "lamed_floweditor",
     "lamed_learn",

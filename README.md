@@ -60,7 +60,7 @@ See : http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
 - implement and debug unit tests easily and effectively
 
 <u>**SO THAT I CAN**</u>
-- Finish fast and at the highest quality 
+- Finish fast and at the highest quality
 - Spend more time focus on new features
 - Easily refactor projects and dependencies
 
