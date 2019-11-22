@@ -1,6 +1,6 @@
 {
   "name": "see_it_done",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "Agile project template",
   "main": "src/index.js",
   "url": "https://www.npmjs.com/package/see_it_done",
