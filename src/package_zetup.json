@@ -17,6 +17,9 @@
   "package_add": "package_add.json",
   "package_update": "package_update.json",
   "packages" : {
+    "design" : [
+      "lamed_flow"  
+    ],
     "test" : [
       "lamed_core",
       "lamed_console",
@@ -32,10 +35,9 @@
       "io_parsepackage",
       "see_it_done",
       "see_it_start",
-      "see_it_zone",
-      "lamed_flow"  
+      "see_it_zone"
     ],
-    "general": [
+    "functions": [
       "lamed_string",
       "lamed_array2",
       "lamed_arraycompare",
@@ -48,7 +50,6 @@
     ],
     "focused": [
       "lamed_pcinfo",
-      "lamed_json",
       "lamed_vscode",
       "lamed_consoleapp",
       "common_word_list",
@@ -72,20 +73,19 @@
     "lamed_name",
     "lamed_badge",
     "lamed_io",
-    "lamed_json",
     "io_parsepackage",
     "lamed_folder",
     "lamed_filesearch",
     "lamed_table",
-    "lamed_learn",
     "lamed_readme",
     "lamed_dev",
-    "lamed_build",
     "lamed_consoleapp",
     "common_word_list",
     "lamed_vscode",
     "lamed_markdown",
+    "lamed_build",
     "lamed_flow",
+    "lamed_learn",
     "lamed_flowchart",
     "lamed_floweditor",
     "see_it_done",
